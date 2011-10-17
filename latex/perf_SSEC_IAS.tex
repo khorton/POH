@@ -1,0 +1,23 @@
+% Static Source Position Error, Airspeed Chart
+%% try boxedminipage.sty to get box around figure, to help separate two figures if there are more than one per page
+\begin{figure}[t]
+% \addcontentsline{toc}{section}{Figure \ref{SSEC-spd-error} Position Error --- Airspeed --- Flaps Retracted}
+\addcontentsline{toc}{section}{POSITION ERROR --- AIRSPEED --- FLAPS RETRACTED}
+\centering{
+  \begin{perfhdr}POSITION ERROR --- AIRSPEED\\
+  FLAPS RETRACTED\\
+  \end{perfhdr}
+
+  \centering{\begin{minipage}{5in}\begin{tabbing}
+  EFIS Make - Model:aaaaa\= \kill
+  Weight:\>1400 lb\\
+  Flaps:\>Retracted\\
+  Date of flight tests:\>14 \& 19 Nov 2008
+  \end{tabbing}\end{minipage}}
+  \begin{center}
+  \input{../graphs/ias_error_no_inst_corr_flaps_up}\end{center}  % for gnuplot epslatex, latex or pslatex mode
+}
+\caption{Position Error --- Airspeed --- Flaps Retracted}
+\label{SSEC-spd-error}
+\end{figure}
+

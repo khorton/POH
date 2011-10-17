@@ -1,0 +1,23 @@
+% Static Source Position Error, Altitude Chart
+%% try boxedminipage.sty to get box around figure, to help separate two figures if there are more than one per page
+\begin{figure}[t]
+% \addcontentsline{toc}{section}{Figure \ref{SSEC-alt-error} Position Error --- Altitude --- Flaps Retracted}
+\addcontentsline{toc}{section}{POSITION ERROR --- ALTITUDE --- FLAPS RETRACTED}
+\centering{
+  \begin{perfhdr}POSITION ERROR --- ALTITUDE\\
+  FLAPS RETRACTED\\
+  \end{perfhdr}
+
+  \centering{\begin{minipage}{5in}\begin{tabbing}
+  EFIS Make - Model:aaaaa\= \kill
+  Weight:\>1600 lb\\
+  Flaps:\>Retracted\\
+  Date of flight tests:\>14 \& 19 Nov 2008
+  \end{tabbing}\end{minipage}}
+  \begin{center}
+  \input{../graphs/alt_error_flaps_up}\end{center}  % for gnuplot epslatex, latex or pslatex mode
+}
+\caption{Position Error --- Altitude --- Flaps Retracted}
+\label{SSEC-alt-error}
+\end{figure}
+

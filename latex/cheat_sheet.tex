@@ -1,0 +1,51 @@
+\changepage{\checklistTextHeight}{\checklistTextWidth}{\checklistEvenSideMargin}{\checklistOddSideMargin}{}{\checklistTopMargin}{0pt}{0pt}{0pt}% original settings, with no room for header or footer
+
+%\addcontentsline{toc}{section}{\numberline { }NORMAL CHECKLIST}
+\addcontentsline{toc}{section}{CHEAT SHEET}
+%\ohead{NORMAL CHECKLIST}% puts "NORMAL CHECKLIST" in the header.
+\chead{\Large CHEAT SHEET} % puts "NORMAL CHECKLIST" in the header.
+% \ohead{DRAFT --- \thistime \ \cdndate\today}
+\ohead{Created --- \thistime \ \cdndate\today}
+
+\begin{multicols}{2}
+\raggedcolumns
+
+\subsection*{EIS 4000}
+\subsubsection*{CHANGE FUEL QUANTITY TO FULL FUEL}
+\begin{enumerate*}
+\item L and R Buttons\dotfill PRESS AND HOLD
+\item INC and DEC Soft Keys\dotfill PRESS (to set 42 USG)
+\item NEXT Soft Key\dotfill PRESS (to return to normal display)
+\end{enumerate*}
+
+\subsubsection*{CHANGE FUEL QUANTITY TO ANY VALUE}
+\begin{enumerate*}
+\item L and R Buttons\dotfill PRESS AND HOLD
+\item INC or DEC Soft Keys\dotfill PRESS (to set desired quantity)
+\item NEXT Soft Key\dotfill PRESS (to return to normal display)
+\end{enumerate*}
+
+\subsubsection*{LEANING MODE}
+\begin{enumerate*}
+\item Centre and R Buttons\dotfill PRESS AND HOLD
+\end{enumerate*}
+
+
+\columnbreak % added to force all of GNS 430W stuff onto one page
+\subsection*{GNS 430W}
+\subsubsection*{REVIEW FLT PLAN LATS \& LONGS}
+\begin{enumerate*}
+\item FPL Page\dotfill SELECT
+\item Cursor\dotfill ACTIVATE
+\item Waypoint Name\dotfill SELECT
+\item ENT Button\dotfill PUSH (to see wpt info)
+\item Lat/Long\dotfill REVIEW
+\item ENT Button\dotfill PUSH (to move to next wpt)
+\end{enumerate*}
+
+\end{multicols}
+
+\cleardoublepage
+\ohead{\leftmark} % put Section name back in outer header
+\chead{} % remove center header
+\changepage{\checklistTextHeight*-1}{\checklistTextWidth*-1}{\checklistEvenSideMargin*-1}{\checklistOddSideMargin*-1}{}{\checklistTopMargin*-1}{0pt}{0pt}{0pt}% original settings, with no room for header or footer

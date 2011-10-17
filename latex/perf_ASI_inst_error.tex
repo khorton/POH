@@ -1,0 +1,27 @@
+% ASI Instrument Error Chart
+\begin{figure}[t]
+% \addcontentsline{toc}{section}{Figure \ref{fg-asi-error} Airspeed Indicator Instrument Error}
+\addcontentsline{toc}{section}{AIRSPEED INDICATOR INSTRUMENT ERROR}
+%\addcontentsline{toc}{section}{Figure \ref{fg-asi-error} AIRSPEED INDICATOR INSTRUMENT ERROR}
+\centering{
+  \begin{perfhdr}AIRSPEED INDICATOR\\
+  INSTRUMENT ERROR\\
+  \end{perfhdr}
+  % details of ASI
+  \centering{\begin{minipage}{5in}\begin{tabbing}
+  ASI Make - Model:aaaaa\= \kill
+  ASI Make \& Model:\>UMA 16-311-241\\
+  Serial \#:\>B0171\\
+  Date of ground test:\>27 Apr 2004
+  \end{tabbing}\end{minipage}}
+  \begin{center}
+  \input{../graphs/asi_error}
+  \end{center}  % for gnuplot epslatex, latex or pslatex mode
+}
+\caption{Airspeed Indicator Instrument Error}
+\label{fg-asi-error}
+\end{figure}
+%\lyxline{\normalsize}
+%%%\vspace{0.1in}
+
+

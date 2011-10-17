@@ -1,0 +1,29 @@
+% EFIS Airspeed Error Chart --- Static Source Position Error + EFIS ASI instrument error
+%% try boxedminipage.sty to get box around figure, to help separate two figures if there are more than one per page
+\begin{figure}[t]
+% \addcontentsline{toc}{section}{Figure \ref{EFIS-spd-error} EFIS Airspeed Error --- Airspeed --- Flaps Retracted}
+\addcontentsline{toc}{section}{EFIS AIRSPEED ERROR --- AIRSPEED --- FLAPS RETRACTED}
+\centering{
+  \begin{perfhdr}EFIS AIRSPEED ERROR\\
+  FLAPS RETRACTED\\
+  \end{perfhdr}
+
+  \centering{\begin{minipage}{5in}\begin{tabbing}
+  EFIS Make --- Model:aaaaa\= \kill
+  EFIS Make \& Model:\>Dynon Development D-10A\\
+  Part \#:\>100321- Rev 0\\
+  Serial \#:\>004439\\
+  Date of ground test:\>27 Apr 2004\\
+  \\
+  Weight:\>1400 lb\\
+  Flaps:\>Retracted\\
+  Date of flight tests:\>14 \& 19 Nov 2008
+  \end{tabbing}\end{minipage}}
+  \begin{center}
+  \input{../graphs/efis_ias_err_flaps_up}\end{center}  % for gnuplot epslatex, latex or pslatex mode
+}
+\caption{EFIS Airspeed Error --- Airspeed --- Flaps Retracted}
+\label{EFIS-spd-error}
+\end{figure}
+
+

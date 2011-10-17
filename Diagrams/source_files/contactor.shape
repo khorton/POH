@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns="http://www.daa.com.au/~james/dia-shape-ns" xmlns:svg="http://www.w3.org/2000/svg">
+  <name>Diagrams - contactor</name>
+  <icon>contactor.png</icon>
+  <connections>
+    <point x="2.81" y="1.69"/>
+    <point x="4.31" y="3.99"/>
+    <point x="2.81" y="3.99"/>
+    <point x="2.81" y="2.84"/>
+    <point x="4.31" y="1.69"/>
+    <point x="4.31" y="2.84"/>
+    <point x="3.56" y="3.99"/>
+    <point x="3.56" y="1.69"/>
+    <point x="3.41" y="2.79"/>
+    <point x="3.71" y="3.79"/>
+    <point x="3.41" y="3.79"/>
+    <point x="3.41" y="3.29"/>
+    <point x="3.71" y="2.79"/>
+    <point x="3.71" y="3.29"/>
+    <point x="3.56" y="3.79"/>
+    <point x="3.56" y="2.79"/>
+    <point x="2.31" y="2.99"/>
+    <point x="3.81" y="2.99"/>
+    <point x="3.06" y="2.99"/>
+    <point x="3.81" y="3.19"/>
+    <point x="3.71" y="3.19"/>
+    <point x="3.76" y="3.19"/>
+    <point x="3.41" y="3.19"/>
+    <point x="3.31" y="3.19"/>
+    <point x="3.36" y="3.19"/>
+    <point x="3.31" y="3.39"/>
+    <point x="3.81" y="3.39"/>
+    <point x="3.56" y="3.39"/>
+    <point x="3.81" y="3.59"/>
+    <point x="3.71" y="3.59"/>
+    <point x="3.76" y="3.59"/>
+    <point x="3.41" y="3.59"/>
+    <point x="2.31" y="3.59"/>
+    <point x="2.86" y="3.59"/>
+    <point x="3.11" y="2.19"/>
+    <point x="4.01" y="1.89"/>
+    <point x="3.56" y="2.04"/>
+    <point x="3.11" y="2.19"/>
+    <point x="2.31" y="2.19"/>
+    <point x="2.71" y="2.19"/>
+    <point x="3.91" y="2.39"/>
+    <point x="4.71" y="2.39"/>
+    <point x="4.31" y="2.39"/>
+    <point x="3.56" y="2.04"/>
+    <point x="3.56" y="2.79"/>
+    <point x="3.56" y="2.415"/>
+  </connections>
+  <aspectratio type="fixed"/>
+  <svg:svg>
+    <svg:rect style="fill: #ffffff" x="2.81" y="1.69" width="1.5" height="2.3"/>
+    <svg:rect style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x="2.81" y="1.69" width="1.5" height="2.3"/>
+    <svg:rect style="fill: #ffffff" x="3.41" y="2.79" width="0.3" height="1"/>
+    <svg:rect style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x="3.41" y="2.79" width="0.3" height="1"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="2.31" y1="2.99" x2="3.81" y2="2.99"/>
+    <svg:path style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" d="M 3.81,3.19 A 0.1,0.1 0 1 1 3.81,2.99"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="3.81" y1="3.19" x2="3.71" y2="3.19"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="3.41" y1="3.19" x2="3.31" y2="3.19"/>
+    <svg:path style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" d="M 3.36,3.19 A 0.103703,0.103703 0 1 0 3.31,3.39"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="3.31" y1="3.39" x2="3.81" y2="3.39"/>
+    <svg:path style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" d="M 3.81,3.59 A 0.1,0.1 0 1 0 3.81,3.39"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="3.81" y1="3.59" x2="3.71" y2="3.59"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="3.41" y1="3.59" x2="2.31" y2="3.59"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="3.11" y1="2.19" x2="4.01" y2="1.89"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="3.11" y1="2.19" x2="2.31" y2="2.19"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000" x1="3.91" y1="2.39" x2="4.71" y2="2.39"/>
+    <svg:line style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke-dasharray: 0.1; stroke: #000000" x1="3.56" y1="2.04" x2="3.56" y2="2.79"/>
+  </svg:svg>
+</shape>

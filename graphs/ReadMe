@@ -1,0 +1,32 @@
+Readme for Graphs, by Kevin Horton
+
+The graphs are created with gnuplot.
+
+http://www.gnuplot.info/
+
+Each graph has its own file with the info required to produce that
+graph.  A single graph is created by running gnuplot on that file, e.g.
+"gnuplot cruise_speed.gp" will create the cruise_speed.tex and
+cruise_speed.eps files.  The cruise_speed.tex file is included in the
+main document - it calls the cruise_speed.eps file.
+
+gnuplot is run on the file all.gp to produce all graphs at once.  e.g.
+
+"gnuplot all.gp"
+
+The file common_commands.gp has info that affects all graphs in the
+Performance section.  It allows formating changes to be made to all
+graphs by editing a single file.
+
+If pdflatex is used, rather than latex, then the graphics files must
+be in pdf format.  The eps files can be converted to pdf using epstopdf.
+The following batch script (~/bin/epstopdf_batch.sh) will work:
+
+
+#!/bin/bash
+# convert eps to pdf
+
+LIST="$(ls *.eps)"
+for i in "$LIST"; do
+    epstopdf "$i";
+done

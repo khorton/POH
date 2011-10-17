@@ -1,0 +1,12 @@
+*.mtc*
+*.pdf
+POH.ps
+*.dvi
+*.log
+*.maf
+*.toc
+graphs/*.eps
+graphs/*.tex
+*.mlf*
+*.bak
+*orig*

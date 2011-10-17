@@ -1,0 +1,192 @@
+%\documentclass[english]{poh}
+%\usepackage[OT1]{fontenc}
+%\usepackage[latin1]{inputenc}
+%\usepackage{geometry}
+%\geometry{verbose,letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=0.5in}
+%\setcounter{secnumdepth}{3}
+%\setlength\parskip{\medskipamount}
+%\setlength\parindent{0pt}
+%\usepackage{array}
+%\usepackage{color}
+%\usepackage{graphicx}
+%%\usepackage{psfrag} % needed to put latex text over graphs
+%\usepackage{boxedminipage} % to put frame around graphs in performance section
+%\usepackage{multicol}
+%\usepackage{mdwlist}
+%\usepackage{textcomp} % for to get degree symbols from \textdegree
+%\usepackage{floatflt} % to wrap text around figures
+%\usepackage{flafter}  % keep floats from coming before the reference
+%\usepackage{ragged2e} % to get the justifying option to make NOTES
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\usepackage{rotating} % needed for Takeoff Perf table
+%\usepackage{array} % used to get vertically centered text in tabulars
+%\usepackage{multirow} % used in performance tables
+%
+%
+%\makeatletter
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%\newcommand{\lyxline}[1]{
+%  {#1 \vspace{1ex} \hrule width \columnwidth \vspace{1ex}}
+%}
+%%% Bold symbol macro for standard LaTeX users
+%\newcommand{\boldsymbol}[1]{\mbox{\boldmath $#1$}}
+%
+%%% Because html converters don't know tabularnewline
+%\providecommand{\tabularnewline}{\\}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%%%\usepackage{babel}
+%\makeatother
+%
+%
+%%\includeonly{intro,limitations,emer_checklist,emer,normal,normal_checklist,systems}
+%
+%%% following five commands to control the placement of figures on the pages
+%%% these commands are not needed here, as they are controlled by the poh2 class
+%%\renewcommand{\textfraction}{0.15} 
+%%\renewcommand{\topfraction}{0.85} 
+%%\renewcommand{\bottomfraction}{0.85} 
+%%\renewcommand{\floatpagefraction}{0.35} 
+%%\setcounter{totalnumber}{5} 
+%
+%%% force "This Page Intentionally Blank" on blank pages
+%\makeatletter 
+%\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else 
+%  \hbox{} 
+%  \vspace*{\fill} 
+%  \begin{center} 
+%    This page intentionally left blank.
+%  \end{center} 
+%  \vspace{\fill} 
+%  \thispagestyle{empty} 
+%  \newpage 
+%  \if@twocolumn\hbox{}\newpage\fi\fi\fi} 
+%\makeatother 
+%
+%%% Multi-line description labels - TLC2, pg 148 & 150
+%\usepackage{calc}
+%\newenvironment{Description}
+%   {\begin{list}{}{\let\makelabel\Descriptionlabel
+%      \setlength\labelwidth{120pt}%
+%      \setlength\leftmargin{\labelwidth+\labelsep}}}%
+%   {\end{list}}
+%\newcommand*\Descriptionlabel[1]
+%   {\raisebox{0pt}[1ex][0pt]%
+%      {\makebox[\labelwidth][l]%
+%         {\parbox[t]{\labelwidth}%
+%%                    {\hspace{0pt}\textsf{#1:}}}}}
+%                    {\hspace{0pt}\textrm{#1}}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start of Document
+%\begin{document}
+
+\newlength{\colOne}
+\newlength{\colTwo}
+\newlength{\colThree}
+\newlength{\colFour}
+\newlength{\colFive}
+\newlength{\colSix}
+\newlength{\colSeven}
+\newlength{\colEight}
+\newlength{\halfrowdrop}
+\setlength{\halfrowdrop}{\baselineskip/-2}
+
+\chapter{PERFORMANCE}
+
+%% following five commands to control the placement of figures on the pages
+%% these values are changed for the Performance Section to allow room 
+%% for two graphs on one page, with no text outside the figure.
+\renewcommand{\textfraction}{0.0} 
+\renewcommand{\topfraction}{1} 
+\renewcommand{\bottomfraction}{1} 
+\renewcommand{\floatpagefraction}{0.35} 
+\setcounter{totalnumber}{5} 
+
+\pagestyle{plain}
+% Cruise Power Chart 
+% Fuel Flow vs power from Lycoming Operator's Manual Curve 12699B, pg 3-22, converted
+% from lb/hr to USG/hr using 6.01 lb/USG
+\settowidth{\colOne}{PRESSURE}
+\settowidth{\colTwo}{FLOW}
+\settowidth{\colThree}{BEST POWER}
+%\settowidth{\colFour}{2400}
+%\settowidth{\colFive}{2500}
+%\settowidth{\colSix}{2600}
+%\settowidth{\colSeven}{2700}
+%\settowidth{\colEight}{2300}
+
+\begin{sidewaysfigure}[htb]
+\begin{center}
+\begin{perfhdr}CRUISE POWER
+\end{perfhdr}
+%\Large
+%\textcolor{red}{DATA PENDING FLIGHT TEST}\normalsize \\
+\vspace{.2in}
+\begin{minipage}{8.56in}
+\begin{minipage}{5in}
+%\textcolor{red}{Add NOTES from Mooney Power Chart}
+NOTES:
+\begin{enumerate*}
+\item Mixture must be full rich when above 75\% power. Lean using fuel flow meter at 75\% power or less.
+\item Add 0.4" M.P. for each 10\textdegree C above standard temperature.  
+\item Subtract 0.4" M.P. for each 10\textdegree C below standard temperature.
+\item If above standard temperature precludes obtaining the desired M.P., use the next higher RPM/M.P. with appropriate temperature correction to M.P.
+\end{enumerate*}
+
+\end{minipage}
+\hfill
+\begin{boxedminipage}{3in}
+\begin{center}EXAMPLE\end{center}
+\begin{tabular}{ll}
+CRUISE ALT.&6000 FT.\\
+OAT&10\textdegree C\\
+POWER&65\%\\
+RPM&2400\\
+M.P.&21.7 (7\textdegree C correction)
+\end{tabular}
+\end{boxedminipage}
+\end{minipage}\\
+\vspace{0.2in}
+%\small
+\begin{tabular}{|r|cc||c|c|c|c||c|c|c|c||c|c|c|c|c|}
+\hline
+&&&\multicolumn{4}{c||}{75\% POWER}&\multicolumn{4}{c||}{65\% POWER}&\multicolumn{5}{c|}{55\% POWER}\\
+&&&\multicolumn{4}{c||}{150 HP}&\multicolumn{4}{c||}{135 HP}&\multicolumn{5}{c|}{110 HP}\\
+\hline
+\multirow{4}{\colOne}{\centering PRESSURE ALTITUDE (FT)}&\multicolumn{2}{r||}{RPM}&
+2400&2500&2600&2700&2300&2400&2500&2600&2200&2300&2400&2500&2600\\
+\cline{2-16}
+&\multirow{2}{\colTwo}{\centering FUEL FLOW}&\multicolumn{1}{|l||}{BEST ECON.}&10.1&10.3&10.4&10.7&
+8.9&9.1&9.2&9.4&7.7&7.9&8.0&8.2&8.3\\
+&&\multicolumn{1}{|l||}{BEST POWER}&11.9&12.1&12.2&12.5&10.5&10.7&10.9&11.0&
+9.1&9.3&9.4&9.6&9.8\\
+\cline{2-16}
+%&\multicolumn{2}{c||}{STD. TEMP}&\multicolumn{4}{c||}{MANIFOLD PRESS.}&\multicolumn{4}{c||}{MANIFOLD PRESS.}&\multicolumn{5}{c|}{MANIFOLD PRESS.}\\
+&\multicolumn{2}{c||}{STD. TEMP}&\multicolumn{13}{c|}{MANIFOLD PRESSURE --- INCHES OF MERCURY}\\
+\hline
+0&\multicolumn{2}{c||}{15 \textdegree C}&25.4&24.5&23.6&22.8&23.7&22.8&22.0&21.2&22.0&21.0&20.2&19.5&18.9\\
+\hline
+2,000&\multicolumn{2}{c||}{11 \textdegree C}&24.9&23.9&23.1&22.3&23.2&22.3&21.5&20.7&21.5&20.5&19.7&19.0&18.4\\
+\hline
+4,000&\multicolumn{2}{c||}{7 \textdegree C}&24.4&23.4&22.6&21.9&22.7&21.8&21.0&20.3&21.0&20.0&19.3&18.5&17.9\\
+\hline
+6,000&\multicolumn{2}{c||}{3 \textdegree C}&23.9&23.0&22.1&21.5&22.3&21.4&20.5&19.8&20.5&19.6&18.9&18.1&17.5\\
+\hline
+8,000&\multicolumn{2}{c||}{-1 \textdegree C}&&22.5&21.7&21.1&21.9&21.0&20.1&19.4&20.1&19.2&18.5&17.7&17.1\\
+\hline
+10,000&\multicolumn{2}{c||}{-5 \textdegree C}&&&&&&20.6&19.7&19.0&19.7&18.9&18.1&17.3&16.7\\
+\hline
+12,000&\multicolumn{2}{c||}{-9 \textdegree C}&&&&&&&19.3&18.7&19.3&18.5&17.7&16.9&16.4\\
+\hline
+
+\end{tabular}
+\normalsize 
+\end{center}
+All data from Lycoming Operator's Manual for IO-360-A, dated July 2000.
+%\caption{Cruise Power}
+\end{sidewaysfigure}
+
+%\end{document}
+
+

@@ -1,0 +1,139 @@
+\section{AUTOPILOT} 
+
+The Trio Avionics Pro Pilot autopilot moves the ailerons and/or elevators to control the aircraft. The autopilot can follow the GNS 430W lateral flight plan, including procedure turns and GPS, RNAV or LPV approaches. The autopilot vertical capabilities include altitude hold, vertical speed hold, altitude preselect and LPV vertical path. A two line alphanumeric display provides detailed information to the pilot. The WING LVLR switch on the LH console controls power to the autopilot system. The power to the servos may be temporarily interrupted by pressing and holding the red master disconnect switch on the pilot's control stick. The autopilot does not control the pitch trim --- the aircraft must be reasonably well trimmed in pitch to allow the autopilot to control the aircraft without reaching the force limit provided by the servo slip clutch. %Each servo has a clutch that will slip to allow the pilot to override the wing leveler if required. %As a last resort, there is a removable pin where the wing leveler push rod connects to the base of the pilot's control stick. 
+
+The autopilot control head is on the instrument panel below the turn and slip indicator. The pitch servo is behind the rear baggage compartment, and the roll servo is beneath the horizontal panel just ahead and to the right of the front seat. The autopilot is powered from the Main Bus. Power is controlled by the Wing Leveler switch on the right console and also by the On toggle switch located at the top centre of the control head.
+
+\textbf{Altimeter Setting} --- The autopilot does not have a means to directly enter an altimeter setting.  Instead, the current altitude is entered whenever the "BARO SET" message is displayed, which allows the system to determine the needed offset to the pressure altitude sensed from the static input.
+
+\subsection*{Controls}
+\begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
+\begin{minipage}[b]{\linewidth}
+\begin{enumerate}
+\item \textbf{Power Switch} --- Controls all power to the autopilot control head and servos. This switch is in series with the Wing Leveler switch on the right switch console.
+\item \textbf{"H~NAV"} --- Engages or disengages the horizontal (i.e. roll) servo. A three second press and hold engages the autopilot in emergency left course reversal (180\textdegree \ left turn with altitude hold).
+\item \textbf{"V~NAV"} --- Engages or disengages the vertical (i.e. pitch) servo. A three second press and hold engages the autopilot in emergency right course reversal (180\textdegree \ right turn with altitude hold).
+\item \textbf{"H~MODE"} --- Cycles the horizontal mode between TRK (track), CRS (course) and INT (intercept) modes, if the display is currently showing horizontal mode info. If the autopilot display is currently showing vertical mode information, the first press of the "H~MODE" button replaces that with horizontal mode information.
+\item \textbf{"V~MODE"} --- Cycles the vertical mode between ALT HOLD (altitude hold), AS/VS (airspeed/vertical speed), ALT SEL (altitude select) and BARO SET (adjust altitude for altimeter setting changes). If the autopilot display is currently showing horizontal mode information, the first press of the "H~MODE" buttons replaces that with vertical mode informationl.
+\item \textbf{Rotary Knob} --- Allows pilot input of values by rotation and then pushing to enter. For changes to selected altitude, one click = 100 ft. If the knob is pressed, then turned, one click = 1000 ft. For changes to selected track, one click = 1\textdegree.
+\end{enumerate}
+\end{minipage} 
+&
+\begin{minipage}[b]{\linewidth}
+\begin{overpic}
+[scale=.8]{../Diagrams/ProPilot5} 
+\end{overpic}
+\caption{Trio Pro Pilot Autopilot}
+\end{minipage}\\
+\end{tabular}
+
+\subsection*{Indicators} 
+\begin{enumerate}
+\setcounter{enumi}{6} 
+\item \textbf{H LED} --- Illuminates when the horizontal servo is engaged. 
+\item \textbf{V LED} --- Illuminates when the vertical servo is engaged. 
+\item \textbf{GPSS LED} --- Blinks when roll steering info from the GNS 430W is available, but not being used because the autopilot is not in TRK mode. Illuminates steady when the autopilot is following roll steering info from the GNS 430W. The autopilot must be in TRK mode to use GPSS.
+\item\textbf{GPSV LED} --- Blinks when vertical steering info from the GNS 430W is available, but not being used because the autopilot is not in TRK mode. Illuminates steady when the autopilot is using vertical steering info from the GNS 430W. GPSV info is only available when the GNS 430W is currently on an instrument approach with vertical guidance (LPV, L/VNAV or LNAV+V).
+\item \textbf{H MODE LEDs} --- TRK, CRS and INT LEDs illuminate steady or flashing to indicate current horizontal mode.
+\item \textbf{V MODE LEDs} --- ALT HLD, AS/VS and ALT SEL LEDs illuminate steady or flashing to indicate current vertical mode.
+\item \textbf{SLIP BALL} --- Indicates lateral acceleration. 
+\item \textbf{H/V FUNCTION ARROW} --- Indicates whether the right side of the display and rotary knob are dedicated to H~MODE (arrow pointing left) or V~MODE functions (arrow pointing right).  If the arrow is pointing left, a single press of the V~MODE button will switch the arrow to the right.  Subsequent presses of the V~MODE button will change the vertical mode.  Similarly, if the arrow is pointing to the right, a single press of the H~MODE button will switch the arrow to the left.
+\end{enumerate}
+
+\subsection*{Power}
+
+\textbf{MAIN POWER} --- The unit is powered from the Main Bus. The toggle switch at the top centre of the control head is in series with the WING LVLR switch on the right console.
+
+\subsection*{Engagement and Disengagement}
+
+\textbf{SERVO ENGAGEMENT} --- The pitch and roll servos are engaged individually by pressing and releasing the "V~NAV" and "H~NAV" buttons at the top of the control head. The green "V" and "H" LEDs illuminate when the vertical (i.e. pitch) and horizontal (i.e. roll) servos are engaged. The default horizontal and vertical modes are TRK and ALT HLD.
+
+\textbf{SERVO DISENGAGEMENT} --- The autopilot may be disengaged by a quick press and release (press and release within 5 seconds) of the red TRIM/AP disable switch on the front stick grip. The pitch and roll servos may be individually disengaged by pressing and releasing the "V~NAV" and "H~NAV" buttons respectively. %If required, the linkage between the servo and the stick may be disconnected by pulling the ``Pip'' pin that is located at the bottom of the front stick, just above the fore and aft pivot.
+
+\subsection*{H~NAV Modes}
+The following horizontal modes are available:
+
+\textbf{TRK} --- Track mode uses roll inputs to follow a GPS flight plan or Direct-To. GPS Steering (GPSS) data will be used if available, in which case the roll steering commands are coming from the GNS 430W. TRK is the default power-up mode, if a GPS flight plan or Direct-To is available.
+
+\textbf{CRS} --- Course mode uses roll inputs to fly a selected GPS course angle (i.e. a selected track with respect to magnetic north). The selected course is seen on the top left of the display, labeled "CRS". The selected course is adjusted by turning the rotary knob, if the H/V function arrow (middle of the top line) is pointing to the left. The actual track is shown just below, labeled "TRK". CRS is the default power-up mode if GPS data is available but no flight plan or Direct-To has been entered.
+
+\begin{Note}
+ATC often requests a specfic heading to be flown.  CRS mode allow a specific track to be flown.  The CRS can be changed until the EFIS shows the desired heading.  The heading will remain constant if the track remains constant, assuming no changes in wind or airspeed.
+\end{Note}
+
+\textbf{INT} --- Intercept mode allows the current GPS leg to be intercepted at a selected interception angle.  The default intercept angle is 25 degrees.  The angle can be changed with the rotary knob, if the H/V function arrow is pointing to the left.  TRK mode will engage automatically as the GPS leg is captured.
+
+\subsection*{V~NAV Modes}
+The following vertical modes are available:
+
+\textbf{ALT HLD} --- Altitude Hold mode uses elevator inputs to hold the current altitude.  This is the default mode that will be engaged if the V~NAV button is pressed with no other modes having been previously selected.  This mode may also be automatically engaged after the autopilot commands a level off from a climb or descent to a selected altitude.  Small adjustments to the altitude may be made by pressing the "V~MODE" button until "ALT ADJ UP/DN" is displayed, then turning the rotary knob.  CW rotation increases the altitude by 5 ft/click, and CCW rotation decreases it by 5 ft/click.
+
+\textbf{VS} --- Vertical speed mode is used to climb or descend at a selected vertical speed.  The 
+
+\subsection*{Pilot Command Steering (PCS)}
+
+Pilot Command Steering may be commanded by pressing and holding the red Autopilot/Trim Disconnect switch on the control stick for longer than five seconds (if the button is held for less than five seconds, the autopilot servos will disengage).
+
+\textbf{PCS in Roll} --- If in TRK mode, PCS will switch the autopilot to CRS mode. The autopilot will continue to fly the GPS track that was being flown when the Autopilot/Trim Disconnect button was released. This is a reasonable surrogate for heading mode (which the autopilot does not have), as the heading will be reasonably constant assuming neither the wind nor the airspeed changes significantly. 
+
+If the autopilot is in CRS mode, use of PCS will change the commanded GPS track.
+
+If the autopilot is in INT mode, use of PCS will change the commanded GPS track to be flown until the GPS flight plan leg is intercepted.
+
+\textbf{PCS in Pitch} --- The autopilot will reengage in ALT HLD mode with the current altitude as the reference if the vertical speed is less than plus or minus 200 ft/mn when the Autopilot/Trim Disconnect switch is released.  The autopilot will reengage in VS mode with the current vertical speed as the reference if the vertical speed is less than plus or minus 200 ft/mn when the Autopilot/Trim Disconnect switch is released.  
+
+\begin{Note}
+PCS affects both horizontal and vertical modes. There is no way to have PCS only affect one axis. If PCS is used to make a small adjustment to the altitude in ALT HLD, the autopilot will also switch from TRK to CRS mode. TRK mode must be reengaged by pressing the H~MODE button until the TRK LED is illuminated.
+\end{Note}
+
+\subsection*{Safety Features}
+The autopilot has the following safety features:
+
+\begin{enumerate}
+\item \textbf{Disconnect During Take-off} --- If the autopilot is connected during the takeoff roll, it will disconnect when the GPS ground speed increases through 25 kt. 
+\item \textbf{Speed Protection} --- The autopilot has minimum and maximum speed protection when in VS mode --- if the speed reaches 80 or 190 kt it will capture that speed rather than follow the commanded vertical speed. 
+\item \textbf{Automatic 180\textdegree \ Mode} --- An automatic 180\textdegree \ turn + altitude hold can be initiated by pressing and holding either the "H NAV" or "V NAV" buttons for three seconds --- pressing "H NAV" will command a left turn, and pressing "V NAV" will command a right turn.
+\item \textbf{Servo Slip Clutches} --- Both servos have slip clutches that will allow the pilot to override the autopilot if sufficient force is applied. 
+\item \textbf{Load Factor Protection} --- The pitch servo will disconnect if the load factor exceeds 2g, or is less than 0g --- this disconnect logic is in the servo, and is independent of the autopilot logic in the control head. 
+\item \textbf{Disconnect on Power Loss} --- The servos should completely release from the flight controls if power is removed from the autopilot.
+\end{enumerate}
+
+\subsection*{Preferences Menu}
+The following autopilot parametres may be changed in flight via the Preferences Menu:
+
+\begin{enumerate}
+\item \textbf{BACKLIGHT and CONTRAST SET} --- Sets the brightness and contrast of the LCD display
+%\item \textbf{CONTRAST ADJUST} --- Sets the contrast for the LCD display
+\item \textbf{FL DIST, FL TIME} --- Displays re-settable flight distance and flight time
+\item \textbf{TOT DIS, TOT TIME} --- Display non-resettable total distance and total time
+\item \textbf{SET HNAV GAINS} --- Adjusts horizontal H NAV fine tracking gains
+\item \textbf{SET H SERVO GAIN} --- Adjusts H NAV servo response gain
+\item \textbf{VNAV GAIN SETS} --- Adjusts gain for the altitude hold and vertical speed modes
+\item \textbf{VNAV SERVO DB} --- Optimizes the V NAV servo dead-band setting
+\end{enumerate}
+
+The preferences are changed as follows:
+
+\begin{enumerate}
+\item Press and hold the rotary knob for 3 seconds to enter the Preferences Menu. 
+\item Turn the rotary knob to cycle through the various preference pages.  
+\item Press the "H~MODE" button to activate the cursor and move it to the item to be changed --- the cursor is a right facing triangle that sits to the left of the item to be changed. 
+\item Turn the rotary knob to change the value.
+\item Press the "H~MODE" button to deactivate the cursor.  
+\item Press and hold the rotary knob to leave the Preferences Menu.
+\end{enumerate}
+
+\subsection*{Messages}
+The following messages may be displayed on the control head LCD display:
+\begin{enumerate}
+\item \textbf{NO GPS} --- Displayed when no GPS data is received, or the GPS does not have a valid position. TRK, CRS and INT modes are not available. The autopilot will engage in wing leveler mode, which commands zero yaw rate. The rotary knob can be used to make small changes in the commanded yaw rate.
+\item \textbf{NO FPLAN} --- Displayed when the GPS has a valid position, but no flight plan or Direct-To waypoint has been entered. CRS mode is available, but TRK and INT modes are not available.
+\item \textbf{TRIM UP REQD} --- The autopilot is holding a significant pitch control force.  The autopilot vertical servo should be disconnected and the aircraft retrimmed.  Anticipate that the aircraft will have a pitch down tendency when the vertical servo is disengaged.
+\item \textbf{TRIM DN REQD} --- The autopilot is holding a significant pitch control force.  The autopilot vertical servo should be disconnected and the aircraft retrimmed.  Anticipate that the aircraft will have a pitch up tendency when the vertical servo is disengaged.
+\item \textbf{CLUTCH SLIP} --- The autopilot vertical servo clutch is slipping due to excessive control force required.  The autopilot is no longer capable of controlling the aircraft in pitch.  The autopilot vertical servo should be disconnected and the aircraft retrimmed.  Anticipate a significant out of trim condition when the vertical servo is disengaged.
+\item \textbf{BARO SET} --- The alitude indicated on the autopilot control head must be compared to the aircraft altimeter, and the rotary knob turned until the two values agree.  Press the rotary knob to input this baro correction into the autopilot.  This messages is displayed after power up, and before every climb or descent to a selected altitude.
+\item \textbf{ALT CAPTURE} --- Displayed for five seconds after the autopilot has captured the selected altitude.
+\item \textbf{VS ERR} --- There is a conflict between the sign of the selected vertical speed and the selected altitude --- e.g. the selected altitude is lower than the current altitude, but a climb has been selected.
+\item \textbf{G FORCE LIMIT} --- Both servos have disengaged due to a load factor greater than +2g or less than 0g.
+\item \textbf{I/O ERROR} --- Both servos have disengaged due to a communcation failure.
+\end{enumerate}

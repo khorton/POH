@@ -1,0 +1,334 @@
+% !iTeXMac(input): POH.tex
+\chapter{EMERGENCY PROCEDURES}
+\vspace{\minitocspacebefore}
+\minitoc
+\cleardoublepage
+\section{INTRODUCTION}
+Section 3 provides procedures to address emergencies that may occur.   Should an emergency arise, the basic guidelines in this section should be considered and applied as necessary to correct the problem.
+
+Some emergency procedures receive additional discussion in the Amplified Procedures section which follows the Emergency Checklists.
+
+\section{AIRSPEEDS FOR EMERGENCY OPERATION}
+(\textcolor{red}{Red text indicates provisional information, based
+on the RV-8A Aircraft Performance Report published by the CAFE Foundation. This data has not yet been validated by flight test.})
+
+\begin{quote}
+Engine Failure After Takeoff\\
+\newlength\emertab
+\setlength\emertab{0.2in}
+%\hspace{\emertab}Flaps UP\dotfill \textcolor{red}{XX} KIAS\\
+\hspace*{\emertab}Flaps UP\dotfill 115 KIAS\\
+\hspace*{\emertab}Flaps DOWN\dotfill 80 KIAS\\
+Manoeuvring Speed\\
+\hspace*{\emertab}1550 lb (703.1 kg) or greater\dotfill \textcolor{red}{120} KIAS\\
+\hspace*{\emertab}1300 lb (589.7 kg)\dotfill \textcolor{red}{110} KIAS\\
+Maximum Glide\\
+\hspace*{\emertab}\theMTOW \space lb (\theMTOWkg .\theMTOWkgdecimal \space kg)\dotfill 115 KIAS\\
+\hspace*{\emertab}1600 lb (725.7 kg)\dotfill 105 KIAS\\
+\hspace*{\emertab}1300 lb (589.7 kg)\dotfill 95 KIAS\\
+Precautionary Landing With Engine Power\dotfill 70 KIAS\\
+Landing Without Engine Power\\
+\hspace*{\emertab}Flaps UP\dotfill 115 KIAS\\
+\hspace*{\emertab}Flaps DOWN\dotfill 80 KIAS
+\end{quote}
+
+\cleardoublepage
+\input{emer_checklist}
+%\cleardoublepage
+
+\section{AMPLIFIED EMERGENCY PROCEDURES}
+
+\subsection{ENGINE FAILURES}
+\subsubsection{ENGINE POWER LOSS DURING TAKEOFF}
+
+If an engine failure occurs during the takeoff run, the most important
+thing to do is stop the aircraft on the remaining runway. Those extra
+items on the checklist will provide added safety.
+
+The first response to an engine failure after takeoff is to promptly
+lower the nose to maintain airspeed and to establish a glide.  Pulling the prop control full aft may significantly reduce windmilling drag if oil pressure
+is available. In most
+cases, the landing should be made straight ahead with only small changes
+in direction to avoid obstructions. A turn back to the runway should
+not be attempted below 1,000 ft AGL, as the aircraft must be turned
+through more than 180\textdegree \ to align with the runway. The checklist procedures
+assume that sufficient time is available to secure the fuel and ignition
+systems prior to touchdown. Flaps should normally be fully extended
+prior to touchdown.
+
+\subsubsection{ENGINE POWER LOSS IN FLIGHT}
+
+Complete power loss is usually due to fuel interruption, if this is
+so, power will be restored when fuel flow is itself restored. The
+first action is to trim for best glide 95 - 115 KIAS, depending on
+weight, and decide if there is time to attempt restart or whether to immediately
+prepare for an emergency ``Power Off'' landing.
+
+Select throttle CLOSED and prop control FULL AFT to reduce drag from the windmilling prop.  The prop will continue to windmill, even if the speed is slowed to the stall with flaps UP, unless the engine has sustained internal damage.  While it is possible to get the prop to stop if the aircraft is slowed just above the stall for about 2 minutes with flaps DOWN, throttle FULL OPEN, significant altitude is lost during this time.  Flight testing showed that by the time the prop stops, the aircraft will be about 900 ft lower than it would have been if it had been gliding with the prop windmilling.  Over 10,000 ft of further descent will be required before the improved glide performance with prop stopped would allow the aircraft to better the performance with prop windmilling.  No attempt should be made to stop the prop unless the aircraft is at least 15,000 ft AGL.  If the prop is stopped with an undamaged engine, except it to start turning again if the airspeed ever exceeds 95 KIAS.
+
+\begin{figure}[htb]
+%\includegraphics*[viewport = 0 25 385 265]{../Diagrams/CG_envelope2.ps} % original chart from Grace
+  \begin{center}
+  \input{../graphs/glide}\end{center}  % chart from gnuplot
+  \caption{Engine-Out Glide Distance}
+  \end{figure}
+
+
+%\textcolor{red}{Figure 3-1 Maximum Glide}
+
+If there is sufficient altitude to attempt to restart the engine, 
+the procedure is to select Boost Pump ON, switch to the other
+tank (provided it has fuel), select mixture to RICH and Alternate
+Air ON. Check engine gauges for an indication of cause and if no fuel
+pressure is indicated change tank selection. When power is restored
+and at a safe altitude, select Alternate Air to OFF and turn Boost
+Pump OFF.
+
+If engine still fails to restart and time permits, turn each ignition
+OFF, then ON to isolate a potentially bad ignition system. Try moving
+the throttle and/or mixture to different settings. This may restore
+power if mixture is too rich or too lean or if there is a partial
+fuel blockage. Try the other tank, as water in the fuel may take time
+to clear the system. Allowing the engine to windmill may restore power.
+If failure is due to water then fuel pressure will be normal. Empty
+fuel lines may take ten seconds to refill.
+
+\subsubsection{ROUGH RUNNING ENGINE}
+
+A slight engine roughness during flight may be caused by carbon or lead deposits fouling one or more spark plugs. 
+This may be verified by selecting one ignition system OFF at a time.  A significant power loss in single ignition
+operation is evidence of either spark plug fouling or an ignition system failure.  Assuming that fouled spark plugs is
+the more likely cause, set cruise power and lean the engine to the recommended cruise fuel flows for several minutes. 
+If the problem does not clear up after several minutes, determine if a richer mixture setting will result in smooth
+running.
+
+A sudden engine roughness or misfiring may be evidence of an ignition problem (either magneto or electronic ignition).
+ Switching one ignition system off in turn will identify which one is malfunctioning.  Select different power settings
+and enrichen the mixture to determine whether continued operation on both ignition systems is possible.
+
+If the problem continues, try different mixture and throttle settings. Select Boost Pump ON,
+change fuel tanks and select Alternate Air ON. Select each ignition system
+OFF then ON.
+
+\begin{Note}[CAUTION]
+The engine may quit completely when one ignition is selected OFF, if the other ignition is faulty.  
+If this occurs, to prevent a severe backfire, select the mixture to ICO, wait 10 seconds, then select the ignition back ON.
+Advance the mixture slowly until engine restarts.
+\end{Note}
+
+%\subsubsection{LOW FUEL PRESSURE}
+%
+%If fuel pressure falls, select Boost Pump ON and change fuel tanks.
+
+\subsubsection{LOW OIL PRESSURE}
+
+If low oil pressure is accompanied by normal oil temperature, there is a possibility that there is a leak in the line
+from the engine to the oil pressure transducer manifold, or that the oil pressure relief valve has malfunctioned.  The
+EIS 4000
+will flash the ENGINE WARN light if the oil pressure decreases below limits. The LOW OIL PRESS light is driven by a
+different transducer on the same external manifold. If only one system indicates low oil pressure it is almost certainly
+a false indication.
+
+A leak in the line to oil pressure transducer manifold is not
+necessarily cause for immediate precautionary landing, as an orifice in the line will prevent sudden loss of oil from
+the sump.  However the aircraft should be landed at the nearest airport for inspection.
+
+A total loss of oil pressure accompanied by increasing oil temperature may indicate an impending total engine failure.
+An off airfield landing while power is available is strongly recommended, especially in the presence of additional
+indicators such as a rise in engine CHT or oil temperature, oil and/or smoke apparent. 
+
+\subsubsection{HIGH OIL TEMPERATURE}
+
+High oil temperature may be caused by the oil cooler door being closed
+too far. High oil temperature may also be due to a low oil level,
+obstruction in oil cooler (internal or external), damaged baffle seals,
+a defective gauge, or other causes. The EIS 4000 ENGINE WARN light
+will flash if the oil temperature becomes higher than 225\textdegree F. A steady
+rise in oil temperature is a particular sign of trouble.
+
+Always land as soon as possible at an appropriate airport/airfield
+and investigate and be prepared for an engine failure. Open the oil
+cooler door. Keep the airspeed up to maximize airflow over the engine.
+Watch the oil pressure and CHT (Cylinder Head Temperature) gauge to
+identify impending failure.
+
+\subsection{FORCED LANDINGS}
+\subsubsection{POWER OFF LANDING}
+
+The initial action is ALWAYS TRIM FOR BEST GLIDE, 95 to 115 KIAS, depending
+on weight. If engine power is not restored and time allows check for
+airports/strips available and notify of problem/intent if possible.  
+Select Mixture to IDLE CUT OFF.  
+Closing the throttle and pulling the prop control full aft will significantly reduce windmilling drag if oil pressure
+is available.  Select Fuel Selector to OFF and Ignition Switches to OFF. 
+Transmit a MAYDAY.
+
+Identify a suitable field, planning an into wind landing. Try to be
+1000 ft AGL at the end of the downwind leg to make a normal landing.
+Aim initially for the centre of the field (drag with a wind milling
+propeller may be higher than expected) and only lower final stages
+of flap when there is no doubt the field can be reached. Sideslip
+as required to lose excess altitude. Plan for slowest short field
+landing but above all else do not stall.
+
+When committed to landing extend Flaps to FULL then select BATT/ALT switch to OFF. 
+ Seat belts should be tight and touchdown made at the
+slowest speed possible.
+
+\textcolor{red}{Add Power-On Landing and Ditching}
+\subsection{FIRES}
+%\subsubsection{ENGINE FIRE DURING START}
+%
+%\textcolor{red}{Nothing to add to checklist?} 
+%
+
+\subsubsection{ENGINE FIRE IN FLIGHT}
+
+The key to dealing with an engine fire is to stop the flow of fuel
+to the engine compartment. Put the mixture to IDLE CUT-OFF, switch
+Fuel Selector OFF, and select Boost Pump OFF. Close cabin heat and
+air vents. All electrical power can be removed ahead of the firewall
+by selecting the ESS BUS FEED switch to EMER (to keep the avionics powered to allow a Mayday call) and the BATT/ALT switch to OFF.
+
+\subsubsection{ELECTRICAL FIRE}
+
+The EFIS internal battery will power it for 3 hours (if it is fully charged), so the aircraft's entire electrical system may be 
+shutdown if required due to electrical smoke or fire.  The EFIS will automatically shutdown 30 seconds
+after the electrical power is cut, but the automatic shutdown sequence may be cancelled by a momentary
+press of the left-most EFIS button.  The Turn Coordinator is powered from the Battery Bus, 
+and will continue to be powered even if the whole electrical system is shutdown.
+
+Fight the fire with the fire extinguisher, if required.  
+Close the vents prior to using the fire extinguisher, to increase its effectiveness.
+Open the vents after using the fire extinguisher to ventilate the cockpit.
+
+%\subsubsection{CABIN FIRE}
+%
+%Shutdown the electrical system.  Fight the fire with the fire extinguisher, if required.  
+%Close the vents prior to using the fire extinguisher, to increase its effectiveness.
+%Open the vents after using the fire extinguisher to ventilate the cockpit.
+%
+%\subsubsection{WING FIRE}
+%
+%Remove electrical power to items in the wing.  Select Nav/Strobe, Landing and Taxi Lights and Pitot Heat OFF.
+
+\subsection{OTHER}
+\subsubsection{STATIC SOURCE BLOCKAGE}
+
+If erroneous readings of the static system instruments (airspeed, altimeter and rate of climb) are suspected, the
+alternate static source valve should be opened, thus supplying air to those instruments from inside the cockpit.
+
+  \textcolor{red}{To avoid the possibility of large errors, the fresh air vents and cockpit heat should be closed. 
+The maximum errors will be ????}  Adjust the altitude and airspeed readings by the corrections shown in Section
+\ref{perf-sec-number}.
+
+\subsubsection{INADVERTENT ICING ENCOUNTER}
+\begin{enumerate*}
+  \item Confirm pitot heat is selected ON.
+  \item Turn back or change altitude to obtain an outside air temperature that is less conducive to icing.
+  \item Increase RPM to minimize ice build-up on the propeller blades.
+  \item Plan a landing at the nearest airport.  With extremely rapid ice build-up, select a suitable ``off-airport'' landing site.
+  \item Minimize flap extension if there is an ice build-up on the horizontal stabilizer, to reduce the risk of tail plane stall.
+  \item Use sideslip as required to improve forward visibility if the windscreen is obscured by ice.
+  \item Increase the approach speed by at least 10 kt, to reduce the risk of wing stall.
+  \end{enumerate*} 
+
+\subsubsection{ALTERNATOR FAILURE}
+
+Alternator failure is identified by a low voltage indication from
+the EIS 4000, which will cause the ENG WARN light to flash.
+
+The root fault may have been an over-voltage condition, in which case
+the over-voltage protection system will cause the ALT CB to trip,
+leading to a low voltage condition. While it is possible to put the
+alternator back on line by resetting the ALT CB, this is not recommended
+unless necessary for safety of flight.
+
+The BATT/ALT switch should be selected to BATT, then BATT + ALT to attempt
+to reset the alternator. If the alternator cannot be brought back
+on line the Standby Alternator can be used to provide up to 8 amps
+of power. Select the ESS BUS FEED to EMER, which provides power
+to the Essential Bus directly from the Battery Bus, bypassing the
+Battery Contactor. The Main Bus can then be shed by selecting the
+BATT/ALT switch to OFF. The EFIS will continue to run using its internal
+battery, however it can be restored to aircraft power by selecting
+the EFIS BU switch to ON. The loads on the Essential Bus and
+Battery Bus total less than 8 amps.
+
+The following systems are unpowered in this configuration:
+
+\begin{itemize*}
+\item Boost Pump
+\item Pitot Heat 
+\item Landing Light 
+\item Taxi Light 
+\item Position Lights 
+\item Strobe Lights 
+\item Engine Instrument Lighting (Map light on goose neck may be used to
+illuminate instrument panel) 
+\item CDI Lighting 
+\item Flaps 
+\item Starter 
+\item Wing Leveler 
+\item Microair 760 Com (COM 2) 
+\item Intercom 
+\item Low Oil Pressure Warning Light 
+\item Analog Tach and MP
+\item Defrost Fan
+\end{itemize*}
+The BATT/ALT switch may be selected to ON prior to landing to restore
+power to all systems.
+
+\subsubsection{STARTER ENGAGED LIGHT ILLUMINATED}
+The STARTER ENGAGED caution light illuminates whenever the starter is engaged.  If this light remains illuminated after
+the starter switch has been released, it indicates that the starter relay is stuck closed, and the starter is still
+powered.
+ Continuing to supply power to the
+starter will eventually result in complete loss of electrical system power, substantial starter damage, and possible
+damage to other electrical system components.  If the starter is stuck closed, the only way to remove power from the
+starter is to select the BATT/ALT switch to OFF.
+
+
+\subsubsection{WING-LEVELER MALFUNCTION}
+
+Press the red Wing-Leveler/Trim Disconnect button on the control stick, and hold it.  This removes power from the servo, and should cause it to release.
+Select the Wing-Leveler Power switch OFF (RH console), then release the Wing-Leveler/Trim Disconnect button.  
+%If required, the control rod from the servo to the controls may be disconnected by pulling the ``pip'' pin located at the base of the front control stick, between the stick and the front spar area.
+
+\subsubsection{RUNAWAY TRIM}
+
+Press the red Wing-Leveler/Trim Disconnect button on the control stick, and hold it.  Select the Trim Power switch OFF (RH console), then release the Wing-Leveler/Trim Disconnect button.
+
+\subsubsection{HIGH CO}
+
+Decrease power.  Set mixture well lean of peak (stops CO production).  Close both cabin heat controls.  Open the vents.  Monitor the CO Monitor readings.  
+Immediate action is required if the red light is illuminated.  
+Consider slowing the aircraft and cracking the canopy open if there is not an immediate decrease in the CO levels.
+
+\subsubsection{LANDING WITH NO ELEVATOR CONTROL}
+\textcolor{red}{Add this item after in-flight assessment}
+
+\subsubsection{SPIN RECOVERY}
+\textcolor{red}{The following text is preliminary, pending flight test validation.}
+
+Upright spin - The upright spin recovery procedure is:
+\begin{enumerate*}
+  \item Retard throttle to idle.
+  \item Retract flaps, if extended.
+  \item Place ailerons to neutral position.
+  \item Apply and hold full rudder opposite to spin direction.  If the visibility of the ground does not allow the spin direction to be determined, use the turn needle --- depress the rudder on the opposite side to that of the turn needle.
+  \item Just after the rudder reaches the stop, move the stick briskly forward far enough to break the stall.
+  \item Hold these control inputs until rotation stops.  Premature relaxation of the recovery control inputs may prevent spin recovery.
+  \item As rotation stops, neutralize the rudder, and recover from the dive, using g as required to stay below $V_{NE}$ without exceeding the load factor limit.  Aggressive use of g early in the recovery will minimize the airspeed build-up.
+  \end{enumerate*}
+  
+Inverted spin - The inverted spin recovery procedure is:
+\begin{enumerate*}
+  \item Retard throttle to idle.
+  \item Retract flaps, if extended.
+  \item Place ailerons to neutral position.
+  \item Confirm spin direction by reference to the turn needle --- the turn needle moves to the side of the spin direction.  Apply and hold full rudder opposite to spin direction.  
+  \item Just after the rudder reaches the stop, move the stick briskly \textbf{aft} far enough to break the stall.
+  \item Hold these control inputs until rotation stops.  Premature relaxation of the recovery control inputs may prevent spin recovery.
+  \item As rotation stops, neutralize the rudder, and recover from the dive, using g as required to stay below $V_{NE}$ without exceeding the load factor limit.  Aggressive use of g early in the recovery will minimize the airspeed build-up.
+  \end{enumerate*}

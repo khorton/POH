@@ -1,0 +1,25 @@
+% EFIS Instrument Error Chart
+%% try boxedminipage.sty to get box around figure, to help separate two figures if there are more than one per page
+\begin{figure}[t]
+% \addcontentsline{toc}{section}{Figure \ref{EFIS-asi-error} EFIS Airspeed Instrument Error}
+\addcontentsline{toc}{section}{EFIS AIRSPEED INSTRUMENT ERROR}
+\centering{
+  \begin{perfhdr}EFIS AIRSPEED\\
+  INSTRUMENT ERROR\\
+  \end{perfhdr}
+  % details of EFIS
+  \centering{\begin{minipage}{5in}\begin{tabbing}
+  EFIS Make - Model:aaaaa\= \kill
+  EFIS Make \& Model:\>Dynon Development D-10A\\
+  Part \#:\>100321- Rev 0\\
+  Serial \#:\>004439\\
+  Date of ground test:\>27 Apr 2004
+  \end{tabbing}\end{minipage}}
+  \begin{center}
+  \input{../graphs/efis_error}\end{center}  % for gnuplot epslatex, latex or pslatex mode
+}
+\caption{EFIS Airspeed Instrument Error}
+\label{EFIS-asi-error}
+\end{figure}
+
+

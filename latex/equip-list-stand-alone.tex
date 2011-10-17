@@ -1,0 +1,84 @@
+%!TEX TS-program = ./custom_compile.py
+
+%
+%  equip-list-stand-alone
+%
+%  Created by Kevin Horton on 2008-08-05.
+%  Copyright (c) 2008 __MyCompanyName__. All rights reserved.
+%
+\documentclass[]{article}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+
+% Uncomment some of the following if you use the features
+%
+% Running Headers and footers
+%\usepackage{fancyhdr}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+% More symbols
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+% \usepackage{minitoc}
+% \newlength{\minitocspacebefore} % define vertical space between chapter name and minitoc
+% \setlength{\minitocspacebefore}{10ex}
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+
+%\newif\ifpdf
+%\ifx\pdfoutput\undefined
+%\pdffalse % we are not running PDFLaTeX
+%\else
+%\pdfoutput=1 % we are running PDFLaTeX
+%\pdftrue
+%\fi
+\usepackage{color}
+\usepackage{tabularx}
+  \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+\title{Equipment List --- RV-8 C-GNHK}
+\author{  }
+
+\date{05 August 2008}
+
+\begin{document}
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\maketitle
+
+
+% \begin{abstract}
+% \end{abstract}
+
+
+
+% \include{equip-list}
+\input{equip-list}
+
+\end{document}

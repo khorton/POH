@@ -1,0 +1,71 @@
+% Cruise Power Chart 
+% Fuel Flow vs power from Lycoming Operator's Manual Curve 12699B, pg 3-22, converted
+% from lb/hr to USG/hr using 6.01 lb/USG
+\settowidth{\colOne}{PRESSURE}
+\settowidth{\colTwo}{FLOW}
+\settowidth{\colThree}{BEST POWER}
+
+\begin{sidewaysfigure}[t]
+% \addcontentsline{toc}{section}{Figure \ref{Cruise-power} Cruise Power}
+\addcontentsline{toc}{section}{CRUISE POWER}
+\begin{center}
+\begin{perfhdr}CRUISE POWER
+\end{perfhdr}
+%\vspace{5ex}
+\begin{minipage}{9in}
+\begin{minipage}{5in}
+NOTES:
+\begin{enumerate*}
+\item Add 0.4" M.P. for each 10\textdegree C above standard temperature.  
+\item Subtract 0.4" M.P. for each 10\textdegree C below standard temperature.
+\item If above standard temperature precludes obtaining the desired M.P., use the next higher RPM/M.P. with appropriate temperature correction to M.P.
+\end{enumerate*}
+
+\end{minipage}
+\hfill
+\begin{boxedminipage}{3in}
+\begin{center}NOTE\end{center}
+Mixture must be full rich when above 75\% power. Lean using fuel flow meter at 75\% power or less.
+\end{boxedminipage}
+\end{minipage}\\
+\vspace{\perfnoteskip}
+%\small
+\begin{tabular}{|r|cc||c|c|c|c||c|c|c|c||c|c|c|c|c|}
+\hline
+&&&\multicolumn{4}{c||}{75\% POWER}&\multicolumn{4}{c||}{65\% POWER}&\multicolumn{5}{c|}{55\% POWER}\\
+&&&\multicolumn{4}{c||}{150 HP}&\multicolumn{4}{c||}{130 HP}&\multicolumn{5}{c|}{110 HP}\\
+\hline
+\multirow{4}{\colOne}{\centering PRESSURE ALTITUDE (FT)}&\multicolumn{2}{r||}{RPM}&
+2400&2500&2600&2700&2300&2400&2500&2600&2200&2300&2400&2500&2600\\
+\cline{2-16}
+&\multirow{2}{\colTwo}{\centering FUEL FLOW}&\multicolumn{1}{|l||}{BEST ECON.}&10.2&10.3&10.4&10.7&
+8.9&9.1&9.2&9.4&7.7&7.9&8.0&8.2&8.3\\
+&&\multicolumn{1}{|l||}{BEST POWER}&12.0&12.1&12.3&12.5&10.5&10.7&10.9&11.0&
+9.1&9.3&9.5&9.6&9.8\\
+\cline{2-16}
+&\multicolumn{2}{c||}{STD. TEMP}&\multicolumn{4}{c||}{MANIFOLD PRESS.}&\multicolumn{4}{c||}{MANIFOLD PRESS.}&\multicolumn{5}{c|}{MANIFOLD PRESS.}\\
+\hline
+\hline
+0&\multicolumn{2}{c||}{15 \textdegree C}&25.4&24.5&23.6&22.8&23.7&22.8&22.0&21.2&22.0&21.0&20.2&19.5&18.9\\
+\hline
+2,000&\multicolumn{2}{c||}{11 \textdegree C}&24.9&23.9&23.1&22.3&23.2&22.3&21.5&20.7&21.5&20.5&19.7&19.0&18.4\\
+\hline
+4,000&\multicolumn{2}{c||}{7 \textdegree C}&24.4&23.4&22.6&21.9&22.7&21.8&21.0&20.3&21.0&20.0&19.3&18.5&17.9\\
+\hline
+6,000&\multicolumn{2}{c||}{3 \textdegree C}&23.9&23.0&22.1&21.5&22.3&21.4&20.5&19.8&20.5&19.6&18.9&18.1&17.5\\
+\hline
+8,000&\multicolumn{2}{c||}{-1 \textdegree C}&23.5&22.5&21.7&21.1&21.9&21.0&20.1&19.4&20.1&19.2&18.5&17.7&17.1\\
+\hline
+10,000&\multicolumn{2}{c||}{-5 \textdegree C}&--&--&--&--&21.5&20.6&19.7&19.0&19.7&18.9&18.1&17.3&16.7\\
+\hline
+12,000&\multicolumn{2}{c||}{-9 \textdegree C}&--&--&--&--&--&20.2&19.3&18.7&19.3&18.5&17.7&16.9&16.4\\
+\hline
+
+\end{tabular}
+\normalsize 
+\end{center}
+\caption{Cruise Power}
+\label{Cruise-power}
+\end{sidewaysfigure}
+
+

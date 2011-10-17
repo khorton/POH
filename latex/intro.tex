@@ -1,0 +1,235 @@
+% !iTeXMac(input): POH.tex
+\title{Pilot's Operating Handbook\\
+[1in]RV-8 C-GNHK\\
+[0.25in]Ser. No. 80427}
+
+\author{Kevin Horton}
+
+\date{29 Aug 2011}
+
+\maketitle \clearpage
+
+%\vfill
+%\centering Typeset with \LaTeXe
+%\vfill
+\cleardoublepage \setcounter{tocdepth}{0} 
+
+% only need chapter names in main TOC
+%\newsavebox{\TOCtitle}
+%\sbox{\TOCtitle}{\bfseries \sffamily \Huge TABLE OF CONTENTS \textnormal}
+%\centering \usebox{\TOCtitle}
+\tableofcontents{}
+
+%\listoffigures{}
+\clearpage
+
+%\listoffigures
+%%\clearpage
+%\cleardoublepage
+%\vfill
+\mainmatter
+
+%\layout % show page layout.  Needs layout package.
+%\pagediagram % show page layout.  Needs layouts package.
+%% Following three lines show a minipage diagram, with margins shown
+%\currentpage
+%\setlayoutscale{0.5}
+%\pagedesign
+%\setcounter{chapter}{1}
+\chapter{GENERAL} \vspace{\minitocspacebefore} \minitoc \clearpage
+
+% 3-view
+%\addcontentsline{toc}{section}{\numberline{}THREE-VIEW}
+\addcontentsline{toc}{section}{THREE-VIEW}
+
+\begin{figure}
+	\begin{center}
+		
+		\begin{overpic}
+			% The following command works with the pspicture package
+			% {../Diagrams/3-view/3view} \put(47.2,13){\Line(0,11)} \put(0.6,13){\Line(0,11)} \put(23.25,23){23'} \arrowlength{4pt} \put(22.5,23.4){\Vector(-21.9,0)} \put(25.3,23.4){\Vector(21.9,0)} \put(44,79.4){\Line(5,0)} \put(42,91.8){\Line(7,0)} \put(47,85){\textcolor{red}{5' 7''}} \put(48.3,84.5){\Vector(0,-5.1)} \put(48.3,86.7){\Vector(0,5.1)} \put(45.4,79.5){\Line(0,-2.8)} \put(3.2,89){\Line(0,-12.2)} \put(23.4,77){\textcolor{red}{21'}} \put(22.65,77.4){\Vector(-19.45,0)} \put(25.95,77.4){\Vector(19.45,0)} 
+			% The following command works with the pict2e package
+			{../Diagrams/3-view/3view} \put(47.2,13){\line(0,1){11}} \put(0.6,13){\line(0,1){11}} \put(23.25,23){23'} \put(22.5,23.4){\vector(-1,0){22}} \put(25.3,23.4){\vector(1,0){22}} \put(49,79.4){\line(-1,0){50.4}} \put(42,91.8){\line(1,0){7}} \put(47,85){5' 10''} \put(48.3,84.5){\vector(0,-1){5.1}} \put(48.3,86.7){\vector(0,1){5.1}} \put(45.4,79.5){\line(0,-1){2.8}} \put(3.2,89){\line(0,-1){12.2}} \put(23.4,77){21'} \put(22.65,77.4){\vector(-1,0){19.45}} \put(25.95,77.4){\vector(1,0){19.45}} \put(-1.4,95.5){\line(1,0){7}} \put(-2,86.85){7' 10''} \put(-0.7,86.35){\vector(0,-1){6.95}} \put(-0.7,88.55){\vector(0,1){6.95}} 
+		\end{overpic}
+	\end{center}
+	\caption{Three View} 
+\end{figure}
+\clearpage 
+\section{INTRODUCTION} This Pilot's Operating Handbook contains nine sections with all the information required to operate the aircraft. 
+
+\textcolor{red}{Items in red text are preliminary, and are subject to change pending the results of ground and flight tests.}
+
+Section 1 provides basic data and information of general interest. It contains definitions or explanations of abbreviations and terminology commonly used.
+
+This aircraft is certificated in the Amateur-Built category. The regulations governing the Amateur-Built category contain only very limited performance requirements, and no flight characteristics requirements. By virtue of its amateur-built status, all persons entering this aircraft do so at their own risk.
+
+\section{DESCRIPTIVE DATA} 
+\subsection{ENGINE} 
+\begin{Description}
+	\item[Engine Manufacturer:] Lycoming 
+	\item[Engine Assembler:] Aerosport Power, Kamloops, B.C. 
+	\item[Engine Model Number:] IO-360-A1B6 
+	\item[Engine Type:] Four cylinder, Direct Drive Horizontally Opposed, Air-Cooled, Fuel-Injected with Inverted Oil System 
+	\item[Horsepower Rating:] 200 BHP 
+	\item[Maximum Engine Speed:]2700 RPM 
+	\item[Displacement:] 361 $\mathrm{in^{3}}$ 
+	\item[Compression Ratio:] 8.7:1 
+	\item[Time Between Overhaul:] 2000 hr 
+\end{Description}
+
+\subsection{PROPELLER} 
+\begin{Description}
+	\item[Manufacturer:] MT 
+	\item[Model:] MTV-12-B-C/C183-59b 
+	\item[Number of blades:] 3 wood core blades with stainless steel leading edges
+	\item[Diameter:] 72.05 inches (183 cm)
+	\item[Type:] Hydraulically Actuated Constant Speed 
+        % TBO data from MT Service Bulletin No 1
+	\item[Time Between Overhaul:] 1800 hr or 72 months 
+\end{Description}
+
+\subsection{FUEL} 
+\begin{Description}
+	\item[Total Fuel Capacity:] 163.5 l (43.2 USG) 
+	\item[Usable Fuel Capacity:] 162.8 l (43 USG)
+	\item[Approved Fuel Grades:] 100/130\\
+	100 (Green)\\
+	100LL (Blue) 
+\end{Description}
+
+\subsection{OIL} 
+\begin{Description}
+	\item[Oil Capacity:]8 US qts 
+	\item[Specification:]Ref Lycoming Operator's Manual Pg 3-12B 
+\end{Description}
+
+% @{} at start of column spec used to supress space to the left of the tabular.  See LaTeX Manual, pg 205-206.
+\begin{tabular}
+	{@{}lcc} Approved Grades& MIL-L-6082B& MIL-L-22851\tabularnewline & & Ashless Dispersant Grades\tabularnewline All Temperatures& --& SAE 15W50 or SAE 20W50\tabularnewline Above 27\textdegree C (80\textdegree F)& SAE 60& SAE 60\tabularnewline Above 16\textdegree C (60\textdegree F)& SAE 50& SAE 40 or 50\tabularnewline -1\textdegree C to 32\textdegree C (30\textdegree F to 90\textdegree F)& SAE 40& SAE 40\tabularnewline -18\textdegree C to 21\textdegree C (0\textdegree F to 70\textdegree F)& SAE 30& SAE 40, 30 or 20W40\tabularnewline Below -12\textdegree C (10\textdegree F)& SAE 20& SAE 30 or 20W30\tabularnewline 
+\end{tabular}
+
+\subsection{MAXIMUM WEIGHTS} 
+\begin{Description}
+	
+	%\item[Maximum Take-Off/\\Landing Weight:] 816.5 kg (1800 lb)\\
+	%      \item[Max Take-Off Weight:] 1900 lb (861.8 kg)
+	%      \item[Max Landing Weight:] 1900 lb (861.8 kg)
+	
+	\item[Max Take-Off Weight:] \theMTOW \space lb (\theMTOWkg .\theMTOWkgdecimal \space kg) 
+	\item[Max Landing Weight:] \theMTOW \space lb (\theMTOWkg .\theMTOWkgdecimal \space kg) 
+%	\item[Max Passenger Weight:] 300 lb (136.1 kg) (subject to Weight \& Balance) 
+%	\item[Max Baggage Weight:] 125 lb (56.7 kg) (subject to Weight \& Balance) 
+	\item[Empty Weight :] 1194 lb (542 kg) (Incl full oil) - Weighed 27 Apr 2010, corrected for autopilot installation
+	\item[Max Useful Load:]  706 lb (320 kg) (subject to Weight \& Balance) 
+\end{Description}
+
+\subsection{SPECIFIC LOADINGS} 
+\begin{Description}
+	\item[Wing Loading:]17.3 $\mathrm{lb/ft^{2}}$ 
+	\item[Power Loading:]9.5 $\mathrm{lb/hp}$ 
+\end{Description}
+
+\section{NOTES, CAUTIONS AND WARNINGS} Specific items requiring emphasis are expanded upon and ranked in increasing order of importance in the form of a NOTE, CAUTION or WARNING.
+
+\begin{Note}
+  Expands on information which is considered essential to emphasize.  Information contained in notes may also be safety related.
+\end{Note}
+
+\begin{NoteCtr}[CAUTION]
+  Provides information that may result in damage to equipment if not followed.
+  \end{NoteCtr}
+
+\begin{NoteCtr}[WARNING]
+  Emphasizes information that may result in personal injury or loss of life if not followed.
+  \end{NoteCtr}
+
+
+\section{TERMINOLOGY AND ABBREVIATIONS} 
+\subsection{GENERAL AIRSPEED TERMINOLOGY} 
+\begin{Description}
+	\item[KIAS] \textbf{Knots Indicated Airspeed} is the speed shown on the airspeed indicator assuming no instrument error, expressed in knots.
+	
+	%   \item[KIAS] IAS in Knots.
+	
+	\item[KCAS] \textbf{Knots Calibrated Airspeed} is indicated airspeed corrected for position and instrument error, expressed in knots. Calibrated airspeed is equal to true airspeed in standard atmosphere at sea level.
+	
+	%    \item[KCAS] CAS in Knots.
+	
+	\item[KTAS] \textbf{Knots True Airspeed} is the airspeed relative to undisturbed air, expressed in knots, which is KCAS corrected for altitude, temperature and compressibility. 
+	\item[GS] \textbf{Ground Speed} is the speed of the aircraft relative to the ground. 
+	\item[$\mathrm{V_{A}}$] \textbf{Manoeuvring Speed} is the maximum speed at which abrupt full control deflection will not overstress the aircraft. 
+	\item[$\mathrm{V_{FE}}$] \textbf{Maximum Flap Extension Speed} is the highest speed permissible with wing flaps in a prescribed extended position. 
+	\item[$\mathrm{V_{NO}}$] \textbf{Maximum Structural Cruising Speed} is the speed that should not be exceeded except in smooth air, and then only with caution. 
+	\item[$\mathrm{V_{NE}}$] \textbf{Never Exceed Speed} is the speed limit that may not be exceeded at any time. 
+	\item[$\mathrm{V_{S}}$] \textbf{Stalling Speed} is the minimum steady flight speed at which the aircraft is controllable in a specified configuration. 
+	\item[$\mathrm{V_{S_{0}}}$] \textbf{Stalling Speed in the landing configuration} at the most forward centre of gravity. 
+	\item[$\mathrm{V_{X}}$] \textbf{Best Angle of Climb Speed} is the speed which results in the greatest altitude gain in a given horizontal distance. 
+	\item[$\mathrm{V_{Y}}$] \textbf{Best Rate of Climb Speed} is the speed which results in the greatest altitude gain in a given time. 
+\end{Description}
+
+\subsection{METEOROLOGICAL TERMINOLOGY} 
+\begin{Description}
+	\item[ISA] \textbf{International Standard Atmosphere} is a nominal atmosphere where air is a dry perfect gas with a temperature of 15\textdegree C (59\textdegree F) at sea level. The pressure at sea level is 29.92 in.\ Hg. The temperature gradient from sea level to 36,089 ft is -1.98\textdegree C per 1000 ft. 
+	\item[OAT] \textbf{Outside Air Temperature} is the free static air temperature. It is obtained from meteorological sources or in-flight instruments adjusted for instrument error and compressibility effects. 
+	\item[Pressure Altitude] \textbf{Pressure Altitude} is the altitude read from an altimeter when the altimeter's barometric scale has been set to 29.92 in.\ Hg, assuming zero position and instrument error (instrument error is assumed to be zero in this POH except where indicated). 
+\end{Description}
+
+\subsection{POWER TERMINOLOGY} 
+\begin{Description}
+	\item[BHP]\textbf{Brake Horsepower} is the power developed by the engine. 
+	\item[RPM]\textbf{Revolutions Per Minute} is engine speed. 
+	\item[MP]\textbf{Manifold Pressure} is the absolute pressure measured in the engine's induction system, expressed in inches of mercury (in.\ Hg).
+	
+	%  \item [Takeoff Power] Maximum power permissible for takeoff.
+	%  \item [Maximum \\
+	%  Continuous Power] Maximum power permissible continuously during flight.\\
+	%  \item [Maximum Climb Power] Maximum power permissible during climb.
+	%  \item [Maximum Cruise Power] Maximum power permissible during cruise.
+\end{Description}
+
+\subsection{AIRCRAFT PERFORMANCE TERMINOLOGY} 
+\begin{Description}
+	\item [Climb Gradient] \textbf{Climb Gradient} is the ratio of the change in height during a climb, to the horizontal distance covered in the same time interval. 
+	\item [Demonstrated \\
+	Crosswind Velocity] \textbf{Demonstrated crosswind velocity} is the velocity of the crosswind component for which adequate control of the aircraft during takeoff and landing has been demonstrated during flight tests. The value shown is not considered to be limiting.
+	
+	%      \item[Accelerate-Stop \\
+	%      Distance] \textbf{Accelerate-Stop Distance} is the distance to accelerate to a specified speed and, assuming engine
+	%      failure when that speed is attained, bring the aircraft to a stop on the runway.
+	
+	\item[Usable Fuel]\textbf{Usable Fuel} is the fuel that can be safely used in flight. 
+	\item[Unusable Fuel]\textbf{Unusable Fuel} is the fuel that can not be safely used in flight. 
+	\item[GPH]\textbf{Gallons Per Hour} is the amount of fuel (in US gallons) consumed per hour.
+	
+	%      \item[NMPG]\textbf{Nautical Miles Per Gallon} is the distance (in nautical miles) which can be expected per US
+	%      gallon of fuel consumed at a specific engine power setting and/or flight configuration.
+	
+	\item[g]\textbf{g} is acceleration due to gravity. 
+\end{Description}
+
+\subsection{WEIGHT AND BALANCE TERMINOLOGY} 
+\begin{Description}
+	\item[Reference Datum]\textbf{Reference Datum} is an imaginary vertical plane from which all horizontal distances are measured for balance purposes. 
+	\item[Station]\textbf{Station} is a location along fuselage given in terms of distance from the reference datum. 
+	\item[Arm]\textbf{Arm} is the horizontal distance from the reference datum to the centre of gravity of an item. 
+	\item[Moment]\textbf{Moment} is the product of weight of an item multiplied by its arm. (Moment divided by the constant 1000 is used in this handbook to simplify balance calculations by reducing the number of digits.) 
+	\item[Centre of Gravity (CG)]\textbf{Centre of Gravity} is the point at which an aircraft, or item, would balance if suspended. 
+	\item[CG Arm]\textbf{Centre of Gravity Arm} is the am obtained by adding the aircraft individual moments and dividing the sum by the total weight. 
+	\item[CG Limits]\textbf{Centre of Gravity Limits} are the extreme centre of gravity locations within which the aircraft must be operated at a given weight.
+	
+	%  \item[Usable Fuel] Fuel available for flight planning.
+	%  \item[Unusable Fuel] Fuel quantity that cannot be safely used in flight.
+	
+	\item[Empty Weight]\textbf{Empty Weight} is the weight of aircraft including unusable fuel and full engine oil. 
+	\item[Useful Load]\textbf{Useful Load} is the difference between takeoff weight and empty weight. 
+	\item[Payload]\textbf{Payload} is the weight of occupants, cargo, and baggage. 
+	\item[Gross Weight]\textbf{Gross Weight} is the loaded weight of the aircraft. 
+	\item[Maximum Takeoff Weight]\textbf{Maximum Takeoff Weight} is the maximum weight approved for start of the takeoff run. 
+	\item[Maximum Landing Weight]\textbf{Maximum Landing Weight} is the maximum weight approved for the landing touchdown. 
+	\item[Tare]\textbf{Tare} is the weight of chocks, blocks, stands, etc. used when weighing an aircraft, and is included in the scale readings. Tare is deducted from the scale readings to obtain the actual (net) aircraft weight. 
+\end{Description}
+
+\subsection{ABBREVIATIONS} 
+\textcolor{red}{To be added}
+
+\cleardoublepage 

@@ -1,0 +1,30 @@
+# gnuplot script file
+# 
+# contains commands to load all gnuplot files.
+# calling this file from gnuplot causes all plots to be rebuilt.
+
+load 'vne_chart.gp'
+load 'g-chart1800.gp'
+load 'g-chart1900.gp'
+load 'asi_error.gp'
+load 'alt_error_flaps_up.gp'
+load 'efis_error.gp'
+load 'stall.gp'
+load 'temp_conv.gp'
+load 'cg_chart1800.gp'
+load 'cg_chart1900.gp'
+load 'cruise_speed.gp'
+load 'cruise_range.gp'
+load 'cruise_speed_wheel_pants_off.gp'
+load 'cruise_range_wheel_pants_off.gp'
+load 'wb-cg-chart1800.gp'
+load 'wb-cg-chart1900.gp'
+load 'wb-moment-chart1800.gp'
+load 'wb-moment-chart1900.gp'
+load 'glide.gp'
+load 'wb-loading-graph.gp'
+load 'buffer.gp'
+load 'efis_asi_err_flaps_up.gp'
+load 'ias_error_no_inst_corr_flaps_up.gp'
+load 'wt_conv.gp'
+load 'vol_conv.gp'

@@ -1,0 +1,378 @@
+% !iTeXMac(input): POH.tex
+\changepage{\checklistTextHeight}{\checklistTextWidth}{\checklistEvenSideMargin}{\checklistOddSideMargin}{}{\checklistTopMargin}{0pt}{0pt}{0pt}% original settings, with no room for header or footer
+
+%% next three lines show a mini page diagram with margins
+%\currentpage
+%\setlayoutscale{0.5}
+%\pagedesign
+
+\small
+%\footnotesize
+%\addcontentsline{toc}{section}{\numberline { }EMERGENCY CHECKLIST}
+%\addcontentsline{toc}{section}{\numberline EMERGENCY CHECKLIST}
+\addcontentsline{toc}{section}{EMERGENCY CHECKLISTS}
+%\mtcaddsection[EMERGENCY CHECKLIST]
+\chead{\Large EMERGENCY CHECKLISTS} % puts "EMERGENCY CHECKLIST" in the header.
+% \ohead{DRAFT --- \thistime \ \cdndate\today}
+\ohead{Created --- \thistime \ \cdndate\today}
+
+\begin{multicols}{2}
+
+%\section{EMERGENCY CHECKLISTS} % leave this line commented out, 
+%as it destroys the visual flow of the checklist page.
+% Find a way to get "EMERGENCY CHECKLISTS" in the header instead.
+\subsection*{ENGINE FAILURES}
+%\renewcommand\sectionmark{\markright {EMERGENCY CHECKLISTS}}
+
+
+\subsubsection*{\fcolorbox{black}{red}{ENGINE FAILURE DURING TAKEOFF RUN}}
+
+\begin{enumerate*}
+  \item Throttle \dotfill IDLE
+  \item Brakes \dotfill APPLY
+  \item Flaps \dotfill RETRACT
+  \item \emph{If insufficient runway remains:}
+  \begin{itemize*}
+%    \item Mixture \dotfill IDLE CUT-OFF
+    \item Fuel Selector \dotfill OFF
+    \item Ignition Switches (Both) \dotfill OFF
+    \item BATT/ALT \dotfill OFF
+    \end{itemize*}
+  \end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{red}{ENGINE FAILURE IMMEDIATELY AFTER TAKEOFF}}
+
+\begin{enumerate*}
+\item Airspeed \raggedright \dotfill 115 KIAS (Flaps UP)\\\hfill80 KIAS (Flaps DOWN)
+\item Mixture \dotfill IDLE CUT-OFF
+\item Prop \dotfill MIN RPM
+\item Fuel Selector \dotfill OFF
+\item Ignition Switches (Both) \dotfill OFF
+\item Flaps \dotfill AS REQUIRED
+\item BATT/ALT \dotfill OFF
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{red}{ENGINE FAILURE DURING FLIGHT}}
+
+\begin{enumerate*}
+\item Airspeed \dotfill 115 KIAS
+\item Fuel Selector \dotfill SWITCH TANKS
+\item Boost Pump \dotfill ON
+\item Mixture \dotfill RICH
+\item Alternate Air \dotfill ON
+% \item Left Ignition Switch \dotfill ON, OFF, ON
+% \item Right Ignition Switch \dotfill ON, OFF, ON
+\item IGNITION, ELEC \dotfill ON, OFF, ON
+\item IGNITION, MAG \dotfill ON, OFF, ON
+\item Starter \dotfill START (if propeller is stopped)
+\item Transponder\dotfill 7700
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{yellow}{ROUGH RUNNING ENGINE}}
+
+\begin{enumerate*}
+\item Mixture \dotfill ADJUST
+\item Throttle \dotfill ADJUST
+\item Boost Pump \dotfill ON
+\item Fuel Selector \dotfill CHANGE TANKS
+\item Alternate Air \dotfill ON
+\suspend{enumerate*}
+\begin{Note}[CAUTION]
+If engine quits when ignition selected OFF, select the mixture to ICO, wait 10 seconds, then select the ignition back ON.
+Advance mixture slowly until engine restarts.
+\end{Note}
+\resume{enumerate*}
+% \item Left Ignition Switch \dotfill ON, OFF, ON
+% \item Right Ignition Switch \dotfill ON, OFF, ON
+\item IGNITION, ELEC \dotfill ON, OFF, ON
+\item IGNITION, MAG \dotfill ON, OFF, ON
+\item Prepare for power off landing
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{yellow}{HIGH OIL TEMPERATURE}}
+
+\begin{enumerate*}
+\item Oil Cooler Door \dotfill OPEN
+\item Oil temperature and pressure \dotfill MONITOR
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{yellow}{LOW FUEL PRESSURE}}
+
+\begin{enumerate*}
+\item Boost Pump \dotfill ON
+\item Fuel Selector \dotfill CHANGE TANKS
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{yellow}{LOW OIL PRESSURE}}
+
+\begin{enumerate*}
+\item OIL PRESS light \dotfill CHECK
+\item EIS Oil Pressure Indication \dotfill CHECK
+\suspend{enumerate*}
+%\begin{Note}
+%EIS oil pressure and OIL PRESS light use different transducers. In
+%case of discrepancy, suspect false warning.
+%\end{Note}
+\begin{Note}
+In case of discrepancy between indications, suspect false warning.
+\end{Note}
+\resume{enumerate*}
+\item \emph{If both indications confirm low oil pressure:}
+\begin{itemize*}
+  \item Land ASAP
+  \end{itemize*}
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{yellow}{AIR-START}}
+
+\begin{enumerate*}
+  \item Throttle \dotfill 1/4 OPEN
+  \item Prop \dotfill MAX RPM
+  \item Fuel Pressure \dotfill CHECK
+  \item \emph{If fuel pressure less than 14 psi:}
+  \begin{itemize*}
+    \item Boost Pump \dotfill ON
+    \item Fuel Selector \dotfill CHANGE TANKS
+    \end{itemize*}
+  \item Ignition Switches\dotfill BOTH ON
+  \item Mixture \dotfill IDLE CUT-OFF
+%  \item Mixture \raggedright \dotfill ADVANCE SLOWLY\\\hfill UNTIL ENGINE STARTS
+  \item Mixture \dotfill ADVANCE SLOWLY UNTIL ENGINE STARTS
+  \item \emph{When engine starts:}
+  \begin{itemize*}
+    \item Throttle \dotfill A/R
+    \item Boost Pump \dotfill OFF
+    \end{itemize*}
+  
+  \end{enumerate*}
+
+\subsection*{FORCED LANDINGS}
+\subsubsection*{\fcolorbox{black}{red}{EMERGENCY LANDING WITHOUT POWER}}
+
+\begin{enumerate*}
+\item Airspeed \raggedright \dotfill 115 KIAS (Flaps UP)\\\hfill80 KIAS (Flaps DOWN)
+\item Throttle \dotfill CLOSED
+\item Mixture \dotfill IDLE CUT-OFF
+\item Prop \dotfill MIN RPM
+\item Fuel Selector \dotfill OFF
+\item Ignition Switches (Both) \dotfill OFF
+\item Radio \dotfill TRANSMIT MAYDAY
+\item Flaps \dotfill A/R
+\item BATT/ALT \dotfill OFF
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{yellow}{EMERGENCY LANDING WITH POWER}}
+
+\begin{enumerate*}
+\item Radio \dotfill TRANSMIT MAYDAY
+\item Airspeed \dotfill 85 KIAS
+\item Flaps \dotfill 50\%
+\item Selected Field \dotfill FLY OVER
+\item Flaps \dotfill FULL
+\item Airspeed \dotfill 70 KIAS
+\item BATT/ALT \dotfill OFF
+\item Ignition Switches (Both) \dotfill OFF (after touchdown)
+\end{enumerate*}
+
+%\clearpage
+
+\subsubsection*{\fcolorbox{black}{red}{DITCHING}}
+
+\begin{enumerate*}
+\item Radio \dotfill TRANSMIT MAYDAY
+\item Flaps \dotfill FULL
+\item Airspeed \dotfill 70 KIAS
+\item Power \dotfill 300 FT/MIN DESCENT
+%\item Approach - High Wind \dotfill INTO WIND
+%\item - Light Wind \dotfill PARALLEL TO SWELLS
+\item Approach \raggedright \dotfill High Wind - INTO WIND\\\hfill Light Wind - PARALLEL TO SWELLS
+\item Face \dotfill CUSHION with folded coat
+\item \emph{Leaving Aircraft}
+
+\begin{itemize*}
+  \item Seat Belts \dotfill RELEASE
+  \item Canopy \dotfill OPEN
+  \item Aircraft \dotfill EXIT
+  \item Life Jacket \dotfill INFLATE 
+  \end{itemize*}
+\end{enumerate*}
+
+\subsection*{FIRES}
+\subsubsection*{\fcolorbox{black}{red}{FIRE DURING START ON GROUND}}
+\begin{enumerate*}
+  % \item Boost Pump \dotfill OFF
+  \item Mixture \dotfill IDLE CUT-OFF
+  \item Fuel Selector \dotfill OFF
+  \item Starter \dotfill OFF
+  \item BATT/ALT \dotfill OFF
+  \item Fire Extinguisher\dotfill OBTAIN
+  \item Aircraft\dotfill EVACUATE
+  \item Fire\dotfill EXTINGUISH
+  \end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{red}{ENGINE FIRE IN FLIGHT}}
+\begin{enumerate*}
+\item Mixture \dotfill IDLE CUT-OFF
+\item Fuel Selector \dotfill OFF
+\item Boost Pump \dotfill OFF
+\item Cabin Heat and Air \dotfill OFF
+\item ESS BUS FEED \dotfill EMER
+\item BATT/ALT \dotfill OFF
+\item Forced Landing \dotfill COMPLETE
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{red}{ELECTRICAL FIRE IN FLIGHT}}
+
+\begin{enumerate*}
+\item BATT/ALT \dotfill OFF
+\item STBY ALT \dotfill OFF
+\item ESS BUS FEED \dotfill NORM
+\item EFIS auto-shutdown \dotfill OVERRIDE (if EFIS required)
+\item Avionics \dotfill OFF
+\item All Other Switches (except Mag and TURN COORD)\dotfill OFF
+\item Vents/ Cabin Air/ Heat \dotfill CLOSED
+\item Fire Extinguisher \dotfill ACTIVATE
+\item Cabin \dotfill VENTILATE
+\end{enumerate*}
+
+\begin{Note}[WARNING]
+  Ventilate the cockpit ASAP after discharging the fire extinguisher.
+  \end{Note}
+  
+\subsubsection*{\fcolorbox{black}{red}{CABIN FIRE}}
+
+\begin{enumerate*}
+\item BATT/ALT \dotfill OFF
+\item STBY ALT \dotfill OFF
+\item ESS BUS FEED \dotfill NORM
+\item EFIS auto-shutdown \dotfill OVERRIDE (if EFIS required)
+\item Vents/ Cabin Heat \dotfill CLOSED
+\item Fire Extinguisher \dotfill ACTIVATE
+\item Cabin \dotfill VENTILATE
+\end{enumerate*}
+
+\begin{Note}[WARNING]
+  Ventilate the cockpit ASAP after discharging the fire extinguisher.
+  \end{Note}
+  
+\subsubsection*{\fcolorbox{black}{red}{WING FIRE}}
+
+\begin{enumerate*}
+\item Nav/Strobe Light Switch \dotfill OFF
+\item Landing \& Taxi Lights \dotfill OFF
+\item PITOT HEAT \dotfill OFF
+\end{enumerate*}
+
+\begin{Note}
+  Perform a sideslip to keep the flames away from the fuel tank and cockpit, and land as soon as possible.
+  \end{Note}
+
+\subsection*{OTHER}
+\subsubsection*{\fcolorbox{black}{yellow}{STATIC SOURCE BLOCKAGE}}
+\begin{enumerate*}
+  \item Vents/ Cabin Air/ Heat \dotfill CLOSED
+  \item Alternate Static Source Valve\dotfill  OPEN
+  \item Airspeed and altitude corrections\dotfill  APPLY
+  \end{enumerate*}
+
+\columnbreak
+\subsubsection*{\fcolorbox{black}{yellow}{ALTERNATOR FAILURE}}
+
+\begin{enumerate*}
+\item BATT/ALT \dotfill BATT, then BATT + ALT
+\item \emph{If failure continues:}
+
+\begin{itemize*}
+\item ESS BUS FEED \dotfill EMER
+\item \emph{If instrument lighting required:}
+
+\begin{itemize*}
+\item[\textbullet] Map Light \dotfill ON
+\end{itemize*}
+\item Radios \dotfill SELECT COM 1 (GNS 430)
+\item BATT/ALT \dotfill OFF
+\item STBY ALT \dotfill ON
+\item EFIS BU \dotfill ON
+\item Voltage \dotfill MONITOR
+%\item \emph{Prior to landing, if Main Bus powered equipment is required:}
+%\begin{itemize*}
+%\item BATT/ALT \dotfill ON
+%\end{itemize*}
+\item The following Main Bus powered equipment is inoperative:
+
+\begin{tabular}{ll}
+COM 2&Landing and Taxi Lights\\
+Intercom&CDI Lighting\\
+Pitot Heat&Eng. Instrument Lighting\\
+Flaps&Strobe Lights\\
+Boost Pump&Position Lights\\
+Analog Tach and MP&Low Oil Press. Light\\
+Autopilot&Defrost Fan\\
+\end{tabular}
+\item \emph{Prior to landing, if equipment powered from Main Bus is required:}
+\begin{itemize*}
+\item BATT/ALT \dotfill ON
+\end{itemize*}
+\end{itemize*}
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{yellow}{STARTER ENGAGED LIGHT ILLUMINATED}}
+\begin{enumerate*}
+  \item BATT/ALT \dotfill OFF
+  \item Aircraft \dotfill LAND ASAP
+  \end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{red}{AUTOPILOT MALFUNCTION}}
+\begin{enumerate*}
+  \item Trim/Autopilot Cut-out \dotfill PRESS AND HOLD
+  \item Autopilot Power Switch (Autopilot Control Head)\dotfill OFF
+  \item WING LVLR Switch (Right Console)\dotfill OFF
+  \item Trim/Autopilot Cut-out \dotfill RELEASE
+%  \item \emph{If failure continues:}
+%  \begin{itemize*}
+%    \item Wing Leveler/Control Stick ``pip'' Pin \dotfill PULL
+%    \end{itemize*}
+  \end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{red}{RUNAWAY TRIM}}
+\begin{enumerate*}
+  \item Trim/Autopilot Cut-out \dotfill PRESS AND HOLD
+  \item TRIM Switch \dotfill OFF
+  \item Trim/Autopilot Cut-out \dotfill RELEASE
+  \end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{red}{AIRBORNE EGRESS}}
+
+\begin{enumerate*}
+\item Helmet Jacks \dotfill UNPLUG
+\item Canopy Jettison Pins \dotfill REMOVE
+\item Canopy \dotfill UNLATCH \& PULL AFT
+\item Canopy \dotfill PUSH UP (lower head)
+\item Seat Belt \dotfill RELEASE
+\item Aircraft \dotfill EGRESS
+\end{enumerate*}
+
+\subsubsection*{\fcolorbox{black}{red}{CO MONITOR ALARM}}
+\begin{enumerate*}
+\item Power \dotfill REDUCE
+\item Mixture \dotfill WELL LEAN OF PEAK
+\item Cabin Heat (Both) \dotfill CLOSED
+\item Fresh Air Vents (Both) \dotfill OPEN
+\item CO Monitor \dotfill MONITOR READINGS
+\item \emph{If red light on CO Monitor remains illuminated:}
+
+  \begin{itemize*}
+    \item Airspeed \dotfill 80 KT MAX
+    \item Canopy \dotfill OPEN SLIGHTLY
+    \end{itemize*}
+\end{enumerate*}
+\end{multicols}
+
+
+%\cleardoublepage
+\normalsize
+\cleardoublepage
+\ohead{\leftmark} % put Section name back in outer header
+\chead{} % remove center header
+\changepage{\checklistTextHeight*-1}{\checklistTextWidth*-1}{\checklistEvenSideMargin*-1}{\checklistOddSideMargin*-1}{}{\checklistTopMargin*-1}{0pt}{0pt}{0pt}% original settings, with no room for header or footer
+

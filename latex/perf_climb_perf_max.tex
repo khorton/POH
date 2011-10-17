@@ -1,0 +1,103 @@
+% Time, Fuel and Distance to Climb table --- Max Power
+\begin{figure}[t]
+% \addcontentsline{toc}{section}{Figure \ref{TFD-to-climb-Max} Time, Fuel and Distance to Climb --- Maximum Power}
+\addcontentsline{toc}{section}{TIME, FUEL AND DISTANCE TO CLIMB --- MAXIMUM POWER}
+\begin{center}
+\begin{perfhdr}TIME, FUEL AND DISTANCE TO CLIMB\\
+MAXIMUM POWER\\
+\end{perfhdr}
+\Large
+\textcolor{red}{DATA TO BE CONFIRMED BY FLIGHT TEST}\normalsize \vspace{5ex} \\
+\begin{minipage}{4in}
+  \begin{flushleft}
+    CONDITIONS:\\
+    Flaps UP\\
+    2700 RPM\\
+    Full Throttle\\
+    Mixture Set at Placard Fuel Flow
+    Standard Temperature\\
+
+    \end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{1.5in}
+  \begin{tabular}{|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{MIXTURE SETTING}\\
+    \hline
+    PRESS ALT&GPH\\
+    \hline
+    S.L.&17\\
+    2000&16\\
+    4000&15\\
+    6000&14\\
+    8000&13\\
+    \hline
+    \end{tabular}
+  \end{minipage}
+\\
+\vspace{\perfnoteskip}
+    \raggedright NOTES:
+    \begin{enumerate*}
+      \item Add 1.0 USG of fuel for engine start, taxi and takeoff.
+%      \item Mixture leaned when power is at 75\% power or less (8,000 ft or above at standard temperature) for smooth
+%      engine operation and increased power.
+      \item Climb speed is 100 KIAS at sea level, decreasing by 1 kt per 1000 ft.
+      \item Increase time, fuel and distance by \textcolor{red}{XX\%} for each 10\textdegree C above standard
+      temperatures.
+      \item Distances shown are based on zero wind.
+      \end{enumerate*}
+
+\vspace{\perfnoteskip}
+% following lengths are used to set row widths to fit the text
+\settowidth{\colOne}{WEIGHT}
+\settowidth{\colTwo}{PRESSURE}
+\settowidth{\colThree}{TEMP}
+\settowidth{\colFour}{CLIMB}
+\settowidth{\colFive}{RATE OF}
+\settowidth{\colSix}{TIME}
+\settowidth{\colSeven}{USED}
+\settowidth{\colEight}{DIST.}
+
+\begin{tabular}{|c|r|r|r|r|r|r|r|}
+\hline
+\multirow{3}{\colOne}[\halfrowdrop]{\centering WEIGHT (LB)}&\multirow{3}{\colTwo}[\halfrowdrop]{\centering PRESSURE ALTITUDE (FT)}&
+\multirow{3}{\colThree}[\halfrowdrop]{\centering TEMP (\textdegree C)}&\multirow{3}{\colFour}[\halfrowdrop]{\centering CLIMB SPEED (KIAS)}&
+\multirow{3}{\colFive}[\halfrowdrop]{\centering RATE OF CLIMB (FT/MN)}&\multicolumn{3}{c|}{FROM SEA LEVEL}\\
+\cline{6-8}
+&&&&&\multicolumn{1}{m{\colSix}|}{\centering TIME (MN)}&\multicolumn{1}{m{\colSeven}|}{\centering FUEL USED (USG)}&\multicolumn{1}{m{\colEight}|}{\centering DIST. (NM)}\\
+\hline
+\hline
+% % START of copied data from python perf script
+% % Data use 95% of the calculated power to match the results from the flight test with the test the Hartzell prop
+1800&0&15&100&1870&0&0&0\\
+\hline
+&2,000&11&98&1700&1&0.3&2\\
+\hline
+&4,000&7&96&1530&2&0.6&4\\
+\hline
+&6,000&3&94&1370&4&0.9&6\\
+\hline
+&8,000&-1&92&1210&5&1.2&9\\
+\hline
+&10,000&-5&90&1050&7&1.5&12\\
+\hline
+&12,000&-9&88&910&9&1.9&16\\
+\hline
+&14,000&-13&86&760&12&2.3&20\\
+\hline
+&16,000&-17&84&620&14&2.8&25\\
+\hline
+&18,000&-21&82&480&18&3.4&32\\
+\hline
+&20,000&-25&80&340&23&4.1&41\\
+\hline
+% % END of copied data from python perf script
+\end{tabular}
+\end{center}
+\caption{Time, Fuel and Distance to Climb --- Maximum Power}
+\label{TFD-to-climb-Max}
+\end{figure}
+
+
+

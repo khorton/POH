@@ -1,0 +1,58 @@
+% !iTeXMac(input): POH.tex
+\chapter{PERFORMANCE}
+\label{perf-sec-number}
+\vspace{\minitocspacebefore}
+\minitoc
+\cleardoublepage
+
+%% following five commands to control the placement of figures on the pages
+%% these values are changed for the Performance Section to allow room 
+%% for two graphs on one page, with no text outside the figure.
+\renewcommand{\textfraction}{0.0} 
+\renewcommand{\topfraction}{1} 
+\renewcommand{\bottomfraction}{1} 
+\renewcommand{\floatpagefraction}{0.35} 
+\setcounter{totalnumber}{5} 
+
+\section{INTRODUCTION}
+Most of the information in the Performance Section is preliminary, based on analysis of
+ data from Van's Aircraft or the CAFE Foundation.
+The section will be completely revised once performance flight testing has been completed.
+\clearpage
+
+
+\input{perf_temp_conv_chart}        % Temperature Conversion Chart
+\input{perf_weight_conv_chart}      % Weight Conversion Chart
+\input{perf_vol_conv_chart}         % Volume Conversion Chart
+\input{perf_SSEC_IAS}               % Static Source Position Error, Airspeed Chart
+\input{perf_SSEC_Alt}               % Static Source Position Error, Altitude Chart
+\input{perf_ASI_inst_error}         % ASI Instrument Error Chart
+\input{perf_EFIS_ASI_inst_error}    % EFIS Instrument Error Chart
+\input{perf_EFIS_airspeed_error}    % EFIS Airspeed Error Chart --- Static Source Position Error + EFIS ASI inst error
+\input{perf_stall_speed}            % Stall Speed Chart
+\input{perf_TO_dist}                % Takeoff Performance
+\input{perf_ROC}                    % Rate of Climb Chart
+\input{perf_climb_perf_max}         % Time, Fuel and Distance to Climb table --- Max Power
+\input{perf_climb_perf_norm}        % Time, Fuel and Distance to Climb table --- Normal Climb Power
+\input{perf_cruise_pwr}             % Cruise Power Chart 
+%\input{perf_cruise_wheel_pants_ON}  % Cruise Speed Chart - Wheel Pants ON
+\input{perf_cruise_wheel_pants_OFF} % Cruise Speed Chart - Wheel Pants OFF
+%\input{perf_cruise_range_WP_ON}     % Cruise Range Chart - Wheel Pants ON
+%\input{perf_cruise_range_WP_OFF}    % Cruise Range Chart - Wheel Pants OFF
+\input{perf_landing}                % Landing Distance
+
+
+\clearpage
+
+\textcolor{red}{To be added once flight test data is available:
+\begin{enumerate*}
+\item Airspeed Calibration --- Normal Static Source --- Flaps Extended
+\item Airspeed Calibration --- Alternate Static Source --- All Flap Positions
+\item Altitude Calibration --- Normal Static Source --- Flaps Extended
+\item Altitude Calibration --- Alternate Static Source --- All Flap Positions
+\item Stall Speeds --- IAS
+%\item Range Profile
+\item Holding Speed and Fuel Flow
+\item Endurance Profile
+\end{enumerate*}}
+\cleardoublepage

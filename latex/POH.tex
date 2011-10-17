@@ -1,0 +1,413 @@
+%!TEX TS-program = ./custom_compile.py
+
+%! iTeXMac(project): POH.pTeXMac
+%% Multi-part RV-8 POH, created by Kevin Horton
+%% This is the master file, which includes the files for each section
+
+%% To get pdf output: 
+%% latex POH.tex
+%% dvips -t letter -o POH.ps POH.dvi
+%% ps2pdf POH.ps POH.pdf
+
+%% To Print
+%% Open in Adobe Acrobat Reader v7.0.5
+%% Select landscape orientation in Page Setup
+%% In the Print dialog box, select Odd Pages, Page Scaling - None, and deselect Auto-Rotate 
+%% and Center.  This will put the odd pages on the left side of the page.  Print the odd pages.
+%% Take the output, put it in the input tray, with the printed side up, and the printed end away 
+%% from the printer (i.e. the blank portion goes in the printer first).  Select Even Pages Only, 
+%% and print.
+
+%% Using latex then dvipdf puts the pages too high, so the header is off the top of the page.  
+%% Using pdflatex causes problems with many "non-pdf special ignored", as some of the 
+% % packages used are not compatible with pdflatex.  This results in some of the lines 
+%% in figures not drawn being drawn.
+
+% % If latex is used, the graphics files must be .eps files.  If starting with a pdf graphics file, care
+% % must be taken to ensure the conversion to .eps uses vector fonts.  Using ghostscript seems 
+% % to often result in bitmap fonts, possibly because TrueType fonts were used in the original
+% % pdf, rather than Type 1 fonts.
+
+% % To get eps graphics files from pdf files, with vector fonts, use pdftops -eps (part of xpdf 
+% % package).  The bounding box in resulting .eps file may be manually editted to get the 
+% % display correct, or a "bb= " statement can be put in the latex code that adds the graphic.
+
+%% Custom typeset scritp in iTexMac is "latex ${iTMInput}; dvips -t letter -o ${iTMInput}.ps ${iTMInput}.dvi;ps2pdf ${iTMInput}.ps ${iTMInput}.pdf; open ${iTMInput}.pdf"
+
+%% Chapter vs Sections - each major division in the POH is labeled as a "Section" in the
+%% printed output.  However, these divisions are called "Chapters" in LaTeX.  Thus each
+%% major division is labeled with \chapter, and the next division lower in the hierarchy is labeled
+%% \section.  It was deemed to be easier to do it this way than to do a major rework of the class
+%% and package files.
+
+% FOR FINAL PRINT!!
+% Add the aircraft registration in the page header, and remove the date in the page footer, 
+% see the scrpage2 portion of this file. 
+
+% TO DO
+% Trial picins package vice wrapfig to better handle figures in the vicinty of lists.
+% Are kg values really required?  Review AMA 549.  Review indicates kg values are probably only needed for placards.
+% Figure out how to reduce space after "NOTES" and the items when enumerate is used.
+% Intro - review General section.  Should there be more info here?
+% Intro - review Oil section against Lycoming Operator's Manual.  Should the "Ashless Dispersant Grades" text be in the right column?
+% emer.tex - write missing emer sections
+% emer - rework to match checklist
+% emer - static source blockage.
+% emer - icing encounter?
+% emer - speeds for emergency operation - add code to adjust weight for VA
+% emer checklist - checked against C177 to Static source blockage (following C177 order)
+% TOC.  Use tocloft to get "SECTION" over top of the list of chapter numbers.  See page 7-8 of tocloft.pdf.
+% Section TOCs - sort out how to handle Figure lines
+% Why is the List of Figures blank? - LOF  removed for now, perhaps it isn't needed.
+% Normal - finish Amplified Procedures
+% W&B chapter - complete
+% Perf chapter - complete.  Revise charts to have 1900 lb and 1800 lb numbers?
+% Perf - review mixture setting info from Mooney and Beech POHs - full rich at high power, or set specified fuel flow?  See Cruise Power chart, 
+% Perf - figure out how to make all wide charts the same width, and how to get mixture setting charts lined up on RH side.
+% Systems - sort out Overfull \hbox on Stick Grip diagram.
+% Systems - get up to date GNS 430W display picture
+% Systems - Get up-to-date panel diagram, with compass above glareshield
+% Systems - Add info on annunciator light  and trim indicator dimmer.
+% Systems - Check whether flux valve ON/OFF is discussed.
+% Service chapter - complete
+% look at format for small page size, suitable for cockpit carriage.
+% tweak float placement parametres to get perf figures at the top of pages. It seems like they are on float pages, and they are centered vertically.
+% Add 3-View with dimensions on page 4
+% Use \minisec where required to have an unnumbered heading close to following text.  See scrguien.pdf pg 73
+
+% REVIEW AT END
+%
+% Review quote symbols.  Need double ` for left quote, and double ' for right quote.   OK as of 19 Oct 04.
+% Put section names in uppercase, subsection in Capitalize Words.  OK as of 23 Oct 04.
+% Fonts - Use Times?  See psnfss2e.pdf - Seems to work OK - try a comparitive printout.
+% Review page breaks, after all editing is complete.  Use \addpenalty as required to suggest better places for page breaks.
+% % \\* prohibits a page break after a forced line break.
+% % \mbox{text} forces all of "text" to be on one line.
+% % ~ is a space that cannot be enlarged, or be at a line break.
+% degree symbols - consider replacing \textdegree with $\30,^{\circ}\mathrm{C}$.  See lshort.pdf
+% PDF file - consider use of pdflatex, to get hyperlinks in index, etc.  Use epstopdf to convert all .eps files to .pdfs. See lshort.pdf pg 73.  Use hyperfef package.
+
+% to create PDF file from GSView on Windows - open file in GSView.  Media, Letter.  File, Convert.  Select pdfwrite.  Select Properties.  Use X offset of 0, and Y offset of -45. 
+
+% to extract text, run "ps2ascii POH.pdf POH.txt"
+
+\documentclass[twoside,titlepage,chapterprefix,10pt]{scrbook}
+% \documentclass[twocolumn,titlepage,chapterprefix,10pt]{scrbook}
+
+%%
+%% go back to T1 fontenc, once the CM super font package is installed
+%%\usepackage[T1]{fontenc}
+\usepackage[OT1]{fontenc}
+\usepackage[latin1]{inputenc}
+\setcounter{secnumdepth}{0} % was 3
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{array}% removed to try the tabls package instead (see TLC2 pg 269)
+\usepackage{boxedminipage} % to put frame around graphs in performance section
+\usepackage{calc}
+%\usepackage{caption}
+\usepackage{chappg} % to get page numbers like 3-5
+\usepackage[strict]{chngpage}% used to set smaller margins for checklists
+\usepackage{color}
+\usepackage{datetime}% used to get date format like 04 Jun 2004.
+  \newdateformat{cdndate}{\twodigit{\THEDAY} \ \shortmonthname \ \THEYEAR}
+%\usepackage{fancyhdr}
+%%  \fancyhead[LE,RO]{\slshape \rightmark}
+%  \fancyhead[LE,RO]{\slshape \leftmark}
+%  \fancyhead[LO,RE]{\slshape RV-8 C-XXXX}
+%%  \fancyhead[LO,RE]{\slshape RV-8 C-GNHK}
+%  \fancyfoot[C]{\thepage}
+%  \fancyfoot[LE,RO]{\scriptsize\today} % remove this for the final printing
+%  \pagestyle{fancy}
+\usepackage{flafter}  % keep floats from coming before the reference
+% \usepackage{floatflt} % to wrap text around figures
+% \usepackage[paper=a4paper,landscape=true]{geometry}
+%\usepackage[paper=a4paper]{geometry}
+\usepackage[paper=letterpaper]{geometry}
+  \newlength{\maintopmargin} % top margin for main part of POH
+  \newlength{\mainbottommargin} % bottom margin for main part of POH
+  \newlength{\maininnermargin} % inner margin for main part of POH
+  \newlength{\mainoutermargin} % outer margin for main part of POH
+%  \setlength{\maintopmargin}{0.5in}
+  \setlength{\maintopmargin}{0.75in}
+  \setlength{\mainbottommargin}{.75in}
+  \setlength{\maininnermargin}{1in}
+  \setlength{\mainoutermargin}{1in}
+%  \newlength{\checklisttopmargin} % top margin for checklists
+%  \newlength{\checklistbottommargin} % bottom margin for checklists
+%  \newlength{\checklistinnermargin} % inner margin for checklists
+%  \newlength{\checklistoutermargin} % outer margin for checklists
+%  \setlength{\checklisttopmargin}{0.1in}
+%  \setlength{\checklistbottommargin}{0.1in}
+%  \setlength{\checklistinnermargin}{0.1in}
+%  \setlength{\checklistoutermargin}{0.1in}
+%  \geometry{verbose,letterpaper,tmargin=0.5in,bmargin=1in,lmargin=1in,rmargin=0.5in}
+
+
+\geometry{verbose,letterpaper,tmargin=\maintopmargin,bmargin=\mainbottommargin,inner=\maininnermargin,outer=\mainoutermargin}
+% \geometry{verbose,a4paper,tmargin=\maintopmargin,bmargin=\mainbottommargin,inner=\maininnermargin,outer=\mainoutermargin}
+
+
+\usepackage{graphicx}
+%\usepackage{layout}
+% \usepackage{layouts}
+%   \newcommand\showpage{%
+%     \setlayoutscale{0.27}\setlabelfont{\tiny}%
+%     \printheadingsfalse\printparametersfalse
+%     \currentpage\pagedesign}
+\usepackage{longtable} % for EIS page format table
+\usepackage{mdwlist}
+\usepackage{minitoc}
+%  \setcounter{parttocdepth}{0}
+  \setcounter{minitocdepth}{3}
+%  \setcounter{minilofdepth}{2} % not defined
+  \renewcommand{\mtcSfont}{\bf}
+  \renewcommand{\mtctitle}{TABLE OF CONTENTS}
+  \renewcommand{\mtifont}{\Large \sffamily \bfseries}  
+  \renewcommand{\mtcfont}{\rm}
+  \renewcommand{\mlffont}{\bf}
+  \renewcommand{\mlftitle}{LIST OF FIGURES}
+%  \renewcommand{\mlffont}{\Large \sffamily \bfseries}  
+  \renewcommand{\mlffont}{\rm}
+  
+  \newlength{\minitocspacebefore} % define vertical space between chapter name and minitoc
+  \setlength{\minitocspacebefore}{10ex}
+\usepackage{multicol}
+\usepackage{multirow} % used in performance tables
+\usepackage{overpic} % to overlay text on graphics.  Used for side view in W&B section
+%\usepackage{paralist} % to get compact description environment
+%\usepackage{pdfsync} % to get back and forth syncing between TextMate and Skim
+\usepackage{picins}
+\usepackage{pict2e} % to get arrows in stick grip figure
+\usepackage{pifont} % to get Zapf Dingbats
+\usepackage{placeins} % to get FloatBarrior, to force figures before next section
+%\usepackage{pspicture} % to get arrows in stick grip figure - superceded by pict2e package
+%\usepackage{pstricks} % to get white circles for background for numbers in autopilot graphic
+\usepackage{ragged2e} % to get the justifying option to make NOTES
+\usepackage[figuresright]{rotating} % needed for Takeoff Perf table
+\usepackage{scrpage2} % KOMA-Script heading package
+  \pagestyle{scrheadings}
+  \ihead{RV-8 C-GNHK} % put aircraft ID in the inner header
+  \ohead{\leftmark} % put Section name in outer header
+  % \ifoot{DRAFT --- \thistime \ \cdndate\today} % replace with issue date eventually
+  \ifoot{Created --- \thistime \ \cdndate\today} % replace with issue date eventually
+\usepackage{scrtime} % needed to get the \thistime command for the footer.  Not needed for the final document.  
+\usepackage[pageshow]{supertabular} % for long table of EIS page formats, but it puts whole table on one page :(
+%\usepackage{tabls} %conflicts with array package
+\usepackage{tabularx}
+  \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{textcomp} % for to get degree symbols from \textdegree
+\usepackage{titletoc}% allows formatting TOC without page numbers, and custom format to get chapter number at right
+  \titlecontents{chapter}[0pc]{\vspace{5ex} \bfseries \sffamily \large}{}{\contentslabel[\chaptername]{0pc}}{\dotfill SECTION \thecontentslabel}
+  \renewcommand\contentsname{TABLE OF CONTENTS}
+\usepackage{wrapfig} % wrap text around small figures
+
+% Following packages change the default fonts to Times and Helvetica
+\usepackage{mathptmx}
+\usepackage[scaled=.92]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp} 
+\usepackage[ps2pdf,bookmarks=true]{hyperref}
+\hypersetup{
+pdfauthor = {Kevin Horton},
+pdftitle = {POH},
+pdfsubject = {Pilot's Operating Manual --- RV-8 C-GNHK},
+%pdfkeywords = {Keyword1, Keyword2, ...},
+pdfcreator = {LaTeX with hyperref package},
+pdfproducer = {dvips + ps2pdf}}
+
+%\addtokomafont{sectioning}{\MakeUppercase}% change section names to upper case - doesn't work
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\lyxline}[1]{
+  {#1 \vspace{1ex} \hrule width \columnwidth \vspace{1ex}}
+}
+%% Bold symbol macro for standard LaTeX users
+\newcommand{\boldsymbol}[1]{\mbox{\boldmath $#1$}}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+\makeatother
+
+
+%\includeonly{intro,limitations,emer_checklist,emer,normal,normal_checklist,systems}
+
+%% following five commands to control the placement of figures on the pages.
+\renewcommand{\textfraction}{0.10} % default is 0.2, or minimum 20% of page for text.
+\renewcommand{\topfraction}{0.9} % default is 0.7, or maximum of 70% at top of page for a figure.
+\renewcommand{\bottomfraction}{0.9} % default is 0.3, or maximum of 30% at bottom of page for a figure.
+\renewcommand{\floatpagefraction}{0.35} % default is 0.5, or minimum 50% of a page covered by figures without any text.
+%\setcounter{totalnumber}{5} % default is maximum of 3 figures per page.
+
+%% force "This Page Intentionally Blank" on blank pages
+\makeatletter 
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else 
+  \hbox{} 
+  \vspace*{\fill} 
+  \begin{center} 
+    \Large  THIS PAGE INTENTIONALLY LEFT BLANK.
+  \end{center} 
+  \vspace{\fill} 
+  \thispagestyle{empty} 
+  \newpage 
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi} 
+\makeatother 
+
+%% Multi-line description labels - TLC2, pg 148 & 150
+\usepackage{calc}
+\newenvironment{Description}
+   {\begin{list}{}{\let\makelabel\Descriptionlabel
+%      \setlength\labelwidth{120pt}%
+      \setlength\labelwidth{110pt}%
+      \setlength\leftmargin{\labelwidth+\labelsep}}}%
+   {\end{list}}
+\newcommand*\Descriptionlabel[1]
+   {\raisebox{0pt}[1ex][0pt]%
+      {\makebox[\labelwidth][l]%
+         {\parbox[t]{\labelwidth}%
+%                    {\hspace{0pt}\textsf{#1:}}}}}
+                    {\hspace{0pt}\textrm{#1}}}}}
+                    
+%% New environment for perf chart headers
+\newenvironment{perfhdr}
+  {\sffamily\huge\begin{center}}
+  {\end{center}\vspace{5ex}\normalfont\normalsize}
+  
+% New space used to set height between Notes and charts in perf section
+\newlength{\perfnoteskip}
+\setlength{\perfnoteskip}{5ex}
+  
+%% New environment for NOTES, CAUTIONS and WARNINGS
+\newcounter{oldparindent}
+\newenvironment{Note}[1][NOTE]
+  {
+    \setcounter{oldparindent}{\parindent} 
+    \begin{quote}
+    \centering{\textbf{#1}}
+    \\ 
+    \justifying  
+    \parindent=0pt
+  }
+  {
+    \parindent \value{oldparindent}pt
+    \end{quote}
+  }
+
+%% New environment for NOTES, CAUTIONS and WARNINGS in checklists
+%% Same as normal notes, but no indent.
+\newenvironment{Note2}[1][NOTE]
+  {
+    \setcounter{oldparindent}{\parindent} 
+    \centering{\textbf{#1}}
+    \\ 
+    \justifying  
+    \parindent=0pt
+  }
+  {
+    \parindent \value{oldparindent}pt
+  }
+
+%% New environment for NOTES, CAUTIONS and WARNINGS
+%% Same as normal notes, but with the note text centered, useful for one line notes
+\newenvironment{NoteCtr}[1][NOTE]
+  {
+    \setcounter{oldparindent}{\parindent} 
+    \begin{quote}
+    \centering{\textbf{#1}}
+    \\ 
+    \parindent=0pt
+  }
+  {
+    \parindent \value{oldparindent}pt
+    \end{quote}
+  }
+
+
+
+\renewcommand\chaptername{SECTION} % used to have "SECTON" appear on the first page of every chapter
+
+%% get thicker horizontal rule for tables.  From TLC2, pg 266
+\newlength{\savedwidth}
+\newcommand\whline{\noalign{\global\savedwidth\arrayrulewidth
+                                                 \global\arrayrulewidth 1pt}%
+                                                 \hline
+                                                 \noalign{\global\arrayrulewidth\savedwidth}}
+
+% following lengths are used to set row widths to fit the text
+\newlength{\colOne}
+\newlength{\colTwo}
+\newlength{\colThree}
+\newlength{\colFour}
+\newlength{\colFive}
+\newlength{\colSix}
+\newlength{\colSeven}
+\newlength{\colEight}
+\newlength{\rowdrop}
+\setlength{\rowdrop}{\baselineskip/-1}
+% halfrowdrop is equal to one half the normal line spacing.  It is used to drop table headers one-half row, as required to good alignment.
+\newlength{\halfrowdrop}
+\setlength{\halfrowdrop}{\baselineskip/-2}
+
+\newlength{\olditemident}% used when adjusting ident for list environments
+
+\newenvironment{checklist}
+  {
+  % \changepage{textheight}{textwidth}{evensidemargin}{oddsidemargin}{columnsep}{topmargin}{headheight}{headsep}{footskip}
+%  \changepage{74pt}{130pt}{-65pt}{-65pt}{}{-28pt}{0pt}{0pt}{0pt}% original settings, with no room for header or footer, 0.5 top margin, 0.75 bottom margin, 1 in left and right margins
+  \changepage{56pt}{130pt}{-65pt}{-65pt}{}{-46pt}{0pt}{0pt}{0pt}% original settings, with no room for header or footer
+%  \changepage{59pt}{130pt}{-65pt}{-65pt}{}{-3pt}{0pt}{-10pt}{0pt}% revised settings, with room for header
+  }
+  {
+  \cleardoublepage
+  Bogus page
+  \cleardoublepage
+  \changepage{-56pt}{-130pt}{65pt}{65pt}{}{46pt}{0pt}{0pt}{0pt}% original settings, with no room for header or footer
+  }
+  
+% Checklist - parametres to change page margins
+\newlength{\checklistTextHeight}
+\newlength{\checklistTextWidth}
+\newlength{\checklistEvenSideMargin}
+\newlength{\checklistOddSideMargin}
+\newlength{\checklistTopMargin}
+\setlength{\checklistTextHeight}{56pt}
+\setlength{\checklistTextWidth}{130pt}
+\setlength{\checklistEvenSideMargin}{-65pt}
+\setlength{\checklistOddSideMargin}{-65pt}
+%\setlength\checklistTopMargin{-46pt} % no room for header, but room for footer
+\setlength{\checklistTopMargin}{-12pt} % room for header, but not footer
+
+% set thickness of vertical rules for multitcolumns in checklists
+\setlength{\columnseprule}{0.4pt}
+
+% Define Direct-To symbol to look like marking on that key on the GNS 430
+\def\directto{${\mkern6mu D\mkern-24mu \longrightarrow \mkern2mu}$} 
+
+% allow different POH for different declared max takeoff weight
+\newcounter{MTOW} % maximum takeoff weight in lbs
+  \setcounter{MTOW}{1900}
+\newcounter{MTOWkg} % MTOW in kg
+  \setcounter{MTOWkg}{\value{MTOW}/\real{2.2046}}
+\newcounter{MTOWkgdecimal}
+  \setcounter{MTOWkgdecimal}{\value{MTOW}/\real{.22046}-(\value{MTOWkg}*10)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start of Document
+\begin{document}
+%\showpage causes the page layout to be drawn in the resulting dvi or pdf file.  Defined in preamble.
+% \showpage
+\setlength{\extrarowheight}{1.5pt} % needs array package
+\dominitoc % can remove, if minitoc package is no longer used
+% \dominilof % can remove, if minitoc package is no longer used
+\frontmatter
+\include{intro}
+\include{limitations}
+\include{emer}
+\include{normal}
+\include{performance}
+\include{wb}
+\include{systems}
+\include{service}
+\input{equip-list-header}
+\input{equip-list}
+
+\end{document}

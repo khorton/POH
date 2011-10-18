@@ -10,3 +10,5 @@ POH.ps
 *.mlf*
 *.bak
 *orig*
+*.aux
+*.out

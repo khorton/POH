@@ -5,8 +5,8 @@ POH.ps
 *.log
 *.maf
 *.toc
-# graphs/*.eps
-# graphs/*.tex
+graphs/*.eps
+graphs/*.tex
 *.mlf*
 *.bak
 *orig*

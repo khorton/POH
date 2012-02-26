@@ -1,5 +1,5 @@
 *.mtc*
-POH.pdf
+*.pdf
 POH.ps
 *.dvi
 *.log

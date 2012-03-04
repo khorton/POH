@@ -36,3 +36,5 @@ plot 'data/cruise_speed.txt' with lines lt -1 lw 2 # lt -1 = blackline
 											# lw = line width
 											# pt = point style
 											# do gnuplot test to see options
+
+plot 'data/cruise_speed_vs_RPM.txt' with lines lt -1 lw 2

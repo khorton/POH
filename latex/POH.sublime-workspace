@@ -1,0 +1,1525 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "POH.tex",
+			"settings":
+			{
+				"buffer_size": 18489,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cheat_sheet.tex",
+			"settings":
+			{
+				"buffer_size": 1969,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "emer.tex",
+			"settings":
+			{
+				"buffer_size": 18387,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "emer_checklist.tex",
+			"settings":
+			{
+				"buffer_size": 11951,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "equip-list-header.tex",
+			"settings":
+			{
+				"buffer_size": 404,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "equip-list-stand-alone.tex",
+			"settings":
+			{
+				"buffer_size": 1613,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "equip-list.tex",
+			"settings":
+			{
+				"buffer_size": 8003,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "% !iTeXMac(input): POH.tex\n\\title{Pilot's Operating Handbook\\\\\n[1in]RV-8 C-GNHK\\\\\n[0.25in]Ser. No. 80427}\n\n\\author{Kevin Horton}\n\n\\date{10 Sep 2012}\n\n\\maketitle \\clearpage\n\n%\\vfill\n%\\centering Typeset with \\LaTeXe\n%\\vfill\n\\cleardoublepage \\setcounter{tocdepth}{0} \n\n% only need chapter names in main TOC\n%\\newsavebox{\\TOCtitle}\n%\\sbox{\\TOCtitle}{\\bfseries \\sffamily \\Huge TABLE OF CONTENTS \\textnormal}\n%\\centering \\usebox{\\TOCtitle}\n\\tableofcontents{}\n\n%\\listoffigures{}\n\\clearpage\n\n%\\listoffigures\n%%\\clearpage\n%\\cleardoublepage\n%\\vfill\n\\mainmatter\n\n%\\layout % show page layout.  Needs layout package.\n%\\pagediagram % show page layout.  Needs layouts package.\n%% Following three lines show a minipage diagram, with margins shown\n%\\currentpage\n%\\setlayoutscale{0.5}\n%\\pagedesign\n%\\setcounter{chapter}{1}\n\\chapter{GENERAL} \\vspace{\\minitocspacebefore} \\minitoc \\clearpage\n\n% 3-view\n%\\addcontentsline{toc}{section}{\\numberline{}THREE-VIEW}\n\\addcontentsline{toc}{section}{THREE-VIEW}\n\n\\begin{figure}\n	\\begin{center}\n		\n		\\begin{overpic}\n			% The following command works with the pspicture package\n			% {../Diagrams/3-view/3view} \\put(47.2,13){\\Line(0,11)} \\put(0.6,13){\\Line(0,11)} \\put(23.25,23){23'} \\arrowlength{4pt} \\put(22.5,23.4){\\Vector(-21.9,0)} \\put(25.3,23.4){\\Vector(21.9,0)} \\put(44,79.4){\\Line(5,0)} \\put(42,91.8){\\Line(7,0)} \\put(47,85){\\textcolor{red}{5' 7''}} \\put(48.3,84.5){\\Vector(0,-5.1)} \\put(48.3,86.7){\\Vector(0,5.1)} \\put(45.4,79.5){\\Line(0,-2.8)} \\put(3.2,89){\\Line(0,-12.2)} \\put(23.4,77){\\textcolor{red}{21'}} \\put(22.65,77.4){\\Vector(-19.45,0)} \\put(25.95,77.4){\\Vector(19.45,0)} \n			% The following command works with the pict2e package\n			{../Diagrams/3-view/3view} \\put(47.2,13){\\line(0,1){11}} \\put(0.6,13){\\line(0,1){11}} \\put(23.25,23){23'} \\put(22.5,23.4){\\vector(-1,0){22}} \\put(25.3,23.4){\\vector(1,0){22}} \\put(49,79.4){\\line(-1,0){50.4}} \\put(42,91.8){\\line(1,0){7}} \\put(47,85){5' 10''} \\put(48.3,84.5){\\vector(0,-1){5.1}} \\put(48.3,86.7){\\vector(0,1){5.1}} \\put(45.4,79.5){\\line(0,-1){2.8}} \\put(3.2,89){\\line(0,-1){12.2}} \\put(23.4,77){21'} \\put(22.65,77.4){\\vector(-1,0){19.45}} \\put(25.95,77.4){\\vector(1,0){19.45}} \\put(-1.4,95.5){\\line(1,0){7}} \\put(-2,86.85){7' 10''} \\put(-0.7,86.35){\\vector(0,-1){6.95}} \\put(-0.7,88.55){\\vector(0,1){6.95}} \n		\\end{overpic}\n	\\end{center}\n	\\caption{Three View} \n\\end{figure}\n\\clearpage \n\\section{INTRODUCTION} This Pilot's Operating Handbook contains nine sections with all the information required to operate the aircraft. \n\n\\textcolor{red}{Items in red text are preliminary, and are subject to change pending the results of ground and flight tests.}\n\nSection 1 provides basic data and information of general interest. It contains definitions or explanations of abbreviations and terminology commonly used.\n\nThis aircraft is certificated in the Amateur-Built category. The regulations governing the Amateur-Built category contain only very limited performance requirements, and no flight characteristics requirements. By virtue of its amateur-built status, all persons entering this aircraft do so at their own risk.\n\n\\section{DESCRIPTIVE DATA} \n\\subsection{ENGINE} \n\\begin{Description}\n	\\item[Engine Manufacturer:] Lycoming \n	\\item[Engine Assembler:] Aerosport Power, Kamloops, B.C. \n	\\item[Engine Model Number:] IO-360-A1B6 \n	\\item[Engine Type:] Four cylinder, Direct Drive Horizontally Opposed, Air-Cooled, Fuel-Injected with Inverted Oil System \n	\\item[Horsepower Rating:] 200 BHP \n	\\item[Maximum Engine Speed:]2700 RPM \n	\\item[Displacement:] 361 $\\mathrm{in^{3}}$ \n	\\item[Compression Ratio:] 8.7:1 \n	\\item[Time Between Overhaul:] 2000 hr \n\\end{Description}\n\n\\subsection{PROPELLER} \n\\begin{Description}\n	\\item[Manufacturer:] MT \n	\\item[Model:] MTV-12-B-C/C183-59b \n	\\item[Number of blades:] 3 wood core blades with stainless steel leading edges\n	\\item[Diameter:] 72.05 inches (183 cm)\n	\\item[Type:] Hydraulically Actuated Constant Speed \n        % TBO data from MT Service Bulletin No 1\n	\\item[Time Between Overhaul:] 1800 hr or 72 months \n\\end{Description}\n\n\\subsection{FUEL} \n\\begin{Description}\n	\\item[Total Fuel Capacity:] 163.5 l (43.2 USG) \n	\\item[Usable Fuel Capacity:] 162.8 l (43 USG)\n	\\item[Approved Fuel Grades:] 100/130\\\\\n	100 (Green)\\\\\n	100LL (Blue) \n\\end{Description}\n\n\\subsection{OIL} \n\\begin{Description}\n	\\item[Oil Capacity:]8 US qts \n	\\item[Specification:]Ref Lycoming Operator's Manual Pg 3-12B \n\\end{Description}\n\n% @{} at start of column spec used to supress space to the left of the tabular.  See LaTeX Manual, pg 205-206.\n\\begin{tabular}\n	{@{}lcc} Approved Grades& MIL-L-6082B& MIL-L-22851\\tabularnewline & & Ashless Dispersant Grades\\tabularnewline All Temperatures& --& SAE 15W50 or SAE 20W50\\tabularnewline Above 27\\textdegree C (80\\textdegree F)& SAE 60& SAE 60\\tabularnewline Above 16\\textdegree C (60\\textdegree F)& SAE 50& SAE 40 or 50\\tabularnewline -1\\textdegree C to 32\\textdegree C (30\\textdegree F to 90\\textdegree F)& SAE 40& SAE 40\\tabularnewline -18\\textdegree C to 21\\textdegree C (0\\textdegree F to 70\\textdegree F)& SAE 30& SAE 40, 30 or 20W40\\tabularnewline Below -12\\textdegree C (10\\textdegree F)& SAE 20& SAE 30 or 20W30\\tabularnewline \n\\end{tabular}\n\n\\subsection{MAXIMUM WEIGHTS} \n\\begin{Description}\n	\n	%\\item[Maximum Take-Off/\\\\Landing Weight:] 816.5 kg (1800 lb)\\\\\n	%      \\item[Max Take-Off Weight:] 1900 lb (861.8 kg)\n	%      \\item[Max Landing Weight:] 1900 lb (861.8 kg)\n	\n	\\item[Max Take-Off Weight:] \\theMTOW \\space lb (\\theMTOWkg .\\theMTOWkgdecimal \\space kg) \n	\\item[Max Landing Weight:] \\theMTOW \\space lb (\\theMTOWkg .\\theMTOWkgdecimal \\space kg) \n%	\\item[Max Passenger Weight:] 300 lb (136.1 kg) (subject to Weight \\& Balance) \n%	\\item[Max Baggage Weight:] 125 lb (56.7 kg) (subject to Weight \\& Balance) \n	\\item[Empty Weight :] 1194 lb (542 kg) (Incl full oil) - Weighed 27 Apr 2010, corrected for autopilot installation\n	\\item[Max Useful Load:]  706 lb (320 kg) (subject to Weight \\& Balance) \n\\end{Description}\n\n\\subsection{SPECIFIC LOADINGS} \n\\begin{Description}\n	\\item[Wing Loading:]17.3 $\\mathrm{lb/ft^{2}}$ \n	\\item[Power Loading:]9.5 $\\mathrm{lb/hp}$ \n\\end{Description}\n\n\\section{NOTES, CAUTIONS AND WARNINGS} Specific items requiring emphasis are expanded upon and ranked in increasing order of importance in the form of a NOTE, CAUTION or WARNING.\n\n\\begin{Note}\n  Expands on information which is considered essential to emphasize.  Information contained in notes may also be safety related.\n\\end{Note}\n\n\\begin{NoteCtr}[CAUTION]\n  Provides information that may result in damage to equipment if not followed.\n  \\end{NoteCtr}\n\n\\begin{NoteCtr}[WARNING]\n  Emphasizes information that may result in personal injury or loss of life if not followed.\n  \\end{NoteCtr}\n\n\n\\section{TERMINOLOGY AND ABBREVIATIONS} \n\\subsection{GENERAL AIRSPEED TERMINOLOGY} \n\\begin{Description}\n	\\item[KIAS] \\textbf{Knots Indicated Airspeed} is the speed shown on the airspeed indicator assuming no instrument error, expressed in knots.\n	\n	%   \\item[KIAS] IAS in Knots.\n	\n	\\item[KCAS] \\textbf{Knots Calibrated Airspeed} is indicated airspeed corrected for position and instrument error, expressed in knots. Calibrated airspeed is equal to true airspeed in standard atmosphere at sea level.\n	\n	%    \\item[KCAS] CAS in Knots.\n	\n	\\item[KTAS] \\textbf{Knots True Airspeed} is the airspeed relative to undisturbed air, expressed in knots, which is KCAS corrected for altitude, temperature and compressibility. \n	\\item[GS] \\textbf{Ground Speed} is the speed of the aircraft relative to the ground. \n	\\item[$\\mathrm{V_{A}}$] \\textbf{Manoeuvring Speed} is the maximum speed at which abrupt full control deflection will not overstress the aircraft. \n	\\item[$\\mathrm{V_{FE}}$] \\textbf{Maximum Flap Extension Speed} is the highest speed permissible with wing flaps in a prescribed extended position. \n	\\item[$\\mathrm{V_{NO}}$] \\textbf{Maximum Structural Cruising Speed} is the speed that should not be exceeded except in smooth air, and then only with caution. \n	\\item[$\\mathrm{V_{NE}}$] \\textbf{Never Exceed Speed} is the speed limit that may not be exceeded at any time. \n	\\item[$\\mathrm{V_{S}}$] \\textbf{Stalling Speed} is the minimum steady flight speed at which the aircraft is controllable in a specified configuration. \n	\\item[$\\mathrm{V_{S_{0}}}$] \\textbf{Stalling Speed in the landing configuration} at the most forward centre of gravity. \n	\\item[$\\mathrm{V_{X}}$] \\textbf{Best Angle of Climb Speed} is the speed which results in the greatest altitude gain in a given horizontal distance. \n	\\item[$\\mathrm{V_{Y}}$] \\textbf{Best Rate of Climb Speed} is the speed which results in the greatest altitude gain in a given time. \n\\end{Description}\n\n\\subsection{METEOROLOGICAL TERMINOLOGY} \n\\begin{Description}\n	\\item[ISA] \\textbf{International Standard Atmosphere} is a nominal atmosphere where air is a dry perfect gas with a temperature of 15\\textdegree C (59\\textdegree F) at sea level. The pressure at sea level is 29.92 in.\\ Hg. The temperature gradient from sea level to 36,089 ft is -1.98\\textdegree C per 1000 ft. \n	\\item[OAT] \\textbf{Outside Air Temperature} is the free static air temperature. It is obtained from meteorological sources or in-flight instruments adjusted for instrument error and compressibility effects. \n	\\item[Pressure Altitude] \\textbf{Pressure Altitude} is the altitude read from an altimeter when the altimeter's barometric scale has been set to 29.92 in.\\ Hg, assuming zero position and instrument error (instrument error is assumed to be zero in this POH except where indicated). \n\\end{Description}\n\n\\subsection{POWER TERMINOLOGY} \n\\begin{Description}\n	\\item[BHP]\\textbf{Brake Horsepower} is the power developed by the engine. \n	\\item[RPM]\\textbf{Revolutions Per Minute} is engine speed. \n	\\item[MP]\\textbf{Manifold Pressure} is the absolute pressure measured in the engine's induction system, expressed in inches of mercury (in.\\ Hg).\n	\n	%  \\item [Takeoff Power] Maximum power permissible for takeoff.\n	%  \\item [Maximum \\\\\n	%  Continuous Power] Maximum power permissible continuously during flight.\\\\\n	%  \\item [Maximum Climb Power] Maximum power permissible during climb.\n	%  \\item [Maximum Cruise Power] Maximum power permissible during cruise.\n\\end{Description}\n\n\\subsection{AIRCRAFT PERFORMANCE TERMINOLOGY} \n\\begin{Description}\n	\\item [Climb Gradient] \\textbf{Climb Gradient} is the ratio of the change in height during a climb, to the horizontal distance covered in the same time interval. \n	\\item [Demonstrated \\\\\n	Crosswind Velocity] \\textbf{Demonstrated crosswind velocity} is the velocity of the crosswind component for which adequate control of the aircraft during takeoff and landing has been demonstrated during flight tests. The value shown is not considered to be limiting.\n	\n	%      \\item[Accelerate-Stop \\\\\n	%      Distance] \\textbf{Accelerate-Stop Distance} is the distance to accelerate to a specified speed and, assuming engine\n	%      failure when that speed is attained, bring the aircraft to a stop on the runway.\n	\n	\\item[Usable Fuel]\\textbf{Usable Fuel} is the fuel that can be safely used in flight. \n	\\item[Unusable Fuel]\\textbf{Unusable Fuel} is the fuel that can not be safely used in flight. \n	\\item[GPH]\\textbf{Gallons Per Hour} is the amount of fuel (in US gallons) consumed per hour.\n	\n	%      \\item[NMPG]\\textbf{Nautical Miles Per Gallon} is the distance (in nautical miles) which can be expected per US\n	%      gallon of fuel consumed at a specific engine power setting and/or flight configuration.\n	\n	\\item[g]\\textbf{g} is acceleration due to gravity. \n\\end{Description}\n\n\\subsection{WEIGHT AND BALANCE TERMINOLOGY} \n\\begin{Description}\n	\\item[Reference Datum]\\textbf{Reference Datum} is an imaginary vertical plane from which all horizontal distances are measured for balance purposes. \n	\\item[Station]\\textbf{Station} is a location along fuselage given in terms of distance from the reference datum. \n	\\item[Arm]\\textbf{Arm} is the horizontal distance from the reference datum to the centre of gravity of an item. \n	\\item[Moment]\\textbf{Moment} is the product of weight of an item multiplied by its arm. (Moment divided by the constant 1000 is used in this handbook to simplify balance calculations by reducing the number of digits.) \n	\\item[Centre of Gravity (CG)]\\textbf{Centre of Gravity} is the point at which an aircraft, or item, would balance if suspended. \n	\\item[CG Arm]\\textbf{Centre of Gravity Arm} is the am obtained by adding the aircraft individual moments and dividing the sum by the total weight. \n	\\item[CG Limits]\\textbf{Centre of Gravity Limits} are the extreme centre of gravity locations within which the aircraft must be operated at a given weight.\n	\n	%  \\item[Usable Fuel] Fuel available for flight planning.\n	%  \\item[Unusable Fuel] Fuel quantity that cannot be safely used in flight.\n	\n	\\item[Empty Weight]\\textbf{Empty Weight} is the weight of aircraft including unusable fuel and full engine oil. \n	\\item[Useful Load]\\textbf{Useful Load} is the difference between takeoff weight and empty weight. \n	\\item[Payload]\\textbf{Payload} is the weight of occupants, cargo, and baggage. \n	\\item[Gross Weight]\\textbf{Gross Weight} is the loaded weight of the aircraft. \n	\\item[Maximum Takeoff Weight]\\textbf{Maximum Takeoff Weight} is the maximum weight approved for start of the takeoff run. \n	\\item[Maximum Landing Weight]\\textbf{Maximum Landing Weight} is the maximum weight approved for the landing touchdown. \n	\\item[Tare]\\textbf{Tare} is the weight of chocks, blocks, stands, etc. used when weighing an aircraft, and is included in the scale readings. Tare is deducted from the scale readings to obtain the actual (net) aircraft weight. \n\\end{Description}\n\n\\subsection{ABBREVIATIONS} \n\\textcolor{red}{To be added}\n\n\\cleardoublepage \n",
+			"file": "intro.tex",
+			"file_size": 13743,
+			"file_write_time": 1345076923000000,
+			"settings":
+			{
+				"buffer_size": 13743,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "limitations.tex",
+			"settings":
+			{
+				"buffer_size": 17609,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "normal.tex",
+			"settings":
+			{
+				"buffer_size": 24729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "normal_checklist.tex",
+			"settings":
+			{
+				"buffer_size": 12285,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_ASI_inst_error.tex",
+			"settings":
+			{
+				"buffer_size": 857,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_EFIS_ASI_TAS_Corr.tex",
+			"settings":
+			{
+				"buffer_size": 2872,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_EFIS_ASI_inst_error.tex",
+			"settings":
+			{
+				"buffer_size": 861,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_EFIS_airspeed_error.tex",
+			"settings":
+			{
+				"buffer_size": 1078,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_ROC.tex",
+			"settings":
+			{
+				"buffer_size": 2204,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_SSEC_Alt.tex",
+			"settings":
+			{
+				"buffer_size": 880,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_SSEC_IAS.tex",
+			"settings":
+			{
+				"buffer_size": 893,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_TO_dist.tex",
+			"settings":
+			{
+				"buffer_size": 3579,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_climb_perf_max.tex",
+			"settings":
+			{
+				"buffer_size": 3204,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_climb_perf_norm.tex",
+			"settings":
+			{
+				"buffer_size": 3240,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_cruise_pwr.tex",
+			"settings":
+			{
+				"buffer_size": 3115,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_cruise_range_WP_OFF.tex",
+			"settings":
+			{
+				"buffer_size": 1203,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_cruise_range_WP_ON.tex",
+			"settings":
+			{
+				"buffer_size": 1172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_cruise_wheel_pants_OFF.tex",
+			"settings":
+			{
+				"buffer_size": 917,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_cruise_wheel_pants_ON.tex",
+			"settings":
+			{
+				"buffer_size": 944,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_landing.tex",
+			"settings":
+			{
+				"buffer_size": 2735,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_stall_speed.tex",
+			"settings":
+			{
+				"buffer_size": 598,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_temp_conv_chart.tex",
+			"settings":
+			{
+				"buffer_size": 463,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_vol_conv_chart.tex",
+			"settings":
+			{
+				"buffer_size": 441,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perf_weight_conv_chart.tex",
+			"settings":
+			{
+				"buffer_size": 440,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "performance.tex",
+			"settings":
+			{
+				"buffer_size": 2763,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "power_chart.tex",
+			"settings":
+			{
+				"buffer_size": 7210,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "service.tex",
+			"settings":
+			{
+				"buffer_size": 33038,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "systems.tex",
+			"settings":
+			{
+				"buffer_size": 76958,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "trio_autopilot.tex",
+			"settings":
+			{
+				"buffer_size": 15690,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wb.tex",
+			"settings":
+			{
+				"buffer_size": 11826,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wing_leveler.tex",
+			"settings":
+			{
+				"buffer_size": 3118,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"markd",
+				"Pandoc: Render Markdown to temp HTML and View"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pand",
+				"Pandoc: Render Markdown to HTML"
+			],
+			[
+				"ht",
+				"Html Export: Current File"
+			],
+			[
+				"package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kwh/Dropbox/Apps/Byword/gl2.txt",
+		"/Users/kwh/Dropbox/Unix/exiftool_notes.txt",
+		"/Users/kwh/Dropbox/OS X/iPhoto Notes.txt",
+		"/sw/src/fink.build/cadabra-1.32-1/cadabra-1.32/INSTALL",
+		"/private/tmp/fink-build-log_cadabra_1.32-1_2012.09.07-20.02.58",
+		"/private/tmp/fink-build-log_cadabra_1.32-1_2012.09.07-20.52.26",
+		"/Users/kwh/sw_projects/git/fink_packages/cadabra/cadabra.info",
+		"/private/tmp/fink-build-log_cadabra_1.32-1_2012.09.06-19.35.06",
+		"/private/tmp/fink-build-log_cadabra_1.32-1_2012.09.06-19.46.12",
+		"/sw/src/fink.build/cadabra-1.32-1/cadabra-1.32/Makefile.in",
+		"/Users/kwh/sw_projects/git/fink_packages/cadabra/fink-build-log_cadabra_1.32-1_2012.09.07-05.27.00",
+		"/Users/kwh/sw_projects/git/fink_packages/cadabra/test_errors_201209072044.txt",
+		"/Users/kwh/Documents/Create Nat Decants Vintages Review List",
+		"/Users/kwh/temp/Vintages 18 Aug 2012 - short",
+		"/Users/kwh/temp/Vintages 18 Aug 2012",
+		"/private/tmp/fink-build-log_cadabra_1.32-1_2012.09.06-19.15.21",
+		"/private/tmp/fink-build-log_cadabra_1.32-1_2012.09.06-19.22.52",
+		"/Users/kwh/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"load",
+			"inverted",
+			"g++",
+			"gcc",
+			"-O",
+			"warning",
+			"nested",
+			"xperm_new",
+			"xperm.cc",
+			"fnested"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "POH.tex",
+					"settings":
+					{
+						"buffer_size": 18489,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "cheat_sheet.tex",
+					"settings":
+					{
+						"buffer_size": 1969,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "emer.tex",
+					"settings":
+					{
+						"buffer_size": 18387,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "emer_checklist.tex",
+					"settings":
+					{
+						"buffer_size": 11951,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "equip-list-header.tex",
+					"settings":
+					{
+						"buffer_size": 404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "equip-list-stand-alone.tex",
+					"settings":
+					{
+						"buffer_size": 1613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "equip-list.tex",
+					"settings":
+					{
+						"buffer_size": 8003,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5746,
+								5746
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2209.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "intro.tex",
+					"settings":
+					{
+						"buffer_size": 13743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								142,
+								142
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "limitations.tex",
+					"settings":
+					{
+						"buffer_size": 17609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11799,
+								11799
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4269.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "normal.tex",
+					"settings":
+					{
+						"buffer_size": 24729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "normal_checklist.tex",
+					"settings":
+					{
+						"buffer_size": 12285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "perf_ASI_inst_error.tex",
+					"settings":
+					{
+						"buffer_size": 857,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "perf_EFIS_ASI_TAS_Corr.tex",
+					"settings":
+					{
+						"buffer_size": 2872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "perf_EFIS_ASI_inst_error.tex",
+					"settings":
+					{
+						"buffer_size": 861,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "perf_EFIS_airspeed_error.tex",
+					"settings":
+					{
+						"buffer_size": 1078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "perf_ROC.tex",
+					"settings":
+					{
+						"buffer_size": 2204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "perf_SSEC_Alt.tex",
+					"settings":
+					{
+						"buffer_size": 880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "perf_SSEC_IAS.tex",
+					"settings":
+					{
+						"buffer_size": 893,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "perf_TO_dist.tex",
+					"settings":
+					{
+						"buffer_size": 3579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "perf_climb_perf_max.tex",
+					"settings":
+					{
+						"buffer_size": 3204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "perf_climb_perf_norm.tex",
+					"settings":
+					{
+						"buffer_size": 3240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "perf_cruise_pwr.tex",
+					"settings":
+					{
+						"buffer_size": 3115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "perf_cruise_range_WP_OFF.tex",
+					"settings":
+					{
+						"buffer_size": 1203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "perf_cruise_range_WP_ON.tex",
+					"settings":
+					{
+						"buffer_size": 1172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "perf_cruise_wheel_pants_OFF.tex",
+					"settings":
+					{
+						"buffer_size": 917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "perf_cruise_wheel_pants_ON.tex",
+					"settings":
+					{
+						"buffer_size": 944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "perf_landing.tex",
+					"settings":
+					{
+						"buffer_size": 2735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "perf_stall_speed.tex",
+					"settings":
+					{
+						"buffer_size": 598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "perf_temp_conv_chart.tex",
+					"settings":
+					{
+						"buffer_size": 463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "perf_vol_conv_chart.tex",
+					"settings":
+					{
+						"buffer_size": 441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "perf_weight_conv_chart.tex",
+					"settings":
+					{
+						"buffer_size": 440,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "performance.tex",
+					"settings":
+					{
+						"buffer_size": 2763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "power_chart.tex",
+					"settings":
+					{
+						"buffer_size": 7210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "service.tex",
+					"settings":
+					{
+						"buffer_size": 33038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "systems.tex",
+					"settings":
+					{
+						"buffer_size": 76958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37449,
+								37449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 11449.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": "trio_autopilot.tex",
+					"settings":
+					{
+						"buffer_size": 15690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "wb.tex",
+					"settings":
+					{
+						"buffer_size": 11826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "wing_leveler.tex",
+					"settings":
+					{
+						"buffer_size": 3118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/kwh/temp/Vintages 18 Aug 2012 - short"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

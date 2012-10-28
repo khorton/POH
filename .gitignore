@@ -12,3 +12,7 @@ graphs/*.tex
 *orig*
 *.aux
 *.out
+*.sublime-project
+latex/POH.sublime-workspace
+
+latex/POH.sublime-workspace

@@ -800,7 +800,45 @@ Cabin heat is provided via two heat muffs attached to the exhaust system and fed
 Ventilation air is supplied from two NACA inlets: one on the front left side of the fuselage for the pilot, and one under the right wing for the passenger. The pilot's ventilation air is fed to an eyeball vent under the left side of the instrument panel. The passenger's ventilation air is fed to an eyeball vent just aft of the front seat back.
 
 A Defog Fan is mounted beneath a grill on the glare shield. It is controlled by a switch on the right console, and blows air from under the instrument panel against the windscreen.
-\clearpage 
+
+\ifthenelse{\theOXYGEN = 1}{
+  \section{OXYGEN}
+
+  An Aerox 13 cubic ft, 2015 psi removable oxygen cylinder (D size cylinder) is fitted in the deep well on the right side of the forward baggage compartment.  The bottle and mounting bracket may be removed when not required.  A pressure gauge, ON-OFF valve and pressure regulator is installed on top of the cylinder.  Two oxygen lines are connected to the regulator with quick disconnect fittings.  A slide on sleeve protects the pressure regulator and valve.
+
+The oxygen supply hoses are permanently mounted in the aircraft.  Quick disconnects on the front end of the hoses allow them to be disconnected from the regulator when the bottle is removed.  Quick disconnects on the aft end of the hoses allow the flow meters and cannulas to be removed.  Each end of the oxygen supply lines should be capped when disconnected, and the lines should be stowed in the clips provided.  The maximum altitude at which the Aerox Oxysaver cannulas may be used is 18,000 ft.
+
+\begin{table}[Hb]
+	\begin{center}
+	
+	\begin{tabular}{|c|c|c|}
+
+		\hline
+		Altitude&Pilot Only&Pilot + Passenger\\
+		(ft)&(hr)&(hr)\\
+		\hline
+		\hline
+		10,000&26.7&13.3\\
+		15,000&14.8&7.4\\
+		18,000&10.3&5.1\\
+		\hline
+	\end{tabular}
+	\caption{Duration with Full Bottle (2015 psi)} \label{oduration}
+	\end{center}
+	
+	\end{table}
+
+	\begin{Note}
+		[WARNINGS] 
+		\begin{enumerate}
+			\item Oil and grease may ignite spontaneously in the presence of high pressure oxygen.  Do not handle the O2 system components with dirty hands.  Ensure the system components are kept clean.
+		\item The oxygen cylinder valve cannot be accessed from the cockpit.  Ensure the valve is opened and the oxygen lines are connected to the regulator prior to any flight on which oxygen may be required.
+	\end{enumerate}
+	\end{Note}
+}{}
+\FloatBarrier 
+
+% \clearpage 
 \section{DYNON D-10A EFIS} 
 \piccaption{Dynon D-10A EFIS} 
 \parpic[r]{\includegraphics[scale=0.65]{../Diagrams/d10a_new_format}}

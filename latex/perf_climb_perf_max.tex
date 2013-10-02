@@ -7,12 +7,12 @@
 MAXIMUM POWER\\
 \end{perfhdr}
 \Large
-\textcolor{red}{DATA TO BE CONFIRMED BY FLIGHT TEST}\normalsize \vspace{5ex} \\
+% \textcolor{red}{DATA TO BE CONFIRMED BY FLIGHT TEST}\normalsize \vspace{5ex} \\
 \begin{minipage}{4in}
   \begin{flushleft}
     CONDITIONS:\\
     Flaps UP\\
-    2700 RPM\\
+    2650 RPM\\
     Full Throttle\\
     Mixture Set at Placard Fuel Flow
     Standard Temperature\\
@@ -42,7 +42,7 @@ MAXIMUM POWER\\
       \item Add 1.0 USG of fuel for engine start, taxi and takeoff.
 %      \item Mixture leaned when power is at 75\% power or less (8,000 ft or above at standard temperature) for smooth
 %      engine operation and increased power.
-      \item Climb speed is 100 KIAS at sea level, decreasing by 1 kt per 1000 ft.
+      \item Climb speed is 102 KIAS at sea level, decreasing by 1 kt per 1000 ft.
       \item Increase time, fuel and distance by \textcolor{red}{XX\%} for each 10\textdegree C above standard
       temperatures.
       \item Distances shown are based on zero wind.
@@ -68,31 +68,30 @@ MAXIMUM POWER\\
 &&&&&\multicolumn{1}{m{\colSix}|}{\centering TIME (MN)}&\multicolumn{1}{m{\colSeven}|}{\centering FUEL USED (USG)}&\multicolumn{1}{m{\colEight}|}{\centering DIST. (NM)}\\
 \hline
 \hline
-% % START of copied data from python perf script
-% % Data use 95% of the calculated power to match the results from the flight test with the test the Hartzell prop
-1800&0&15&100&1870&0&0&0\\
+% % START of copied data from python Climb_DA_fit.py script
+1800&0&15&102&1810&0&0&0\\
 \hline
-&2,000&11&98&1700&1&0.3&2\\
+&2000&11&100&1640&1&0.3&2\\
 \hline
-&4,000&7&96&1530&2&0.6&4\\
+&4000&7&98&1470&2&0.7&4\\
 \hline
-&6,000&3&94&1370&4&0.9&6\\
+&6000&3&96&1300&4&1.0&7\\
 \hline
-&8,000&-1&92&1210&5&1.2&9\\
+&8000&-1&94&1130&6&1.4&10\\
 \hline
-&10,000&-5&90&1050&7&1.5&12\\
+&10000&-5&92&960&7&1.8&13\\
 \hline
-&12,000&-9&88&910&9&1.9&16\\
+&12000&-9&90&790&10&2.3&17\\
 \hline
-&14,000&-13&86&760&12&2.3&20\\
+&14000&-13&88&620&13&2.9&22\\
 \hline
-&16,000&-17&84&620&14&2.8&25\\
+&16000&-17&86&450&16&3.5&29\\
 \hline
-&18,000&-21&82&480&18&3.4&32\\
+&18000&-21&84&290&22&4.5&39\\
 \hline
-&20,000&-25&80&340&23&4.1&41\\
+&20000&-25&82&120&32&6.1&57\\
 \hline
-% % END of copied data from python perf script
+% % END of copied data from python Climb_DA_fit.py script
 \end{tabular}
 \end{center}
 \caption{Time, Fuel and Distance to Climb --- Maximum Power}

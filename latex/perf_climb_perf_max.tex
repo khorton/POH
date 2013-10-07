@@ -7,7 +7,8 @@
 MAXIMUM POWER\\
 \end{perfhdr}
 \Large
-% \textcolor{red}{DATA TO BE CONFIRMED BY FLIGHT TEST}\normalsize \vspace{5ex} \\
+% \textcolor{red}{DATA TO BE CONFIRMED BY FLIGHT TEST}\\
+\normalsize \vspace{5ex} 
 \begin{minipage}{4in}
   \begin{flushleft}
     CONDITIONS:\\
@@ -28,10 +29,14 @@ MAXIMUM POWER\\
     PRESS ALT&GPH\\
     \hline
     S.L.&17\\
-    2000&16\\
-    4000&15\\
-    6000&14\\
-    8000&13\\
+    2,000&16\\
+    4,000&15\\
+    6,000&14\\
+    8,000&13\\
+    10,000&12.5\\
+    12,000&11.8\\
+    14,000&11.1\\
+    16,000&10.4\\
     \hline
     \end{tabular}
   \end{minipage}
@@ -51,7 +56,7 @@ MAXIMUM POWER\\
 \vspace{\perfnoteskip}
 % following lengths are used to set row widths to fit the text
 \settowidth{\colOne}{WEIGHT}
-\settowidth{\colTwo}{PRESSURE}
+\settowidth{\colTwo}{PRESS.}
 \settowidth{\colThree}{TEMP}
 \settowidth{\colFour}{CLIMB}
 \settowidth{\colFive}{RATE OF}
@@ -61,7 +66,7 @@ MAXIMUM POWER\\
 
 \begin{tabular}{|c|r|r|r|r|r|r|r|}
 \hline
-\multirow{3}{\colOne}[\halfrowdrop]{\centering WEIGHT (LB)}&\multirow{3}{\colTwo}[\halfrowdrop]{\centering PRESSURE ALTITUDE (FT)}&
+\multirow{3}{\colOne}[\halfrowdrop]{\centering WEIGHT (LB)}&\multirow{3}{\colTwo}[\halfrowdrop]{\centering PRESS. ALT. (FT)}&
 \multirow{3}{\colThree}[\halfrowdrop]{\centering TEMP (\textdegree C)}&\multirow{3}{\colFour}[\halfrowdrop]{\centering CLIMB SPEED (KIAS)}&
 \multirow{3}{\colFive}[\halfrowdrop]{\centering RATE OF CLIMB (FT/MN)}&\multicolumn{3}{c|}{FROM SEA LEVEL}\\
 \cline{6-8}
@@ -69,27 +74,27 @@ MAXIMUM POWER\\
 \hline
 \hline
 % % START of copied data from python Climb_DA_fit.py script
-1800&0&15&102&1810&0&0&0\\
+1,800&0&15&102&1810&0&0&0\\
 \hline
-&2000&11&100&1640&1&0.3&2\\
+&2,000&11&100&1640&1&0.3&2\\
 \hline
-&4000&7&98&1470&2&0.7&4\\
+&4,000&7&98&1470&2&0.7&4\\
 \hline
-&6000&3&96&1300&4&1.0&7\\
+&6,000&3&96&1300&4&1.0&7\\
 \hline
-&8000&-1&94&1130&6&1.4&10\\
+&8,000&-1&94&1130&6&1.4&10\\
 \hline
-&10000&-5&92&960&7&1.8&13\\
+&10,000&-5&92&960&7&1.8&13\\
 \hline
-&12000&-9&90&790&10&2.3&17\\
+&12,000&-9&90&790&10&2.3&17\\
 \hline
-&14000&-13&88&620&13&2.9&22\\
+&14,000&-13&88&620&13&2.9&22\\
 \hline
-&16000&-17&86&450&16&3.5&29\\
+&16,000&-17&86&450&16&3.5&29\\
 \hline
-&18000&-21&84&290&22&4.5&39\\
+&18,000&-21&84&290&22&4.5&39\\
 \hline
-&20000&-25&82&120&32&6.1&57\\
+&20,000&-25&82&120&32&6.1&57\\
 \hline
 % % END of copied data from python Climb_DA_fit.py script
 \end{tabular}

@@ -1,0 +1,82 @@
+% Time, Fuel and Distance to Climb table --- Normal Climb Power
+\begin{figure}[t]
+% \addcontentsline{toc}{section}{Figure \ref{TFD-to-climb-Norm} Time, Fuel and Distance to Climb --- Normal Climb Power}
+\addcontentsline{toc}{section}{TIME, FUEL AND DISTANCE TO CLIMB --- MAX EFFICIENCY CLIMB --- 1800 lb}
+\begin{center}
+\begin{perfhdr}TIME, FUEL AND DISTANCE TO CLIMB --- 1800 lb\\
+MAX EFFICIENCY CLIMB\\
+\end{perfhdr}
+\Large
+
+\normalsize
+\vspace{5ex}
+    \raggedright 
+    CONDITIONS:\\
+    Flaps UP\\
+    2650 RPM\\
+    Full Throttle\\
+    Mixture Set to give Take-off EGT\\
+    Standard Temperature\\
+\hfill
+
+\vspace{\perfnoteskip}
+    \raggedright NOTES:
+    \begin{enumerate*}
+      \item Add 1.5 USG of fuel for engine start, taxi and takeoff.
+%      \item Mixture leaned when power is at 75\% power or less (6,000 ft or above at standard temperature) for smooth engine operation and increased power.
+      \item Climb speed is 130 KIAS, until the rate of climb reduces to 500 ft/mn.  Then hold 500 ft/mn until the speed reduces to $\mathrm{V_{Y}}$.
+      \item Increase time, fuel and distance by 10\% for each 10\textdegree C above standard temperatures.
+      \item Distances shown are based on zero wind.
+      \end{enumerate*}
+\vspace{\perfnoteskip}
+% following lengths are used to set row widths to fit the text
+\settowidth{\colOne}{WEIGHT}
+\settowidth{\colTwo}{PRESSURE}
+\settowidth{\colThree}{TEMP}
+\settowidth{\colFour}{CLIMB}
+\settowidth{\colFive}{RATE OF}
+\settowidth{\colSix}{TIME}
+\settowidth{\colSeven}{USED}
+\settowidth{\colEight}{DIST.}
+
+\begin{tabular}{|c|r|r|r|r|r|r|r|}
+\hline
+\multirow{3}{\colOne}[\halfrowdrop]{\centering WEIGHT (LB)}&\multirow{3}{\colTwo}[\halfrowdrop]{\centering PRESSURE ALTITUDE (FT)}&
+\multirow{3}{\colThree}[\halfrowdrop]{\centering TEMP (\textdegree C)}&\multirow{3}{\colFour}[\halfrowdrop]{\centering CLIMB SPEED (KIAS)}&
+\multirow{3}{\colFive}[\halfrowdrop]{\centering RATE OF CLIMB (FT/MN)}&\multicolumn{3}{c|}{FROM SEA LEVEL}\\
+\cline{6-8}
+&&&&&\multicolumn{1}{m{\colSix}|}{\centering TIME (MN)}&\multicolumn{1}{m{\colSeven}|}{\centering FUEL USED (USG)}&\multicolumn{1}{m{\colEight}|}{\centering DIST. (NM)}\\
+\hline
+\hline
+% % START of copied data from sage script
+
+1,800&0&15&130&1,680&0&0&0\\
+\hline
+&2,000&11&130&1,410&1&0.4&3\\
+\hline
+&4,000&7&130&1,180&3&0.8&6\\
+\hline
+&6,000&3&130&960&5&1.2&11\\
+\hline
+&8,000&-1&130&730&7&1.8&16\\
+\hline
+&10,000&-5&130&510&10&2.5&24\\
+\hline
+&12,000&-9&119&500&14&3.4&34\\
+\hline
+&14,000&-13&106&500&18&4.1&43\\
+\hline
+&16,000&-17&90&450&22&4.9&52\\
+\hline
+&18,000&-21&90&310&28&5.8&62\\
+\hline
+&20,000&-25&90&160&36&7.1&79\\
+\hline
+% % END of copied data from sage script
+\end{tabular}
+\end{center}
+\caption{Time, Fuel and Distance to Climb --- Max Efficiency Climb --- 1800 lb}
+\label{TFD-to-climb-Norm}
+\end{figure}
+
+

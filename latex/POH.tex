@@ -210,15 +210,22 @@
 \usepackage[scaled=.92]{helvet}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp} 
-\usepackage[ps2pdf,bookmarks=true]{hyperref}
+% \usepackage[ps2pdf,bookmarks=true]{hyperref}
+\usepackage[dvipdfmx,bookmarks=true]{hyperref}
+% \usepackage[bookmarks=true, debug=true]{hyperref}
+% \usepackage[dvips,bookmarks=true, debug=true]{hyperref}
+% \usepackage[dvips,bookmarks=true,debug=true]{hyperref}
 \hypersetup{
 pdfauthor = {Kevin Horton},
-pdftitle = {POH},
+pdftitle = {Pilot's Operating Manual --- RV-8 C-GNHK},
 pdfsubject = {Pilot's Operating Manual --- RV-8 C-GNHK},
 %pdfkeywords = {Keyword1, Keyword2, ...},
 pdfcreator = {LaTeX with hyperref package},
-pdfproducer = {dvips + ps2pdf}}
+% pdfproducer = {dvips + ps2pdf}
+pdfproducer = {dvipdfm}
+}
 
+\usepackage{bookmark}
 %\addtokomafont{sectioning}{\MakeUppercase}% change section names to upper case - doesn't work
 
 \makeatletter
@@ -403,7 +410,7 @@ pdfproducer = {dvips + ps2pdf}}
 % \showpage
 \setlength{\extrarowheight}{1.5pt} % needs array package
 \dominitoc % can remove, if minitoc package is no longer used
-% \dominilof % can remove, if minitoc package is no longer used
+\dominilof % can remove, if minitoc package is no longer used
 \frontmatter
 \include{intro}
 \include{limitations}
@@ -411,7 +418,8 @@ pdfproducer = {dvips + ps2pdf}}
 \include{normal}
 \include{performance}
 \include{wb}
-\include{systems}
+% \include{systems}
+\include{systems2}
 \include{service}
 \input{equip-list-header}
 \input{equip-list}

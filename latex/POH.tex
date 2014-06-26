@@ -6,6 +6,7 @@
 
 %% To get pdf output: 
 %% latex POH.tex
+%% dvipdfmx POH.dvi
 %% dvips -t letter -o POH.ps POH.dvi
 %% ps2pdf POH.ps POH.pdf
 
@@ -418,8 +419,8 @@ pdfproducer = {dvipdfm}
 \include{normal}
 \include{performance}
 \include{wb}
-% \include{systems}
-\include{systems2}
+\include{systems}
+% \include{systems2}
 \include{service}
 \input{equip-list-header}
 \input{equip-list}

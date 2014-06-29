@@ -35,7 +35,7 @@ tpi eyebolt to attach tie down rope to airplane. Secure a third line to the tail
 In addition to the engine cowling, the aircraft has a number of inspection and access panels:
 \begin{enumerate*}
   \item Oil dipstick access door on aft right side of upper cowling.
-  \item Instrument panel access door on aft wall of forward baggage compartment.  Four Torx T10 screws are removed, allowing the access panel to be opened.
+  \item Instrument panel access door on aft wall of forward baggage compartment. Four Torx T10 screws are removed, allowing the access panel to be opened.
   \item Three under-wing inspection panels on each wing provide access to fuel tank securing bolts and aileron bellcranks.
   \item Rear fuselage inspection plates on each side provide access to the elevator horns.
   \item Rear baggage compartment aft wall and hat shelf are removable, providing access to the battery and rear fuselage.
@@ -137,13 +137,24 @@ The following inspections are required following first flight:
 		\item Reinstall the spinner. 
 	\end{enumerate*}
 	\item Check alternator belt tension (7 -- 9 ft-lb on pulley when belt slips). 
-	\item Magneto
+\ifthenelse{\thePMAG = 1}{
+	\item PMag
+	\begin{enumerate*}
+		\item Check E-Mag website for Service Bulletin compliance. \dotfill $\bigbox$
+		\item Check PMag thermal sticker for exceedence. \dotfill $\bigbox$
+		\item Check PMag ignition lead resistance IAW 'Ohm Check' from PMag Installation Manual  \dotfill $\bigbox$
+		\item Check PMag plug gaps. \dotfill $\bigbox$
+		\item Remove PMag and check for smooth rotation and no excessive lateral or axial play in shaft. \dotfill $\bigbox$
+		\item Torque wire lead connection screws to 5 in--lb. \dotfill $\bigbox$
+		\item Set PMag timing. \dotfill $\bigbox$
+	\end{enumerate*}}
+{	\item Magneto
 	\begin{enumerate*}
 		\item Check breaker points for pitting and minimum gap, 
 		\item Check for excessive oil in breaker compartment, 
 		\item Lubricate breaker point felt, and 
 		\item Check Magneto to Engine timing. See Lycoming Direct Drive Overhaul Manual for details of procedure.
-	\end{enumerate*} 
+	\end{enumerate*}}
 	\item Electronic Ignition
 	  \begin{enumerate*}
 	    \item Remove Hall Effect Sensor and open up to check for gear, bearing and seal wear
@@ -203,7 +214,7 @@ The following inspections are required following first flight:
 	\item Test transponder IAW AWM 571 App. F (requirement from CAR 625 App. C).
 \end{enumerate*}
 
-\section{ANNUAL INSPECTION} An annual inspection must be carried out once every 12 months (the due date is the end of the 12th month following the previous inspection).  The inspection must include all items listed in CAR 625 Appendix B.  The following list expands on the required items.  Items marked with (*) are not required as per CAR 625 Appendix B.  Completion of these items is not required as per the CARs, but is strongly recommended to improve reliability and safety.
+\section{ANNUAL INSPECTION} An annual inspection must be carried out once every 12 months (the due date is the end of the 12th month following the previous inspection). The inspection must include all items listed in CAR 625 Appendix B. The following list expands on the required items. Items marked with (*) are not required as per CAR 625 Appendix B. Completion of these items is not required as per the CARs, but is strongly recommended to improve reliability and safety.
 
 \begin{enumerate*}
 	\item{AD Review}
@@ -221,8 +232,8 @@ The following inspections are required following first flight:
 
 	\item{Fuel System} 
 	\begin{enumerate*}
-		\item Fuel Filter --- clean and inspect.  \dotfill $\bigbox$
-		\item Gascolator --- clean and inspect.  \dotfill $\bigbox$
+		\item Fuel Filter --- clean and inspect. \dotfill $\bigbox$
+		\item Gascolator --- clean and inspect. \dotfill $\bigbox$
 		\item Fuel Lines --- inspect. \dotfill $\bigbox$
 		\item Leaks --- check fuel system for leaks. \dotfill $\bigbox$
 		\item Fuel Pressure --- Check pressure from electric fuel pump is 25 -- 45 psi. Record pressure: \underline{\makebox[0.5in][l]{}} \dotfill $\bigbox$
@@ -233,7 +244,7 @@ The following inspections are required following first flight:
 
 	\item{Engine} 
 	\begin{Note}
-		[WARNING] \centering Ground mags before working on engine. 
+\ifthenelse{\thePMAG = 1}{WARNING] \centering Ground PMag before working on engine.}{[WARNING] \centering Ground mags before working on engine.}
 	\end{Note}
 	\begin{enumerate*}
 		\item Remove engine cowl.\dotfill $\bigbox$
@@ -243,7 +254,7 @@ The following inspections are required following first flight:
 		\begin{enumerate*}
 			\item Oil temp. sender --- inspect for leaks and security. \dotfill $\bigbox$
 			\item Oil lines and fittings --- inspect for leaks, chafing security, dents and cracks. \dotfill $\bigbox$
-			\item Oil cooler --- clean cooling fins and inspect condition.  (*)\dotfill $\bigbox$
+			\item Oil cooler --- clean cooling fins and inspect condition. (*)\dotfill $\bigbox$
 			\item Inverted oil system --- inspect for for leaks and security. \dotfill $\bigbox$
 			\item Screens and sump drain plugs --- inspect for metal particles and foreign matter. \dotfill $\bigbox$
 			\item Fill engine with oil per \textcolor{red}{lubrication chart}. \dotfill $\bigbox$
@@ -252,27 +263,33 @@ The following inspections are required following first flight:
 		\begin{enumerate*}
 			\item Check condition of spark plugs and adjust gap. \dotfill $\bigbox$
 			\item Check ignition harness and insulators. \dotfill $\bigbox$
-			\item Check magneto points for proper clearance maintain at \textcolor{red}{.018 $\pm $ .006}. \dotfill $\bigbox$
+\ifthenelse{\thePMAG = 0}{\item Check magneto points for proper clearance maintain at \textcolor{red}{.018 $\pm $ .006}. \dotfill $\bigbox$
 			\item Check magneto for oil seal leaks. \dotfill $\bigbox$
 			\item Check breaker felt for proper lubrication. \dotfill $\bigbox$
 			\item Check distributor block for cracks, burned areas or corrosion. \dotfill $\bigbox$
-			\item Check magnetos to engine timing. See Lycoming Direct Drive Overhaul Manual for details of procedure. \dotfill $\bigbox$
+			\item Check magnetos to engine timing. See Lycoming Direct Drive Overhaul Manual for details of procedure. \dotfill $\bigbox$}
+			{\item Check E-Mag website for Service Bulletin compliance. \dotfill $\bigbox$
+			\item Check PMag thermal sticker for exceedence. \dotfill $\bigbox$
+			\item Check PMag ignition lead resistance IAW 'Ohm Check' from PMag Installation Manual  \dotfill $\bigbox$
+			\item Remove PMag and check for smooth rotation and no excessive lateral or axial play in shaft. \dotfill $\bigbox$
+			\item Torque PMag wire lead connection screws to 5 in--lb. \dotfill $\bigbox$
+			\item Set PMag timing. \dotfill $\bigbox$}
 			\item Check electronic ignition timing. \dotfill $\bigbox$
 		\end{enumerate*}
 		\item Thoroughly clean engine and other items ahead of the firewall. \dotfill $\bigbox$
 		\item Studs and nuts --- inspect for defects, evidence of improper torque and safety locking. \dotfill $\bigbox$
-  	\item Cylinder compression --- conduct compression check on all cylinders.  Record readings: \\* \#1:\hfill \underline{\makebox[0.5in][l]{}} \\* \hfill \#2:\underline{\makebox[0.5in][l]{}} \\* \hfill \#3:\underline{\makebox[0.5in][l]{}} \\* \hfill \#4:\underline{\makebox[0.5in][l]{}} \\*  If compression test indicates problems, check internal condition and tolerances. \dotfill $\bigbox$
-		\item Remove air filter and clean.  \dotfill $\bigbox$
+  	\item Cylinder compression --- conduct compression check on all cylinders. Record readings: \\* \#1:\hfill \underline{\makebox[0.5in][l]{}} \\* \hfill \#2:\underline{\makebox[0.5in][l]{}} \\* \hfill \#3:\underline{\makebox[0.5in][l]{}} \\* \hfill \#4:\underline{\makebox[0.5in][l]{}} \\* If compression test indicates problems, check internal condition and tolerances. \dotfill $\bigbox$
+		\item Remove air filter and clean. \dotfill $\bigbox$
 		\item Check condition of alternate air door and cable. \dotfill $\bigbox$
 		\item Fuel Injection System
 		\begin{enumerate*}
   		\item Inspect fuel injection servo. \dotfill $\bigbox$
   		\item Inspect condition of fuel injection lines IAW FAA AD 2011-26-04 \& Lycoming MSB 342F. \dotfill $\bigbox$
 		\end{enumerate*}
-		\item Clean screens in fuel pump.  \dotfill $\bigbox$
+		\item Clean screens in fuel pump. \dotfill $\bigbox$
 		\item General condition: \dotfill $\bigbox$
 		\begin{enumerate*}
-		\item Check engine controls throttle, carb heat, mixture, prop and alternate air door.  Check condition, proper travel and safety locking. \dotfill $\bigbox$
+		\item Check engine controls throttle, carb heat, mixture, prop and alternate air door. Check condition, proper travel and safety locking. \dotfill $\bigbox$
 		\item Exhaust system --- inspect for cracks, defects and improper attachment. \dotfill $\bigbox$
 		\item Inspect heater muffs, heater boxes and SCAT tubes. \dotfill $\bigbox$
 		\item Check breather tube for obstructions and security. \dotfill $\bigbox$
@@ -287,17 +304,17 @@ The following inspections are required following first flight:
 		\item Check prop governor. \dotfill $\bigbox$
 		\item Internal corrosion --- inspect engines which have not been inhibited and have been out of service in excess of 12 months. \dotfill $\bigbox$
 	  \end{enumerate*}
-		\item Check \& record brake fluid level.  (*) \dotfill $\bigbox$
+		\item Check \& record brake fluid level. (*) \dotfill $\bigbox$
 		\item Lubricate all controls. \dotfill $\bigbox$
-		\item Reinstall engine cowl.  \dotfill $\bigbox$
+		\item Reinstall engine cowl. \dotfill $\bigbox$
 	\end{enumerate*}
 	\item{Fuel System} 
 	\begin{enumerate*}
-		\item Clean and inspect fuel filter.  \dotfill $\bigbox$
-		\item Clean and inspect gascolator.  \dotfill $\bigbox$
+		\item Clean and inspect fuel filter. \dotfill $\bigbox$
+		\item Clean and inspect gascolator. \dotfill $\bigbox$
 		\item Inspect condition of fuel lines. \dotfill $\bigbox$
 		\item Check fuel system for leaks. \dotfill $\bigbox$
-		\item Check pressure from electric fuel pump is 25 -- 45 psi.  Record pressure   \dotfill $\bigbox$
+		\item Check pressure from electric fuel pump is 25 -- 45 psi. Record pressure \dotfill $\bigbox$
 		\item Check operation of fuel selector valve. \dotfill $\bigbox$
 		\item Check fuel vents. \dotfill $\bigbox$
 	\end{enumerate*}
@@ -321,24 +338,24 @@ The following inspections are required following first flight:
 
 	\item{Cockpit} 
 	\begin{enumerate*}
-		\item Remove seats and cockpit floors.  \dotfill $\bigbox$
+		\item Remove seats and cockpit floors. \dotfill $\bigbox$
 		\item Generally --- inspect for dirt and loose equipment that might foul the controls. \dotfill $\bigbox$
-		\item Inspect cockpit area, forward fuselage and underfloor area for corrosion, cracks, chafed wiring, deterioration, distortion, evidence of failure, defective or insecure attachment fittings, etc.  \dotfill $\bigbox$
+		\item Inspect cockpit area, forward fuselage and underfloor area for corrosion, cracks, chafed wiring, deterioration, distortion, evidence of failure, defective or insecure attachment fittings, etc. \dotfill $\bigbox$
 		\item Check for dirt and loose equipment that might foul the controls. \dotfill $\bigbox$
 		\item Check all wing front spar attachment bolts. \dotfill $\bigbox$
 		\item Check rear spar carry through structure. \dotfill $\bigbox$
 		\item Inspect COM 1 and transponder antennae and coax. \dotfill $\bigbox$
-		\item Landing gear boxes --- inspect condition of wiring, etc.  Check for FOD. \dotfill $\bigbox$
+		\item Landing gear boxes --- inspect condition of wiring, etc. Check for FOD. \dotfill $\bigbox$
 		\item Landing gear attach bolts --- Check torque \dotfill $\bigbox$
 		\item Controls:
   	\begin{enumerate*}
   		\item Check control columns, systems and connection. \dotfill $\bigbox$
   		\item Lubricate control column bearings as required. \dotfill $\bigbox$
-  		\item Check pitch and roll trim operation from front and rear seats.  \dotfill $\bigbox$
+  		\item Check pitch and roll trim operation from front and rear seats. \dotfill $\bigbox$
   		\item Check flap motor, wiring and pushrods. \dotfill $\bigbox$
   		\item Lubricate flap pushrod bearings as required. \dotfill $\bigbox$
   	  \end{enumerate*}
-		\item Reinstall cockpit floors and front seat.  \dotfill $\bigbox$
+		\item Reinstall cockpit floors and front seat. \dotfill $\bigbox$
 		\item Windscreen and canopy --- inspect for deterioration and breakage. \dotfill $\bigbox$
 		\item Windscreen and canopy --- inspect canopy tracks, rollers and latch. \dotfill $\bigbox$
 		\item Upholstery --- inspect for security and tears. (*) \dotfill $\bigbox$
@@ -360,34 +377,34 @@ The following inspections are required following first flight:
 	\end{enumerate*}
 	\item{Aft Fuselage} 
 	\begin{enumerate*}
-		\item Remove aft baggage floor and aft baggage rear bulkhead.  \dotfill $\bigbox$
+		\item Remove aft baggage floor and aft baggage rear bulkhead. \dotfill $\bigbox$
 		\item Check under whole aft fuselage, including skins, bulkheads, longerons, stiffeners ,under baggage floor area for corrosion, cracks, chafed wiring, deterioration, distortion, evidence of failure, defective or insecure attachment fittings, etc. \dotfill $\bigbox$
-		\item Battery --- inspect for improper installation and improper charge.  Inspect battery hold-down and battery cables.  Check battery voltage with no load. \dotfill $\bigbox$
+		\item Battery --- inspect for improper installation and improper charge. Inspect battery hold-down and battery cables. Check battery voltage with no load. \dotfill $\bigbox$
 		\item Strobe power supply --- Check condition and wiring. \dotfill $\bigbox$
 		\item GPS antenna --- check condition of antenna and coax cable. \dotfill $\bigbox$
-		\item Elevator bellcrank and elevator control tubes --- check condition.  Lubricate bellcrank and pushrod ends as required.  \dotfill $\bigbox$
-		\item Reinstall aft baggage floor and aft baggage rear bulkhead.  \dotfill $\bigbox$
+		\item Elevator bellcrank and elevator control tubes --- check condition. Lubricate bellcrank and pushrod ends as required. \dotfill $\bigbox$
+		\item Reinstall aft baggage floor and aft baggage rear bulkhead. \dotfill $\bigbox$
 	\end{enumerate*}
   \item{ELT} 
   \begin{enumerate*}
-  	\item Inspect mounting tray and fasteners.  \dotfill $\bigbox$
-  	\item Inspect coax cable for abrasion. Disconnect coax connections and inspect jack and plug for corrosion.  \dotfill $\bigbox$
-  	\item Inspect cable to remote control for abrasion. Disconnect connections and inspect for corrosion.  \dotfill $\bigbox$
+  	\item Inspect mounting tray and fasteners. \dotfill $\bigbox$
+  	\item Inspect coax cable for abrasion. Disconnect coax connections and inspect jack and plug for corrosion. \dotfill $\bigbox$
+  	\item Inspect cable to remote control for abrasion. Disconnect connections and inspect for corrosion. \dotfill $\bigbox$
   	\item Inspect GPS data cable for abrasion. Disconnect GPS data cable and inspect jack and plug for corrosion. \dotfill $\bigbox$
-  	\item Check expiration date of ELT, aural alert and remote batteries and replace if they will expire within the next 12 months.  \dotfill $\bigbox$
+  	\item Check expiration date of ELT, aural alert and remote batteries and replace if they will expire within the next 12 months. \dotfill $\bigbox$
   	\item Conduct g-switch test from FAA Order 8250.3. From ACK manual, page 13. (*) \dotfill $\bigbox$
   	\begin{enumerate*}
-  		\item Remove ELT from tray.  \dotfill $\bigbox$
-  		\item Select ELT switch to ARMED.  \dotfill $\bigbox$
-  		\item Monitor 121.5, with squelch turned OFF.  \dotfill $\bigbox$
+  		\item Remove ELT from tray. \dotfill $\bigbox$
+  		\item Select ELT switch to ARMED. \dotfill $\bigbox$
+  		\item Monitor 121.5, with squelch turned OFF. \dotfill $\bigbox$
   		\item During first five minutes of the hour, test g-switch: 
   		\begin{enumerate*}
-  		  \item hold the ELT at your waist with the arrow printed on the battery case facing away from you.  \dotfill $\bigbox$
-  		  \item move the ELT rapidly away from your waist.  \dotfill $\bigbox$
+  		  \item hold the ELT at your waist with the arrow printed on the battery case facing away from you. \dotfill $\bigbox$
+  		  \item move the ELT rapidly away from your waist. \dotfill $\bigbox$
   		  \item when the ELT reaches the full extent of your arm retract it back to your waist as fast as possible. \dotfill $\bigbox$
   		  \end{enumerate*} 
-  		\item Verify that the ELT tone is heard.  \dotfill $\bigbox$
-  		\item Select ELT switch to OFF within 30 s (406 MHz emergency signal is sent 50 s after g-switch activation).  \dotfill $\bigbox$
+  		\item Verify that the ELT tone is heard. \dotfill $\bigbox$
+  		\item Select ELT switch to OFF within 30 s (406 MHz emergency signal is sent 50 s after g-switch activation). \dotfill $\bigbox$
   	\end{enumerate*}
   	\item Reinstall ELT \dotfill $\bigbox$
   	\item Set ELT switch to ARMED \dotfill $\bigbox$
@@ -397,30 +414,30 @@ The following inspections are required following first flight:
   \end{enumerate*}
 	\item{Empennage} 
 	\begin{enumerate*}
-		\item Remove empennage fairing and elevator horn inspection covers.  \dotfill $\bigbox$
-		\item Check horizontal stabilizer attachment.  \dotfill $\bigbox$
-		\item Check vertical fin attachments.  \dotfill $\bigbox$
-		\item Check vertical fin and rudder surfaces.  \dotfill $\bigbox$
-		\item Check rudder horn and attachment.  \dotfill $\bigbox$
-		\item Check rudder bolts for wear.  \dotfill $\bigbox$
-		\item Check rudder strobe and nav light for security.  \dotfill $\bigbox$
-		\item Check horizontal stabilizer and elevators.  \dotfill $\bigbox$
-		\item Inspect horizontal stabilizer front spar IAW SB 14-01-31.  \dotfill $\bigbox$
-		\item Record SB 14-01-31 inspection in logbook.  \dotfill $\bigbox$
-		\item Check elevator trim tab and servo.  \dotfill $\bigbox$
-		\item Check elevator horn.  \dotfill $\bigbox$
-		\item Check elevator bolts for wear.  \dotfill $\bigbox$
-		\item Inspect elevator spar IAW SB 14-02-05.  \dotfill $\bigbox$
-		\item Record SB 14-02-05 inspection in logbook.  \dotfill $\bigbox$
-		\item Lubricate all bearings as needed.  \dotfill $\bigbox$
-		\item Reinstall empennage fairing and elevator horn inspection covers.  \dotfill $\bigbox$
+		\item Remove empennage fairing and elevator horn inspection covers. \dotfill $\bigbox$
+		\item Check horizontal stabilizer attachment. \dotfill $\bigbox$
+		\item Check vertical fin attachments. \dotfill $\bigbox$
+		\item Check vertical fin and rudder surfaces. \dotfill $\bigbox$
+		\item Check rudder horn and attachment. \dotfill $\bigbox$
+		\item Check rudder bolts for wear. \dotfill $\bigbox$
+		\item Check rudder strobe and nav light for security. \dotfill $\bigbox$
+		\item Check horizontal stabilizer and elevators. \dotfill $\bigbox$
+		\item Inspect horizontal stabilizer front spar IAW SB 14-01-31. \dotfill $\bigbox$
+		\item Record SB 14-01-31 inspection in logbook. \dotfill $\bigbox$
+		\item Check elevator trim tab and servo. \dotfill $\bigbox$
+		\item Check elevator horn. \dotfill $\bigbox$
+		\item Check elevator bolts for wear. \dotfill $\bigbox$
+		\item Inspect elevator spar IAW SB 14-02-05. \dotfill $\bigbox$
+		\item Record SB 14-02-05 inspection in logbook. \dotfill $\bigbox$
+		\item Lubricate all bearings as needed. \dotfill $\bigbox$
+		\item Reinstall empennage fairing and elevator horn inspection covers. \dotfill $\bigbox$
 	\end{enumerate*}
 	\item{Wings} 
 	\begin{enumerate*}
-		\item Remove wing root fairing and under-wing inspection panels.  \dotfill $\bigbox$
+		\item Remove wing root fairing and under-wing inspection panels. \dotfill $\bigbox$
 		\item Check fuel tank to fuselage mount. \dotfill $\bigbox$
 		\item Check wing rear spar attachment bolts. \dotfill $\bigbox$
-		\item Check surfaces for damage and loose rivets.  \dotfill $\bigbox$
+		\item Check surfaces for damage and loose rivets. \dotfill $\bigbox$
 		\item Check wing walk condition. \dotfill $\bigbox$
 		\item Check flaps and pushrods. \dotfill $\bigbox$
 		\item Check fuel tank bolts on front spar. \dotfill $\bigbox$
@@ -432,11 +449,11 @@ The following inspections are required following first flight:
 		\item Check nav lights and strobes - condition and function. \dotfill $\bigbox$
 		\item Check wing tips. \dotfill $\bigbox$
 		\item Remove wing tips and inspect internal antennae. \dotfill $\bigbox$
-		\item Reinstall wing root fairing and under-wing inspection panels.  \dotfill $\bigbox$
+		\item Reinstall wing root fairing and under-wing inspection panels. \dotfill $\bigbox$
 	\end{enumerate*}
 	\item{Wheels and Brakes} 
 	\begin{enumerate*}
-		\item Tail wheel assembly.  
+		\item Tail wheel assembly. 
 		\begin{enumerate*}
 		  \item Tail wheel pivot --- disassemble. \dotfill $\bigbox$
 		  \item Tail wheel pivot and locking mechanism --- inspect and lubricate. \dotfill $\bigbox$
@@ -444,24 +461,24 @@ The following inspections are required following first flight:
 		  \item Tail wheel bearings --- inspect and lubricate. \dotfill $\bigbox$
 		  \item Tail wheel axle and tail wheel assembly --- reassemble and reinstall on aircraft. \dotfill $\bigbox$
 	  \end{enumerate*}
-		\item Wheel pants and gear leg fairings --- remove.  \dotfill $\bigbox$
+		\item Wheel pants and gear leg fairings --- remove. \dotfill $\bigbox$
 		\item Wheels --- remove. \dotfill $\bigbox$
 		\item Wheels --- inspect for cracks, corrosion, defects broken bolts and condition of bearings. \dotfill $\bigbox$
 		\item Wheel bearings --- clean, inspect and repack. \dotfill $\bigbox$
-		\item Tires - inspect for wear, cuts and incorrect inflation; inspect for improper installation and improper operation.  Rotate as required. \dotfill $\bigbox$
-		\item Brake lining --- inspect.  Minimum acceptable lining thickness is 0.100\" \dotfill $\bigbox$
-		\item Brake disc --- inspect.  Minimum acceptable disc thickness is 0.167\" \dotfill $\bigbox$
+		\item Tires - inspect for wear, cuts and incorrect inflation; inspect for improper installation and improper operation. Rotate as required. \dotfill $\bigbox$
+		\item Brake lining --- inspect. Minimum acceptable lining thickness is 0.100\" \dotfill $\bigbox$
+		\item Brake disc --- inspect. Minimum acceptable disc thickness is 0.167\" \dotfill $\bigbox$
 		\item Landing gear legs --- inspect. \dotfill $\bigbox$
-		\item Wheels --- reinstall.  \dotfill $\bigbox$
+		\item Wheels --- reinstall. \dotfill $\bigbox$
 		\item Brake lines --- inspect for leaks and condition. \dotfill $\bigbox$
 		\item Landing gear wear plate at lower fuselage longeron --- inspect. \dotfill $\bigbox$
-		\item Wheel pants, gear leg fairings and intersection fairings ---  inspect. \dotfill $\bigbox$
-		\item Tire Pressure --- check. Record tire pressures. L:\underline{\makebox[0.5in][l]{}}, R:\underline{\makebox[0.5in][l]{}}  \dotfill $\bigbox$
-		\item Wheel pants and gear leg fairings --- reinstall.  \dotfill $\bigbox$
+		\item Wheel pants, gear leg fairings and intersection fairings --- inspect. \dotfill $\bigbox$
+		\item Tire Pressure --- check. Record tire pressures. L:\underline{\makebox[0.5in][l]{}}, R:\underline{\makebox[0.5in][l]{}} \dotfill $\bigbox$
+		\item Wheel pants and gear leg fairings --- reinstall. \dotfill $\bigbox$
 	\end{enumerate*}
 	\item{Operational Inspection} 
 	\begin{enumerate*}
-		\item Check items that wouldn't normally be checked in flight. \textcolor{red}{Which items??}  \dotfill $\bigbox$
+		\item Check items that wouldn't normally be checked in flight. \textcolor{red}{Which items??} \dotfill $\bigbox$
 		\item Pitot Heat --- check. \dotfill $\bigbox$
 	\end{enumerate*}
 	\item{Engine Ground Run}
@@ -486,23 +503,33 @@ The following inspections are required following first flight:
 	\item See Torque Table for tension arm and pivot bolt torque values. 
 \end{enumerate*}
 
-\section{MAGNETO TIMING} 
+\ifthenelse{\thePMAG = 1}{\section{SET PMAG ELECTRONIC IGNITION TIMING}
+\begin{enumerate*}
+	\item Set the engine to TDC for cylinders 1 and 2.
+	\item Select PMag OFF and PMag BU Pwr to ON. LED on PMag should be illuminated steady Red. 
+	\item Disconnect MP line at engine end. 
+	\item Blow into MP with a pressure of at least 0.5 psi for a duration of at least one second. Confirm LED is blinking Red. If not, blow again.
+	\item Blow into MP line a second time.  LED will blink Green to confirm timing has been set. If not, blow again. 
+	\item Cycle PMag BU Pwr from ON to OFF to ON to set PMag to normal operation. 
+	\item Move prop around TDC. LED should be Red prior to TDC, and Green at TDC.
+	\item Select PMag to OFF.
+	\end{enumerate*}
+}{\section{MAGNETO TIMING} 
 \begin{enumerate*}
 	\item See the Lycoming Direct Drive Overhaul Manual for the detailed procedure. 
-	\item Mag timing box --- Connect the black lead to the ground screw on the magneto.  Connect the red or green lead to the mag lead screw.  The red and green lamps on the timing box work backwards to what is described in the overhaul manual - the lamps extinguish when the points open, i.e. when the ignition fires. 
+	\item Mag timing box --- Connect the black lead to the ground screw on the magneto. Connect the red or green lead to the mag lead screw. The red and green lamps on the timing box work backwards to what is described in the overhaul manual - the lamps extinguish when the points open, i.e. when the ignition fires. 
 	\item The Mag Switch must be ON to use the timing box. 
-	\item This serial number engine has a timing setting of 20\textdegree ~BTDC. 
-	
-\end{enumerate*}
+	\item This serial number engine has a timing setting of 20\textdegree ~BTDC. 	
+\end{enumerate*}}
 
-\section{ELECTRONIC IGNITION}
+\section{LIGHTSPEED ELECTRONIC IGNITION}
 \subsection{SET IGNITION TIMING} 
 \begin{enumerate*}
 	\item See the Lightspeed Engineering Plasma II Manual for the detailed timing procedure. 
 	\item Set the engine to 5\textdegree ~after TDC for cylinders 1 and 2.
 	\item Disconnect the two coax at the LightSpeed box.
 	\item Select the EI Switch to ON.
-	\item Rotate the hall effect module CCW until the green LED goes ON, then OFF.  Torque the hall effect module in place.
+	\item Rotate the hall effect module CCW until the green LED goes ON, then OFF. Torque the hall effect module in place.
 \end{enumerate*}
 \subsection{CHECK IGNITION TIMING} 
 \begin{enumerate*}
@@ -514,17 +541,19 @@ The following inspections are required following first flight:
 
   \subsection{PHASE CHECK} 
   \begin{enumerate*}
-  	\item disconnect all spark plug wires at the coils.  
-  	\item Select EI Switch to ON.  
-  	\item Set prop to 5\textdegree ~after TDC for cylinders 1 and 2.  
-  	\item Briskly rock prop back and forth --- look for a spark at the spark plug lead connections on one of the coils.  
+  	\item disconnect all spark plug wires at the coils. 
+  	\item Select EI Switch to ON. 
+  	\item Set prop to 5\textdegree ~after TDC for cylinders 1 and 2. 
+  	\item Briskly rock prop back and forth --- look for a spark at the spark plug lead connections on one of the coils. 
   	\item Connect the spark plug leads for cylinders 1 and 2 to the coil that produced the spark.
 \end{enumerate*}
 
 \section{SPARK PLUG GAPS}
-Automotive spark plug, upper plugs, fired by electronic ignition - 0.026" -- 0.035" gap.
+Automotive spark plug, upper plugs, fired by Lightspeed electronic ignition - 0.026" -- 0.035" gap.
 
-Aviation spark plug, lower plugs, fired by magneto - 0.016" -- 0.021" gap.
+\ifthenelse{\thePMAG = 1}{
+Automotive spark plug, lower plugs, fired by PMag - 0.030" -- 0.035" gap.}{
+Aviation spark plug, lower plugs, fired by magneto - 0.016" -- 0.021" gap.}
 
 \section{PROPELLER GOVERNOR}
 One CW turn of high rpm adjustment screw should decrease max speed by 25 RPM. 
@@ -532,9 +561,10 @@ One CW turn of high rpm adjustment screw should decrease max speed by 25 RPM.
 \section{RETORQUE MAIN LANDING GEAR BOLTS}
   \begin{enumerate*}
     \item Torque the 7/16" bolts on the outboard end of each main landing gear leg with the torque wrench on the nut below the aircraft.  Hold the bolt heads with a 1/4" drive socket on a ratchet. 
-    \item Torque the 7/16" bolt on the inboard end of each gear leg with the torque wrench on the nut inside the cockpit.  
-    \item Torque the two 5/16" bolts at the inboard end of each gear leg with the torque wrench on the bolt head below the aircraft.  Hold the nuts with a 1/2" open end wrench.  
+    \item Torque the 7/16" bolt on the inboard end of each gear leg with the torque wrench on the nut inside the cockpit. 
+    \item Torque the two 5/16" bolts at the inboard end of each gear leg with the torque wrench on the bolt head below the aircraft. Hold the nuts with a 1/2" open end wrench. 
 \end{enumerate*}
+\clearpage
 
 \section{TORQUE TABLE} 
 \begin{tabularx}
@@ -545,9 +575,9 @@ One CW turn of high rpm adjustment screw should decrease max speed by 25 RPM.
 	\hline Main Alternator Pivot Bolt&30 -- 40 ft-lb&from Installation Instructions\\
 	\hline Spark Plugs (Aviation)&35 ft-lb&from Lycoming Overhaul Manual\\
 	\hline Spark Plugs (Automotive)&180 in-lb&from Electronic Ignition Installation Instructions\\
-	\hline Spark Plug Adaptors&25 ft-lb&Do no apply anti-seize.  from Electronic Ignition Installation Instructions\\
+	\hline Spark Plug Adaptors&25 ft-lb&Do no apply anti-seize. from Electronic Ignition Installation Instructions\\
 	\hline Rocker Box Screws&50 in-lb&from Lycoming Overhaul Manual\\
-	\hline Exhaust Pipe Nuts&180 -- 200 in-lb&Apply anti-seize.  from Vetterman Exhaust Installation Instructions\\
+	\hline Exhaust Pipe Nuts&180 -- 200 in-lb&Apply anti-seize. from Vetterman Exhaust Installation Instructions\\
 	\hline Magneto and EI Hall Effect Unit Base Clamps&204 in-lb&from ECI Service Info\\
 	\hline Propeller Governor Mounting Nuts&110 -- 150 in-lb&from PCU-5000 Installation and Adjustment document\\
 	\hline Propeller Governor High RPM Stop Jam Nut&24.8 -- 28.3 in-lb&from PCU-5000 Installation and Adjustment document\\

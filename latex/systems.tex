@@ -171,7 +171,10 @@ The rear seat has a throttle mounted on the left side wall, and a pitch trim swi
 			\item \textbf{LDG LT} --- Controls Landing Light in right outboard wing. \\
 			\\
 			The Taxi and Landing Lights flash alternately if both switches are placed in the middle, "FLASH", position. 
-			\item \textbf{IGNITION --- MAG} --- Controls the single magneto. 
+\ifthenelse{\thePMAG = 1}{
+			\item \textbf{IGNITION --- MAG} --- Controls the PMag electronic ignition.}
+{			\item \textbf{IGNITION --- MAG} --- Controls the single magneto. }
+
 			\item \textbf{IGNITION --- ELEC} --- Controls the Electronic Ignition which is installed in place of the right magneto. 
 			\item \textbf{STARTER} --- Guarded switch enables the Start switch on the front control stick grip, and provides an alternate starter switch. The lower position disables the stick grip starter switch. If the guard is lifted, and the switch placed in the middle position, the stick grip starter switch is enabled. The momentary upper position engages the starter. 
 			\item \textbf{FLAPS} --- Momentary switch causes the flaps to move up or down while it is held. The flap actuator will free-wheel once the flaps reach full travel up or down. 
@@ -216,7 +219,7 @@ The rear seat has a throttle mounted on the left side wall, and a pitch trim swi
 	\begin{minipage}{3in}
 	  The front seat has an Infinity Aerospace stick grip with switches that control various aircraft systems.
 		\begin{enumerate}
-			\item \textbf{Trim and Autopilot Disconnect} --- Red. The power to the elevator and aileron trim servos is removed when this momentary switch is depressed. The power will be restored when the switch is released.  A press and release within 5 seconds will disconnect the autopilot.  Holding the switch depressed for longer than 5 seconds will activate the autopilot Pilot Command Steering mode.
+			\item \textbf{Trim and Autopilot Disconnect} --- Red. The power to the elevator and aileron trim servos is removed when this momentary switch is depressed. The power will be restored when the switch is released. A press and release within 5 seconds will disconnect the autopilot. Holding the switch depressed for longer than 5 seconds will activate the autopilot Pilot Command Steering mode.
 			
 			\item \textbf{Elevator and Aileron Trim} --- Controls elevator and roll trim.
 			
@@ -237,30 +240,30 @@ The rear seat has a throttle mounted on the left side wall, and a pitch trim swi
 			\begin{overpic}[scale=.2]{../Diagrams/stick-grip1} \Large \put(-1,95){\ding{172}} 
 				
 				% #1 dingbat
-				%  \put(3,94){\Vector(6,-12)}
+				% \put(3,94){\Vector(6,-12)}
 				\put(3,94){\vector(1,-2){3.5}} \put(14.25,99.25){\ding{173}} 
 				
 				% #2 dingbat
-				%  \put(19,99){\Vector(15,-13)}
+				% \put(19,99){\Vector(15,-13)}
 				\put(19,99){\vector(6,-5){12}} \put(55,99){\ding{174}} 
 				
 				% #3 dingbat
-				%  \put(56,98){\Vector(-3,-7)}
+				% \put(56,98){\Vector(-3,-7)}
 				\put(56,98){\vector(-1,-2){3}} \put(-1,60){\ding{176}} 
 				
 				% #5 dingbat
-				%  \put(3,59){\Vector(4,-8)}
+				% \put(3,59){\Vector(4,-8)}
 				\put(3,59){\vector(1,-2){4}} \normalsize 
 			\end{overpic}
 			&
 			\begin{overpic}[scale=.17]{../Diagrams/stick-grip2} \Large \put(-6.25,43.25){\ding{175}} 
 				
 				% #4 dingbat
-				%  \put(-2,48){\Vector(5,8)}
+				% \put(-2,48){\Vector(5,8)}
 				\put(-2,48){\vector(2,4){4}} \put(1.5,35){\ding{177}} 
 				
 				% #6 dingbat
-				%  \put(5,34){\Vector(7,-16)}
+				% \put(5,34){\Vector(7,-16)}
 				\put(5,34){\vector(1,-2){7}} \normalsize 
 			\end{overpic}
 		\end{tabular}
@@ -288,11 +291,19 @@ The rear seat has a throttle mounted on the left side wall, and a pitch trim swi
 \needspace{10\baselineskip}
 \section{ENGINE AND PROPELLER}
 
-The aircraft is powered by a Lycoming I0-360-A1B6 four cylinder, direct drive, horizontally opposed engine rated at 200 HP at 2700 rpm. The engine is fitted with a 60 amp 14 volt main alternator, an 8 amp standby alternator, shielded magneto ignition, Lightspeed Engineering electronic ignition, fuel pump, fuel injection, and an alternate air induction system.
+The aircraft is powered by a Lycoming I0-360-A1B6 four cylinder, direct drive, horizontally opposed engine rated at 200 HP at 2700 rpm. The engine is fitted with a 60 amp 14 volt main alternator, an 8 amp standby alternator, 
+\ifthenelse{\thePMAG = 1}{PMag electronic ignition,}
+{shielded magneto ignition,}
+ Lightspeed Engineering electronic ignition, fuel pump, fuel injection, and an alternate air induction system. 
+ 
+\ifthenelse{\thePMAG = 1}
+{The PMag has two power sources. It is powered from the Essential Bus during start and at ground idle. It is powered by its own internal generator if the rpm is above approximately 900 rpm, and will thus provide ignition even after a total electrical failure. The PMag internal generator may be checked by selecting the PMAG BU PWR switch to TEST, which removes the Essential Bus power.}
+{The magneto is self-powered, and will provide ignition even after a total electrical failure.} 
+The Lightspeed Electronic ignition is powered from the Battery Bus, and will provide ignition as long as there is sufficient battery voltage available.
 
 The exhaust system is all stainless steel with a crossover configuration and no mufflers. Two heat muffs provide cabin heat.
 
-The engine drives a 72.05\char`\"{} (183 cm) diameter MT three-blade constant speed propeller.  The propeller blade roots have counterweights that force them towards coarse pitch if propeller governor oil pressure is lost.  The propeller blades are of composite construction, with a wooden core covered by epoxy fibreglass.  The outer portion of the blade leading edges is protected by a stainless steel erosion strip that is bonded in place.  The inner portion of the blade leading edge is protected by a self-adhesive strip.
+The engine drives a 72.05\char`\"{} (183 cm) diameter MT three-blade constant speed propeller. The propeller blade roots have counterweights that force them towards coarse pitch if propeller governor oil pressure is lost. The propeller blades are of composite construction, with a wooden core covered by epoxy fibreglass. The outer portion of the blade leading edges is protected by a stainless steel erosion strip that is bonded in place. The inner portion of the blade leading edge is protected by a self-adhesive strip.
 
 \section{ENGINE MONITOR} 
 \begin{wrapfigure}[15]{R}{0pt}
@@ -322,7 +333,7 @@ Each parametre that the EIS monitors can have upper and lower limits assigned, a
 
 \subsection*{Display Formats}
 
-%\textbf{Displays} --- There are 14 different pages of data that may be displayed.  
+%\textbf{Displays} --- There are 14 different pages of data that may be displayed. 
 There are 14 different pages of data that may be displayed. Pressing the ``Next/Ack'' button cycles to the next page. Pressing the ``Previous'' button cycles to the previous page. Double-pushing the ``Display'' button changes to the default page. The two user-configurable pages don't have labels identifying which parametre each block of numbers represents. Pressing and holding the ``Display'' button from a user-configurable page replaces the digits with the data labels, allowing the data blocks to be identified.
 \clearpage 
 The pages, in sequence, are:
@@ -364,7 +375,7 @@ The fuel quantity is a detotalizer, based on the pilot-entered fuel quantity, le
 
 % \centering \textbf{WARNING}
 % 
-% The fuel flow is not yet calibrated, so the detotalizer is not accurate.  \\
+% The fuel flow is not yet calibrated, so the detotalizer is not accurate. \\
 % The fuel gauges are the primary source of fuel quantity information.
 \vspace{\tablebottomspace}
 \end{minipage}\\
@@ -467,7 +478,7 @@ Then, the cylinder \# of the first cylinder to peak is shown, plus its change fr
 \vspace{\tabletopspace}
 \textbf{EGT Cruise Bar Graph Page}\\
 \textbf{Top row} --- EGT Cruise Bar Graph --- shows how the EGT for each cylinder has changed from the saved lean point. 
-Each pixel is 10\textdegree F.  Bars growing left of centre show decrease in EGT, to the right is an increase in EGT.  
+Each pixel is 10\textdegree F. Bars growing left of centre show decrease in EGT, to the right is an increase in EGT. 
 Then, the cylinder \# of the first cylinder to peak is shown, then its EGT vs the peak EGT.\\
 \textbf{Bottom row} --- Fuel flow, EGT for first cylinder to peak and RPM.
 \vspace{\tablebottomspace}
@@ -483,8 +494,8 @@ Then, the cylinder \# of the first cylinder to peak is shown, then its EGT vs th
 \vspace{\tabletopspace}
 \textbf{EGT Page }\\
 \textbf{Top row} --- EGT \#2 EGT \#1\\
-\textbf{Bottom row} ---  EGT \#4 EGT \#3\\\\
-The EGT presentation is oriented as if the viewer was looking down on the engine.  I.e. the top row shows the EGTs for
+\textbf{Bottom row} --- EGT \#4 EGT \#3\\\\
+The EGT presentation is oriented as if the viewer was looking down on the engine. I.e. the top row shows the EGTs for
 the front two cylinders, and the bottom row shows the rear two cylinders.
 \vspace{\tablebottomspace}
 \end{minipage}\\
@@ -500,11 +511,11 @@ the front two cylinders, and the bottom row shows the rear two cylinders.
 \vspace{\tabletopspace}
 \textbf{Digital Leaning Page }\\
 \textbf{Top row} --- EGT \#2 EGT \#1\\
-\textbf{Bottom row} ---  EGT \#4 EGT \#3\\\\
-Shows the EGTs for all cylinders that have not peaked.  
+\textbf{Bottom row} --- EGT \#4 EGT \#3\\\\
+Shows the EGTs for all cylinders that have not peaked. 
 Once an EGT reaches peak, and decreases by 10\textdegree F, the EGT is replaced by the amount the temperature has
-decreased from the peak.  
-The cylinder \# for the first cylinder to peak is shown in the top right corner of the display.  \textbf{Note that the
+decreased from the peak. 
+The cylinder \# for the first cylinder to peak is shown in the top right corner of the display. \textbf{Note that the
 numbering scheme here is not the same as Lycoming's cylinder numbering scheme} --- 1 is top left (Cyl \#2), 2 is top right (Cyl \#1), 3 is bottom left (Cyl \#4) and 4 is bottom right (Cyl \#3). 
 \vspace{\tablebottomspace}
 \end{minipage}\\
@@ -520,7 +531,7 @@ numbering scheme here is not the same as Lycoming's cylinder numbering scheme} -
 \vspace{.25ex}
 \textbf{Cruise Page }\\
 \textbf{Top row} --- EGT \#2 EGT \#1\\
-\textbf{Bottom row} ---  EGT \#4 EGT \#3\\\\
+\textbf{Bottom row} --- EGT \#4 EGT \#3\\\\
 Shows the amount the EGTs have changed since ``SAVE LEAN PT.'' was selected.
 \vspace{.25ex}
 \vspace{\tablebottomspace}
@@ -535,9 +546,9 @@ Shows the amount the EGTs have changed since ``SAVE LEAN PT.'' was selected.
 \begin{minipage}{\eistablerightcol}
 \vspace{\tabletopspace}
 \textbf{CHT Page }\\
-\textbf{Top row} --- CHT \#2 CHT \#1  plus highest CHT in top right corner.\\
-\textbf{Bottom row} ---  CHT \#4 CHT \#3\\\\
-The CHT presentation is oriented as if the viewer was looking down on the engine.  I.e. the top row shows the CHT for
+\textbf{Top row} --- CHT \#2 CHT \#1 plus highest CHT in top right corner.\\
+\textbf{Bottom row} --- CHT \#4 CHT \#3\\\\
+The CHT presentation is oriented as if the viewer was looking down on the engine. I.e. the top row shows the CHT for
 the front two cylinders, and the bottom row shows the rear two cylinders. 
 \vspace{\tablebottomspace}
 \end{minipage}\\
@@ -551,8 +562,8 @@ the front two cylinders, and the bottom row shows the rear two cylinders.
 \begin{minipage}{\eistablerightcol}
 \vspace{\tabletopspace}
 \textbf{Timer/Temperature Page }\\
-\textbf{Top row} --- Flight Timer --- runs when the RPM is above 2000 rpm.  Shows the last flight time at power up, and
-the current flight time after three minutes of flight.  Hours:Minutes:Seconds.  The internal unit temperature is shown
+\textbf{Top row} --- Flight Timer --- runs when the RPM is above 2000 rpm. Shows the last flight time at power up, and
+the current flight time after three minutes of flight. Hours:Minutes:Seconds. The internal unit temperature is shown
 in the top right corner.\\
 \textbf{Bottom row} --- Engine Hours --- accumulates when the RPM is above 2000 rpm. 
 \vspace{\tablebottomspace}
@@ -632,7 +643,7 @@ The upper and lower alarm limits, and other user-modifiable data, may be edited 
 
 After power-up, the EIS will alarm for any parametres that are outside the allowable limits, such as oil pressure, fuel pressure, etc. Acknowledge each alarm in turn by a momentary press of the ``Next/Ack'' button. The unit will default to the User-Configurable Page 1, which has RPM, MP, highest CHT and EGT, Oil Pressure, Oil Temperature and Fuel Flow. Pressing and holding the ``Display'' button will replace the data with the data labels, so each field may be identified. A press of the ``Next/Ack'' button will bring up User-Configurable Page 2, which has Fuel Quantity, Fuel Flow, Fuel Pressure, OAT, Voltage and Main Alternator Load. There are 14 different pages in all --- a double-push of the ``Display'' button will return to the default page.
 
-\textbf{Fuel Detotalizer} --- Upon power-up the fuel detotalizer function will start with the fuel quantity it had at the last power-down.  Press and hold the left and right buttons to reach the fuel quantity page.  Once on the fuel quantity page, the fuel quantity may be adjusted as indicated by the ``Soft'' labels.  The fuel quantity can be quickly set to 43 USG (full tanks) by simultaneously pushing the buttons indicated by the ``Inc'' and ``Dec'' labels.
+\textbf{Fuel Detotalizer} --- Upon power-up the fuel detotalizer function will start with the fuel quantity it had at the last power-down. Press and hold the left and right buttons to reach the fuel quantity page. Once on the fuel quantity page, the fuel quantity may be adjusted as indicated by the ``Soft'' labels. The fuel quantity can be quickly set to 43 USG (full tanks) by simultaneously pushing the buttons indicated by the ``Inc'' and ``Dec'' labels.
 
 \textbf{Digital Leaning Page} --- The digital leaning page is a special page that is intended to be used when leaning the mixture. This page is identified by the ``L'' in the lower right corner. Initially it shows the highest EGT for each cylinder, until each cylinder's EGT peaks, in which case it shows the EGT decrease from peak. The first cylinder to peak is identified by the digit in the top right corner of the window. Note that the numbering scheme here is not the same as Lycoming's cylinder numbering scheme --- 1 is top left (Cyl \#2), 2 is top right (Cyl \#1), 3 is bottom left (Cyl \#4) and 4 is bottom right (Cyl \#3).
 
@@ -645,7 +656,7 @@ The page is used as follows:
 \item Enrichen or lean as desired so all cylinders are at the desired value lower than the peak EGT.
 \end{enumerate}
 
-\subsection*{Abnormal Operations} The EIS will flash the ``MSTR WARN'' red light if any parametre goes outside the upper or lower limits programmed via the ``Set Limits'' interface. The EIS display will automatically change to a page that displays the parametre of interest, with the value flashing.  Press the ``Next/Ack'' button to acknowledge the warning --- the EIS display will return to its previous page.  The ``MSTR WARN'' light will stop flashing, but will remain illuminated until all parametres are within the programmed ranges.  If another parametre goes outside the programmed ranges, the ``MSTR WARN'' light will flash again, and the display will change to show the parametre of interest.
+\subsection*{Abnormal Operations} The EIS will flash the ``MSTR WARN'' red light if any parametre goes outside the upper or lower limits programmed via the ``Set Limits'' interface. The EIS display will automatically change to a page that displays the parametre of interest, with the value flashing. Press the ``Next/Ack'' button to acknowledge the warning --- the EIS display will return to its previous page. The ``MSTR WARN'' light will stop flashing, but will remain illuminated until all parametres are within the programmed ranges. If another parametre goes outside the programmed ranges, the ``MSTR WARN'' light will flash again, and the display will change to show the parametre of interest.
 
 \section{ENGINE CONTROLS} Engine controls consist of throttle, propeller, mixture, alternate air door and oil cooler door controls. The throttle, propeller and mixture controls are in a throttle quadrant mounted on the left side of the front cockpit. The alternate air door position is controlled by a push-pull Bowden cable connected to a knob mounted on the upper, inboard side of the left landing gear box structure, underneath and ahead of the instrument panel. The oil cooler door controls the amount of air that enters the oil cooler, to allow the oil temperature to be varied. The oil cooler door position is controlled by a push-pull Bowden cable connected to a knob mounted on the upper, inboard side of the left landing gear box structure, underneath and ahead of the instrument panel.
 
@@ -662,7 +673,7 @@ The parking brake control valve is mounted on the forward baggage compartment af
 [WARNING] The parking brake valve must be checked prior to landing to ensure that it is held in the OFF position by the spring-loaded catch. If the parking brake valve is in the ON position, any applied brake cannot be released, which may lead to loss of directional control.
 \end{Note}
 \begin{Note}
-[WARNING] The brakes have enough brake energy capacity for a single maximum braked rejected take-off or landing from normal approach speed.  Multiple hard braking events, or a maximum braked landing from an abnormally high landing speed could overheat the brakes resulting in brake failure.
+[WARNING] The brakes have enough brake energy capacity for a single maximum braked rejected take-off or landing from normal approach speed. Multiple hard braking events, or a maximum braked landing from an abnormally high landing speed could overheat the brakes resulting in brake failure.
 \end{Note}
 
 \textcolor{red}{ADD PHOTO OR DRAWING OF PARKING BRAKE VALVE LOCATION}
@@ -743,7 +754,7 @@ The electrical system includes a 14 volt 60 amp Main Alternator, a 12 volt, 17 a
 
 \textbf{Over Voltage Protection} --- Each alternator has independent over voltage protection. If the alternator output voltage is too high, the over voltage protection system will short the Main Alternator field or the Standby Alternator relay to ground. This will open a CB on the aft end of the right side switch console, and shutdown the affected alternator. The over voltage protection may be reset by pushing the CB back in, but it will pop again if the over voltage condition still exists.
 
-\textbf{Electrical System Circuit Protection} --- All circuit protection is by fuses, except for circuit breakers for the Main Alternator Field and the Standby Alternator Relay. The fuses for the Main and Essential busses are mounted on the aft face of the hinged door on the forward baggage compartment aft bulkhead, and are accessible on the ground only.  Battery Bus fuses are in a fuse block next to the battery, behind the aft baggage compartment. Fusible links are also used to protect some of the wires.
+\textbf{Electrical System Circuit Protection} --- All circuit protection is by fuses, except for circuit breakers for the Main Alternator Field and the Standby Alternator Relay. The fuses for the Main and Essential busses are mounted on the aft face of the hinged door on the forward baggage compartment aft bulkhead, and are accessible on the ground only. Battery Bus fuses are in a fuse block next to the battery, behind the aft baggage compartment. Fusible links are also used to protect some of the wires.
 
 \clearpage %force electrical system figures and table to appear, before moving on to next system
 % \begin{table}[htb]
@@ -829,9 +840,9 @@ A Defog Fan is mounted beneath a grill on the glare shield. It is controlled by 
 	%
 	% 	\end{wraptable}
 
-An Aerox 13 cubic ft, 2015 psi removable oxygen cylinder (D size cylinder) is fitted in the deep well on the right side of the forward baggage compartment.  The bottle and mounting bracket may be removed when not required.  A pressure gauge, ON-OFF valve and pressure regulator is installed on top of the cylinder.  Two oxygen lines are connected to the regulator with quick disconnect fittings.  A slide on sleeve protects the pressure regulator and valve.
+An Aerox 13 cubic ft, 2015 psi removable oxygen cylinder (D size cylinder) is fitted in the deep well on the right side of the forward baggage compartment. The bottle and mounting bracket may be removed when not required. A pressure gauge, ON-OFF valve and pressure regulator is installed on top of the cylinder. Two oxygen lines are connected to the regulator with quick disconnect fittings. A slide on sleeve protects the pressure regulator and valve.
 
-The oxygen supply hoses are permanently mounted in the aircraft.  Quick disconnects on the front end of the hoses allow them to be disconnected from the regulator when the bottle is removed.  Quick disconnects on the aft end of the hoses allow the flow meters and cannulas to be removed.  Each end of the oxygen supply lines should be capped when disconnected, and the lines should be stowed in the clips provided.  The maximum altitude at which the Aerox Oxysaver cannulas may be used is 18,000 ft.
+The oxygen supply hoses are permanently mounted in the aircraft. Quick disconnects on the front end of the hoses allow them to be disconnected from the regulator when the bottle is removed. Quick disconnects on the aft end of the hoses allow the flow meters and cannulas to be removed. Each end of the oxygen supply lines should be capped when disconnected, and the lines should be stowed in the clips provided. The maximum altitude at which the Aerox Oxysaver cannulas may be used is 18,000 ft.
 
 \vspace{5 mm}
 	\begin{center}
@@ -858,8 +869,8 @@ The oxygen supply hoses are permanently mounted in the aircraft.  Quick disconne
 	\begin{Note}
 		[WARNINGS]
 		\begin{enumerate}
-			\item Oil and grease may ignite spontaneously in the presence of high pressure oxygen.  Do not handle the O2 system components with dirty hands.  Ensure the system components are kept clean.
-		\item The oxygen cylinder valve cannot be accessed from the cockpit.  Ensure the valve is opened and the oxygen lines are connected to the regulator prior to any flight on which oxygen may be required.
+			\item Oil and grease may ignite spontaneously in the presence of high pressure oxygen. Do not handle the O2 system components with dirty hands. Ensure the system components are kept clean.
+		\item The oxygen cylinder valve cannot be accessed from the cockpit. Ensure the valve is opened and the oxygen lines are connected to the regulator prior to any flight on which oxygen may be required.
 	\end{enumerate}
 	\end{Note}
 }{}
@@ -934,7 +945,7 @@ The GNS 430W provides GPS, COM, VOR, LOC and G/S capability with a colour moving
 
 \textbf{Power} --- The GNS 430W is powered from the Essential Bus. The unit is turned ON/OFF by turning the COM PWR/VOL switch at the top left corner. The Self-Test page data must be verified for IFR navigation using the GPS.
 
-\textbf{COM} --- The GNS 430W COM is connected to the COM1 selection of the Audio Panel. The COM volume is controlled by the PWR/VOL knob at the top left corner. This knob is pushed to toggle the squelch ON/OFF. Two concentric tuning knobs at the lower left select the standby frequency for the COM and NAV. The frequency tuning function will default to COM, but it may be toggled between the COM and NAV functions by pushing the inner tuning knob (marked ``PUSH C/V''). The standby and active frequencies are exchanged by pushing the ``C$\updownarrow$'' button.  Press and hold the ``C$\updownarrow$'' button to switch to 121.5 mHz.
+\textbf{COM} --- The GNS 430W COM is connected to the COM1 selection of the Audio Panel. The COM volume is controlled by the PWR/VOL knob at the top left corner. This knob is pushed to toggle the squelch ON/OFF. Two concentric tuning knobs at the lower left select the standby frequency for the COM and NAV. The frequency tuning function will default to COM, but it may be toggled between the COM and NAV functions by pushing the inner tuning knob (marked ``PUSH C/V''). The standby and active frequencies are exchanged by pushing the ``C$\updownarrow$'' button. Press and hold the ``C$\updownarrow$'' button to switch to 121.5 mHz.
 
 \textbf{NAV} --- The frequencies are tuned as described in the COM section. The NAV audio may be selected via the audio panel. The NAV volume is controlled by the lower of the two VOL knobs (marked ``V''). The NAV idents are not fed to the NAV audio by default, but they may be selected by pushing the NAV volume knob.
 
@@ -1043,7 +1054,7 @@ The Narco 122D is a VOR/ILS receiver with an integral CDI display. It is located
 
 \textbf{Power Source} --- The Narco 122D is powered from the Main Bus.
 
-\textbf{Back-lighting} --- The Narco 122D has no internal backlighting.  It is illuminated by the instrument panel flood flights.
+\textbf{Back-lighting} --- The Narco 122D has no internal backlighting. It is illuminated by the instrument panel flood flights.
 
 \textbf{Antenna} --- The Narco 122D receives NAV and G/S signals from the same antenna that feeds the GNS 430W, which is mounted inside the right wing tip.
 
@@ -1207,7 +1218,7 @@ The unit is designed to operate in temperatures of -1\textdegree C to 49\textdeg
 \needspace{5\baselineskip}
 \section{FIRE EXTINGUISHER}
 
-A 2.5 lb halon fire extinguisher is mounted in a bracket on the floor on the left side  of the cockpit below the rear seat throttle. The cockpit must be ventilated after using the fire extinguisher.
+A 2.5 lb halon fire extinguisher is mounted in a bracket on the floor on the left side of the cockpit below the rear seat throttle. The cockpit must be ventilated after using the fire extinguisher.
 
 \needspace{15\baselineskip}
 \section{EMERGENCY LOCATOR TRANSMITTER}

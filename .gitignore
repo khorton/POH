@@ -14,3 +14,4 @@ graphs/*.tex
 *.out
 *.sublime-project
 latex/POH.sublime-workspace
+*.out.ps

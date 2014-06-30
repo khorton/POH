@@ -243,9 +243,8 @@ The following inspections are required following first flight:
 
 
 	\item{Engine} 
-	\begin{Note}
-\ifthenelse{\thePMAG = 1}{WARNING] \centering Ground PMag before working on engine.}{[WARNING] \centering Ground mags before working on engine.}
-	\end{Note}
+\ifthenelse{\thePMAG = 1}{\begin{Note}[WARNING] \centering Ground PMag before working on engine. \end{Note}}
+{\begin{Note}[WARNING] \centering Ground mags before working on engine. \end{Note}}
 	\begin{enumerate*}
 		\item Remove engine cowl.\dotfill $\bigbox$
 		\item Cowling --- clean it and inspect for cracks, distortion and loose or missing fasteners.\dotfill $\bigbox$
@@ -497,6 +496,13 @@ The following inspections are required following first flight:
 	\end{enumerate*}
 \end{enumerate*}
 
+\section{BATTERY CHARGING}
+A battery charger lead is attached directly to the battery and extends into the aft baggage compartment. 
+\ifthenelse{\thePMAG = 1}{\begin{Note}[CAUTION] \centering Pull PMag CB prior to charging battery if the aircraft electrical system is to be powered.
+\end{Note}
+}
+
+
 \section{ALTERNATOR BELT TENSION} 
 \begin{enumerate*}
 	\item Adjust tension arm so that 11 -- 13 ft-lb (new alternator belt), or 7--9 ft-lb (used alternator belt) of torque on the alternator pulley is required to slip the pulley on the alternator belt (from Lycoming SI 1129A Accessory Drive Belt Tension). 
@@ -505,13 +511,13 @@ The following inspections are required following first flight:
 
 \ifthenelse{\thePMAG = 1}{\section{SET PMAG ELECTRONIC IGNITION TIMING}
 \begin{enumerate*}
-	\item Set the engine to TDC for cylinders 1 and 2.
+	\item Set the engine to 3\textdegree ATDC for cylinders 1 and 2.
 	\item Select PMag OFF and PMag BU Pwr to ON. LED on PMag should be illuminated steady Red. 
 	\item Disconnect MP line at engine end. 
 	\item Blow into MP with a pressure of at least 0.5 psi for a duration of at least one second. Confirm LED is blinking Red. If not, blow again.
 	\item Blow into MP line a second time.  LED will blink Green to confirm timing has been set. If not, blow again. 
 	\item Cycle PMag BU Pwr from ON to OFF to ON to set PMag to normal operation. 
-	\item Move prop around TDC. LED should be Red prior to TDC, and Green at TDC.
+	\item Move prop around 3\textdegree ATDC. LED should be Red prior to 3\textdegree ATDC, and Green at 3\textdegree ATDC.
 	\item Select PMag to OFF.
 	\end{enumerate*}
 }{\section{MAGNETO TIMING} 
@@ -526,7 +532,7 @@ The following inspections are required following first flight:
 \subsection{SET IGNITION TIMING} 
 \begin{enumerate*}
 	\item See the Lightspeed Engineering Plasma II Manual for the detailed timing procedure. 
-	\item Set the engine to 5\textdegree ~after TDC for cylinders 1 and 2.
+	\item Set the engine to 5\textdegree ATDC for cylinders 1 and 2.
 	\item Disconnect the two coax at the LightSpeed box.
 	\item Select the EI Switch to ON.
 	\item Rotate the hall effect module CCW until the green LED goes ON, then OFF. Torque the hall effect module in place.
@@ -536,14 +542,14 @@ The following inspections are required following first flight:
 	\item Select the EI Switch to ON.
 	\item Set prop to well before TDC for cylinders 1 and 2.
 	\item Rotate prop CW (normal direction of rotation).
-	\item Green light on hall effect module should illuminate, then extinguish at 5\textdegree ~after TDC for cylinders 1 and 2.
+	\item Green light on hall effect module should illuminate, then extinguish at 5\textdegree ATDC for cylinders 1 and 2.
 \end{enumerate*}
 
   \subsection{PHASE CHECK} 
   \begin{enumerate*}
   	\item disconnect all spark plug wires at the coils. 
   	\item Select EI Switch to ON. 
-  	\item Set prop to 5\textdegree ~after TDC for cylinders 1 and 2. 
+  	\item Set prop to 5\textdegree ATDC for cylinders 1 and 2. 
   	\item Briskly rock prop back and forth --- look for a spark at the spark plug lead connections on one of the coils. 
   	\item Connect the spark plug leads for cylinders 1 and 2 to the coil that produced the spark.
 \end{enumerate*}

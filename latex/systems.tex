@@ -173,9 +173,9 @@ The rear seat has a throttle mounted on the left side wall, and a pitch trim swi
 			The Taxi and Landing Lights flash alternately if both switches are placed in the middle, "FLASH", position. 
 \ifthenelse{\thePMAG = 1}{
 			\item \textbf{IGNITION --- MAG} --- Controls the PMag electronic ignition.}
-{			\item \textbf{IGNITION --- MAG} --- Controls the single magneto. }
+{			\item \textbf{IGNITION --- MAG} --- Controls the single magneto.}
 
-			\item \textbf{IGNITION --- ELEC} --- Controls the Electronic Ignition which is installed in place of the right magneto. 
+			\item \textbf{IGNITION --- ELEC} --- Controls the Lightspeed electronic ignition. 
 			\item \textbf{STARTER} --- Guarded switch enables the Start switch on the front control stick grip, and provides an alternate starter switch. The lower position disables the stick grip starter switch. If the guard is lifted, and the switch placed in the middle position, the stick grip starter switch is enabled. The momentary upper position engages the starter. 
 			\item \textbf{FLAPS} --- Momentary switch causes the flaps to move up or down while it is held. The flap actuator will free-wheel once the flaps reach full travel up or down. 
 		\end{enumerate}
@@ -297,7 +297,7 @@ The aircraft is powered by a Lycoming I0-360-A1B6 four cylinder, direct drive, h
  Lightspeed Engineering electronic ignition, fuel pump, fuel injection, and an alternate air induction system. 
  
 \ifthenelse{\thePMAG = 1}
-{The PMag has two power sources. It is powered from the Essential Bus during start and at ground idle. It is powered by its own internal generator if the rpm is above approximately 900 rpm, and will thus provide ignition even after a total electrical failure. The PMag internal generator may be checked by selecting the PMAG BU PWR switch to TEST, which removes the Essential Bus power.}
+{The PMag has two power sources. It is powered from the Essential Bus during start and at ground idle. It is powered by its own internal generator if the rpm is above approximately 875 rpm, and will thus provide ignition even after a total electrical failure. The PMag internal generator may be checked by selecting the Electronic Ignition OFF and then pulling the PMAG CB, removing the Essential Bus power from the PMag, forcing it to use its internal alternator.}
 {The magneto is self-powered, and will provide ignition even after a total electrical failure.} 
 The Lightspeed Electronic ignition is powered from the Battery Bus, and will provide ignition as long as there is sufficient battery voltage available.
 
@@ -633,7 +633,8 @@ Ignore the data labelled ``Carb''.  It is not operative.
 \end{longtable}
 
 \begin{Note}
-The tachometer signal is from the Magneto. The RPM will read "0" if the IGNITION --- MAG switch is selected OFF. 
+\ifthenelse{\thePMAG = 0}{The tachometer signal is from the Magneto. The RPM will read "0" if the IGNITION --- MAG switch is selected OFF.}
+{The tachometer signal is from the P-Mag, and will continue to read if the P-Mag ignition is selected off, as long as the P-Mag unit has power. The RPM will read "0" if the P-Mag is inoperative.} 
 \end{Note}
 
 \subsection*{Setting Alarm Limits}

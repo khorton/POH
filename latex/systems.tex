@@ -173,9 +173,9 @@ The rear seat has a throttle mounted on the left side wall, and a pitch trim swi
 			The Taxi and Landing Lights flash alternately if both switches are placed in the middle, "FLASH", position. 
 \ifthenelse{\thePMAG = 1}{
 			\item \textbf{IGNITION --- MAG} --- Controls the PMag electronic ignition.}
-{			\item \textbf{IGNITION --- MAG} --- Controls the single magneto.}
+{			\item \textbf{IGNITION --- MAG} --- Controls the single magneto. }
 
-			\item \textbf{IGNITION --- ELEC} --- Controls the Lightspeed electronic ignition. 
+			\item \textbf{IGNITION --- ELEC} --- Controls the Light Speed electronic ignition. 
 			\item \textbf{STARTER} --- Guarded switch enables the Start switch on the front control stick grip, and provides an alternate starter switch. The lower position disables the stick grip starter switch. If the guard is lifted, and the switch placed in the middle position, the stick grip starter switch is enabled. The momentary upper position engages the starter. 
 			\item \textbf{FLAPS} --- Momentary switch causes the flaps to move up or down while it is held. The flap actuator will free-wheel once the flaps reach full travel up or down. 
 		\end{enumerate}
@@ -294,12 +294,12 @@ The rear seat has a throttle mounted on the left side wall, and a pitch trim swi
 The aircraft is powered by a Lycoming I0-360-A1B6 four cylinder, direct drive, horizontally opposed engine rated at 200 HP at 2700 rpm. The engine is fitted with a 60 amp 14 volt main alternator, an 8 amp standby alternator, 
 \ifthenelse{\thePMAG = 1}{PMag electronic ignition,}
 {shielded magneto ignition,}
- Lightspeed Engineering electronic ignition, fuel pump, fuel injection, and an alternate air induction system. 
+ Light Speed Engineering electronic ignition, fuel pump, fuel injection, and an alternate air induction system. 
  
 \ifthenelse{\thePMAG = 1}
-{The PMag has two power sources. It is powered from the Essential Bus during start and at ground idle. It is powered by its own internal generator if the rpm is above approximately 875 rpm, and will thus provide ignition even after a total electrical failure. The PMag internal generator may be checked by selecting the Electronic Ignition OFF and then pulling the PMAG CB, removing the Essential Bus power from the PMag, forcing it to use its internal alternator.}
+{The PMag has two power sources. It is powered from the Essential Bus during start and at ground idle. It is powered by its own internal alternator if the rpm is above approximately 875 rpm, and will thus provide ignition even after a total electrical failure. The PMag internal alternator may be checked by pulling the PMAG BU PWR CB, which removes the Essential Bus power.}
 {The magneto is self-powered, and will provide ignition even after a total electrical failure.} 
-The Lightspeed Electronic ignition is powered from the Battery Bus, and will provide ignition as long as there is sufficient battery voltage available.
+The Light Speed Electronic ignition is powered from the Battery Bus, and will provide ignition as long as there is sufficient battery voltage available.
 
 The exhaust system is all stainless steel with a crossover configuration and no mufflers. Two heat muffs provide cabin heat.
 
@@ -335,7 +335,8 @@ Each parametre that the EIS monitors can have upper and lower limits assigned, a
 
 %\textbf{Displays} --- There are 14 different pages of data that may be displayed. 
 There are 14 different pages of data that may be displayed. Pressing the ``Next/Ack'' button cycles to the next page. Pressing the ``Previous'' button cycles to the previous page. Double-pushing the ``Display'' button changes to the default page. The two user-configurable pages don't have labels identifying which parametre each block of numbers represents. Pressing and holding the ``Display'' button from a user-configurable page replaces the digits with the data labels, allowing the data blocks to be identified.
-\clearpage 
+% \clearpage
+
 The pages, in sequence, are:
 
 % The following lengths define extra space to be left between the hlines and the text in the page format table.
@@ -634,7 +635,7 @@ Ignore the data labelled ``Carb''.  It is not operative.
 
 \begin{Note}
 \ifthenelse{\thePMAG = 0}{The tachometer signal is from the Magneto. The RPM will read "0" if the IGNITION --- MAG switch is selected OFF.}
-{The tachometer signal is from the P-Mag, and will continue to read if the P-Mag ignition is selected off, as long as the P-Mag unit has power. The RPM will read "0" if the P-Mag is inoperative.} 
+{The tachometer signal from the PMag is valid even if the IGNITION -- MAG switch is selected OFF. The RPM will read "0" if the PMag has failed.} 
 \end{Note}
 
 \subsection*{Setting Alarm Limits}
@@ -761,7 +762,7 @@ The electrical system includes a 14 volt 60 amp Main Alternator, a 12 volt, 17 a
 % \begin{table}[htb]
 \begin{center}
 \begin{tabular}
-{|l|l|l|} \hline \multicolumn{1}{|c|}{Main Bus}& \multicolumn{1}{c|}{Essential Bus} & \multicolumn{1}{c|}{Battery Bus}\tabularnewline \hline \hline EFIS Main Power & GNS 430W & Turn and Bank\tabularnewline \hline Microair COM &CDI & Electronic Ignition\tabularnewline \hline Narco 122D & Transponder & EFIS Emergency Power\tabularnewline \hline Audio Panel &Grand Rapids EIS 4000 & Aux Power Outlet\tabularnewline \hline CO Monitor &Inst. Panel Lighting & \tabularnewline \hline Engine Inst. Lighting &Goose Neck Flood Light & \tabularnewline \hline CDI Lighting &Pitch Trim & \tabularnewline \hline Landing Light &Roll Trim & \tabularnewline \hline Taxi Light &Fuel Gauges & \tabularnewline \hline Position Lights &ELT GPS Decoder & \tabularnewline \hline Strobe Lights & & \tabularnewline \hline Oil Press. Warning Light & & \tabularnewline \hline Starter & & \tabularnewline \hline Flaps & & \tabularnewline \hline Boost Pump & & \tabularnewline \hline Pitot Heat & & \tabularnewline \hline Autopilot & & \tabularnewline \hline Hour Meter & & \tabularnewline \hline Tachometer & & \tabularnewline \hline Manifold Pressure Gauge & & \tabularnewline \hline Defog Fan & & \tabularnewline \hline
+{|l|l|l|} \hline \multicolumn{1}{|c|}{Main Bus}& \multicolumn{1}{c|}{Essential Bus} & \multicolumn{1}{c|}{Battery Bus}\tabularnewline \hline \hline EFIS Main Power & PMag Electronic Ignition &Light Speed Electronic Ignition \tabularnewline \hline Microair COM &GNS 430W & Turn and Bank\tabularnewline \hline Narco 122D &CDI  & EFIS Emergency Power\tabularnewline \hline Audio Panel &Transponder & Aux Power Outlet\tabularnewline \hline CO Monitor &Grand Rapids EIS 4000 & \tabularnewline \hline Engine Inst. Lighting &Inst. Panel Lighting & \tabularnewline \hline CDI Lighting &Goose Neck Flood Light & \tabularnewline \hline Landing Light &Pitch Trim & \tabularnewline \hline Taxi Light &Roll Trim & \tabularnewline \hline Position Lights &Fuel Gauges & \tabularnewline \hline Strobe Lights &ELT GPS Decoder & \tabularnewline \hline Oil Press. Warning Light & & \tabularnewline \hline Starter & & \tabularnewline \hline Flaps & & \tabularnewline \hline Boost Pump & & \tabularnewline \hline Pitot Heat & & \tabularnewline \hline Autopilot & & \tabularnewline \hline Hour Meter & & \tabularnewline \hline Tachometer & & \tabularnewline \hline Manifold Pressure Gauge & & \tabularnewline \hline Defog Fan & & \tabularnewline \hline
 \end{tabular}
 \caption{Items Powered By Each Electrical Bus}
 \end{center}

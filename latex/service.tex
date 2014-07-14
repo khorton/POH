@@ -91,7 +91,7 @@ The following inspections are required following first flight:
 	\begin{enumerate*}
 		\item Fuel \& oil hoses, 
 		\item Ignition system, 
-		\item Magneto P-lead \& mounting bolts, 
+		\ifthenelse{\thePMAG = 0}{\item Magneto P-lead \& mounting bolts, }{\item PMag wiring at connector \& mounting bolts}
 		\item Exhaust system \& attachment hardware, 
 		\item Cylinders - check for oil leak at rocker box covers, and check for signs of overheating (burned paint), 
 		\item Baffling/plenum, 
@@ -138,15 +138,15 @@ The following inspections are required following first flight:
 	\end{enumerate*}
 	\item Check alternator belt tension (7 -- 9 ft-lb on pulley when belt slips). 
 \ifthenelse{\thePMAG = 1}{
-	\item PMag
+	\item PMag Electronic Ignition
 	\begin{enumerate*}
-		\item Check E-Mag website for Service Bulletin compliance. \dotfill $\bigbox$
-		\item Check PMag thermal sticker for exceedence. \dotfill $\bigbox$
-		\item Check PMag ignition lead resistance is approximately 180\Omega per foot.  Confirm the resistance is approximately stable while bending, twisting and tugging each end.\dotfill $\bigbox$
-		\item Check PMag plug gaps. \dotfill $\bigbox$
-		\item Remove PMag and check for smooth rotation and no excessive lateral or axial play in shaft. \dotfill $\bigbox$
-		\item Torque wire lead connection screws to 5 in--lb. \dotfill $\bigbox$
-		\item Set PMag timing. \dotfill $\bigbox$
+		\item Check E-Mag website for Service Bulletin compliance.
+		\item Check PMag thermal sticker for exceedence. 
+		\item Check PMag ignition lead resistance is approximately 180\Omega per foot.  Confirm the resistance is approximately stable while bending, twisting and tugging each end.
+		\item Check PMag plug gaps.
+		\item Remove PMag and check for smooth rotation and no excessive lateral or axial play in shaft. 
+		\item Torque wire lead connection screws to 5 in--lb.
+		\item Set PMag timing. 
 	\end{enumerate*}}
 {	\item Magneto
 	\begin{enumerate*}
@@ -155,7 +155,7 @@ The following inspections are required following first flight:
 		\item Lubricate breaker point felt, and 
 		\item Check Magneto to Engine timing. See Lycoming Direct Drive Overhaul Manual for details of procedure.
 	\end{enumerate*}}
-	\item Electronic Ignition
+	\item Light Speed Electronic Ignition
 	  \begin{enumerate*}
 	    \item Remove Hall Effect Sensor and open up to check for gear, bearing and seal wear
 	    \item Set electronic ignition timing
@@ -273,11 +273,12 @@ The following inspections are required following first flight:
 			\item Remove PMag and check for smooth rotation and no excessive lateral or axial play in shaft. \dotfill $\bigbox$
 			\item Torque PMag wire lead connection screws to 5 in--lb. \dotfill $\bigbox$
 			\item Set PMag timing. \dotfill $\bigbox$}
-			\item Check electronic ignition timing. \dotfill $\bigbox$
+			\item Remove Light Speed electronic ignition Hall Effect Sensor and open up to check for gear, bearing and seal wear. \dotfill $\bigbox$
+			\item Set Light Speed electronic ignition timing. \dotfill $\bigbox$
 		\end{enumerate*}
 		\item Thoroughly clean engine and other items ahead of the firewall. \dotfill $\bigbox$
 		\item Studs and nuts --- inspect for defects, evidence of improper torque and safety locking. \dotfill $\bigbox$
-  	\item Cylinder compression --- conduct compression check on all cylinders. Record readings: \\* \#1:\hfill \underline{\makebox[0.5in][l]{}} \\* \hfill \#2:\underline{\makebox[0.5in][l]{}} \\* \hfill \#3:\underline{\makebox[0.5in][l]{}} \\* \hfill \#4:\underline{\makebox[0.5in][l]{}} \\* If compression test indicates problems, check internal condition and tolerances. \dotfill $\bigbox$
+  	\item Cylinder compression --- conduct compression check on all cylinders. Record readings: \\* \hfill \#1:\underline{\makebox[0.5in][l]{}} \\* \hfill \#2:\underline{\makebox[0.5in][l]{}} \\* \hfill \#3:\underline{\makebox[0.5in][l]{}} \\* \hfill \#4:\underline{\makebox[0.5in][l]{}} \\* If compression test indicates problems, check internal condition and tolerances. \dotfill $\bigbox$
 		\item Remove air filter and clean. \dotfill $\bigbox$
 		\item Check condition of alternate air door and cable. \dotfill $\bigbox$
 		\item Fuel Injection System
@@ -301,7 +302,7 @@ The following inspections are required following first flight:
 		\item Check condition of starter, starter mount, starter cable and solenoid. \dotfill $\bigbox$
 		\item Check standby alternator. \dotfill $\bigbox$
 		\item Check prop governor. \dotfill $\bigbox$
-		\item Internal corrosion --- inspect engines which have not been inhibited and have been out of service in excess of 12 months. \dotfill $\bigbox$
+		\item Internal corrosion --- inspect engines which have not been inhibited and have been out of \\service in excess of 12 months. \dotfill $\bigbox$
 	  \end{enumerate*}
 		\item Check \& record brake fluid level. (*) \dotfill $\bigbox$
 		\item Lubricate all controls. \dotfill $\bigbox$
@@ -322,7 +323,7 @@ The following inspections are required following first flight:
 	\begin{enumerate*}
 	  \item Propeller hub assembly --- inspect for cracks, nicks, binding and oil leakage. \dotfill $\bigbox$
 	  \item Bolts and nuts --- inspect for improper torque and safety locking. \dotfill $\bigbox$
-	  \item Control mechanisms --- inspect for improper operation, insecure mounting and improper range of travel. \dotfill $\bigbox$
+	  \item Control mechanisms --- inspect for improper operation, insecure mounting and improper range of \\travel. \dotfill $\bigbox$
 	  \item Composite blades --- inspect for:
 	  \begin{enumerate*}
 	    \item cracks, bruises, scars, warping, evidence of glue failure and delamination, \dotfill $\bigbox$
@@ -363,7 +364,7 @@ The following inspections are required following first flight:
 		\item Gooseneck and instrument lights --- check condition and function of lamps and dimmers. \dotfill $\bigbox$
 		\item Instrument Panel:
   	\begin{enumerate*}
-  		\item Instruments --- inspect for poor condition, mounting, marking and, where practicable, for improper operation. \dotfill $\bigbox$
+  		\item Instruments --- inspect for poor condition, mounting, marking and, where practicable, for \\improper operation. \dotfill $\bigbox$
   		\item Placards ---- confirm all placards listed in the POH are in place and are legible. \dotfill $\bigbox$
   		\item Static System --- conduct static system leak check. (*) \dotfill $\bigbox$
       \end{enumerate*}
@@ -372,16 +373,16 @@ The following inspections are required following first flight:
 		\item Check condition of oil cooler door and alternate air controls. \dotfill $\bigbox$
 		\item Check condition and operation of air vents. \dotfill $\bigbox$
 		\item Check fire extinguisher. \dotfill $\bigbox$
-		\item Check wire bundles for chafing, paying particular attention to Infinity stick grip wire bundle at bottom of stick. \dotfill $\bigbox$
+		\item Check wire bundles for chafing, paying particular attention to Infinity stick grip wire bundle at \\bottom of stick. \dotfill $\bigbox$
 	\end{enumerate*}
 	\item{Aft Fuselage} 
 	\begin{enumerate*}
 		\item Remove aft baggage floor and aft baggage rear bulkhead. \dotfill $\bigbox$
 		\item Check under whole aft fuselage, including skins, bulkheads, longerons, stiffeners ,under baggage floor area for corrosion, cracks, chafed wiring, deterioration, distortion, evidence of failure, defective or insecure attachment fittings, etc. \dotfill $\bigbox$
-		\item Battery --- inspect for improper installation and improper charge. Inspect battery hold-down and battery cables. Check battery voltage with no load. \dotfill $\bigbox$
+		\item Battery --- inspect for improper installation and improper charge. Inspect battery hold-down and \\battery cables. Check battery voltage with no load. \dotfill $\bigbox$
 		\item Strobe power supply --- Check condition and wiring. \dotfill $\bigbox$
 		\item GPS antenna --- check condition of antenna and coax cable. \dotfill $\bigbox$
-		\item Elevator bellcrank and elevator control tubes --- check condition. Lubricate bellcrank and pushrod ends as required. \dotfill $\bigbox$
+		\item Elevator bellcrank and elevator control tubes --- check condition. Lubricate bellcrank and \\pushrod ends as required. \dotfill $\bigbox$
 		\item Reinstall aft baggage floor and aft baggage rear bulkhead. \dotfill $\bigbox$
 	\end{enumerate*}
   \item{ELT} 
@@ -389,8 +390,8 @@ The following inspections are required following first flight:
   	\item Inspect mounting tray and fasteners. \dotfill $\bigbox$
   	\item Inspect coax cable for abrasion. Disconnect coax connections and inspect jack and plug for corrosion. \dotfill $\bigbox$
   	\item Inspect cable to remote control for abrasion. Disconnect connections and inspect for corrosion. \dotfill $\bigbox$
-  	\item Inspect GPS data cable for abrasion. Disconnect GPS data cable and inspect jack and plug for corrosion. \dotfill $\bigbox$
-  	\item Check expiration date of ELT, aural alert and remote batteries and replace if they will expire within the next 12 months. \dotfill $\bigbox$
+  	\item Inspect GPS data cable for abrasion. Disconnect GPS data cable and inspect jack and plug for \\corrosion. \dotfill $\bigbox$
+  	\item Check expiration date of ELT, aural alert and remote batteries and replace if they will expire \\within the next 12 months. \dotfill $\bigbox$
   	\item Conduct g-switch test from FAA Order 8250.3. From ACK manual, page 13. (*) \dotfill $\bigbox$
   	\begin{enumerate*}
   		\item Remove ELT from tray. \dotfill $\bigbox$
@@ -400,7 +401,7 @@ The following inspections are required following first flight:
   		\begin{enumerate*}
   		  \item hold the ELT at your waist with the arrow printed on the battery case facing away from you. \dotfill $\bigbox$
   		  \item move the ELT rapidly away from your waist. \dotfill $\bigbox$
-  		  \item when the ELT reaches the full extent of your arm retract it back to your waist as fast as possible. \dotfill $\bigbox$
+  		  \item when the ELT reaches the full extent of your arm retract it back to your waist as fast \\as possible. \dotfill $\bigbox$
   		  \end{enumerate*} 
   		\item Verify that the ELT tone is heard. \dotfill $\bigbox$
   		\item Select ELT switch to OFF within 30 s (406 MHz emergency signal is sent 50 s after g-switch activation). \dotfill $\bigbox$
@@ -482,8 +483,8 @@ The following inspections are required following first flight:
 	\end{enumerate*}
 	\item{Engine Ground Run}
 	\begin{enumerate*}
-		\item Idle and maximum rpm --- check (for safety reasons, the check of maximum rpm will be done during a takeoff, rather than during a ground run). \dotfill $\bigbox$
-		\item Magneto drop --- check. Record drops. Mag OFF:\underline{\makebox[0.5in][l]{}}, EI OFF:\underline{\makebox[0.5in][l]{}}\dotfill $\bigbox$
+		\item Idle and maximum rpm --- check (for safety reasons, the check of maximum rpm will be done \\during a takeoff, rather than during a ground run). \dotfill $\bigbox$
+		\item Ignition RPM drop --- check. Record drops. \ifthenelse{\thePMAG = 0}{Mag}{PMag} OFF:\underline{\makebox[0.5in][l]{}}, EI OFF:\underline{\makebox[0.5in][l]{}}\dotfill $\bigbox$
 		\item Oil pressure --- check. Record oil pressure at idle: \underline{\makebox[0.5in][l]{}} \dotfill $\bigbox$
 		\item Cylinder and oil temperatures --- check. \dotfill $\bigbox$
 		\item Propeller governor operation -- check. \dotfill $\bigbox$
@@ -509,17 +510,28 @@ A battery charger lead is attached directly to the battery and extends into the 
 	\item See Torque Table for tension arm and pivot bolt torque values. 
 \end{enumerate*}
 
-\ifthenelse{\thePMAG = 1}{\section{SET PMAG ELECTRONIC IGNITION TIMING}
+\ifthenelse{\thePMAG = 1}{\section{PMAG ELECTRONIC IGNITION}
+\subsection{SET IGNITION TIMING} 
 \begin{enumerate*}
 	\item Set the engine to 3\textdegree ATDC for cylinders 1 and 2.
-	\item Select PMag OFF and PMag BU Pwr to ON. LED on PMag should be illuminated steady Red. 
+	\item Select PMag OFF, PMag BU Pwr CB IN and ESS BUS FEED switch ON. LED on PMag should be illuminated steady Red. 
 	\item Disconnect MP line at engine end. 
 	\item Blow into MP with a pressure of at least 0.5 psi for a duration of at least one second. Confirm LED is blinking Red. If not, blow again.
 	\item Blow into MP line a second time.  LED will blink Green to confirm timing has been set. If not, blow again. 
 	\item Cycle PMag BU Pwr from ON to OFF to ON to set PMag to normal operation. 
 	\item Move prop around 3\textdegree ATDC. LED should be Red prior to 3\textdegree ATDC, and Green at 3\textdegree ATDC.
-	\item Select PMag to OFF.
+	\item Select ESS BUS FEED switch OFF.
 	\end{enumerate*}
+	
+\subsection{CHECK IGNITION TIMING} 
+\begin{enumerate*}
+	\item Select PMag OFF
+	\item Select ESS BUS FEED switch ON
+	\item Set engine to well before TDC for cylinders 1 and 2.
+	\item Move prop around 3\textdegree ATDC. LED should be steady Red prior to 3\textdegree ATDC, and steady Green at 3\textdegree ATDC.
+	\item Select ESS BUS FEED switch OFF.
+	\end{enumerate*}
+
 }{\section{MAGNETO TIMING} 
 \begin{enumerate*}
 	\item See the Lycoming Direct Drive Overhaul Manual for the detailed procedure. 
@@ -531,7 +543,7 @@ A battery charger lead is attached directly to the battery and extends into the 
 \section{LIGHTSPEED ELECTRONIC IGNITION}
 \subsection{SET IGNITION TIMING} 
 \begin{enumerate*}
-	\item See the Lightspeed Engineering Plasma II Manual for the detailed timing procedure. 
+	\item See the Light Speed Engineering Plasma II Manual for the detailed timing procedure. 
 	\item Set the engine to 5\textdegree ATDC for cylinders 1 and 2.
 	\item Disconnect the two coax at the LightSpeed box.
 	\item Select the EI Switch to ON.
@@ -540,7 +552,7 @@ A battery charger lead is attached directly to the battery and extends into the 
 \subsection{CHECK IGNITION TIMING} 
 \begin{enumerate*}
 	\item Select the EI Switch to ON.
-	\item Set prop to well before TDC for cylinders 1 and 2.
+	\item Set engine to well before TDC for cylinders 1 and 2.
 	\item Rotate prop CW (normal direction of rotation).
 	\item Green light on hall effect module should illuminate, then extinguish at 5\textdegree ATDC for cylinders 1 and 2.
 \end{enumerate*}
@@ -555,7 +567,7 @@ A battery charger lead is attached directly to the battery and extends into the 
 \end{enumerate*}
 
 \section{SPARK PLUG GAPS}
-Automotive spark plug, upper plugs, fired by Lightspeed electronic ignition - 0.026" -- 0.035" gap.
+Automotive spark plug, upper plugs, fired by Light Speed electronic ignition - 0.026" -- 0.035" gap.
 
 \ifthenelse{\thePMAG = 1}{
 Automotive spark plug, lower plugs, fired by PMag - 0.030" -- 0.035" gap.}{
@@ -586,12 +598,15 @@ One CW turn of high rpm adjustment screw should decrease max speed by 25 RPM.
 	\hline \hline Main Alternator Mount&110 -- 150 in-lb&from Installation Instructions\\
 	\hline Main Alternator Tension Arm&110 -- 150 in-lb&from Installation Instructions\\
 	\hline Main Alternator Pivot Bolt&30 -- 40 ft-lb&from Installation Instructions\\
-	\hline Spark Plugs (Aviation)&35 ft-lb&from Lycoming Overhaul Manual\\
-	\hline Spark Plugs (Automotive)&180 in-lb&from Electronic Ignition Installation Instructions\\
-	\hline Spark Plug Adaptors&25 ft-lb&Do no apply anti-seize. from Electronic Ignition Installation Instructions\\
+	\hline \ifthenelse{\thePMAG = 0}{Spark Plugs (Aviation)&35 ft-lb&from Lycoming Overhaul Manual\\
+	\hline Spark Plugs (Automotive)&180 in-lb&from Electronic Ignition Installation Instructions\\}	
+	{Spark Plugs&180 in-lb&from PMag and Electronic Ignition Installation Instructions\\}
+	\hline \ifthenelse{\thePMAG = 1}{PMag Spark Plug Adaptors&18 ft-lb&Screw adapters onto sparkplugs, and torque via the spark plug. Do no apply anti-seize. from PMag Installation Instructions\\
+	\hline Light Speed Spark Plug Adaptors&25 ft-lb&Do not apply anti-seize. from Electronic Ignition Installation Instructions\\}
+	{\hline Light Speed Spark Plug Adaptors&25 ft-lb&Do not apply anti-seize. from Electronic Ignition Installation Instructions\\}
 	\hline Rocker Box Screws&50 in-lb&from Lycoming Overhaul Manual\\
 	\hline Exhaust Pipe Nuts&180 -- 200 in-lb&Apply anti-seize. from Vetterman Exhaust Installation Instructions\\
-	\hline Magneto and EI Hall Effect Unit Base Clamps&204 in-lb&from ECI Service Info\\
+	\hline \ifthenelse{\thePMAG = 0}{Magneto}{PMag} and EI Hall Effect Unit Base Clamps&204 in-lb&from ECI Service Info\\
 	\hline Propeller Governor Mounting Nuts&110 -- 150 in-lb&from PCU-5000 Installation and Adjustment document\\
 	\hline Propeller Governor High RPM Stop Jam Nut&24.8 -- 28.3 in-lb&from PCU-5000 Installation and Adjustment document\\
 	\hline Oil Screen&135\textdegree rotation after contact&from Lycoming SSP-1776-B\\

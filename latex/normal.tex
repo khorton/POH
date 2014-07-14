@@ -206,21 +206,23 @@ When taxiing, it is important that aileron and elevator be used as appropriate t
   
   \subsubsection{IGNITION CHECK}
   The ignition check should be done at 1800 RPM as follow:
-\ifthenelse{\thePMAG = 0}{
+  \ifthenelse{\thePMAG = 0}{
   \begin{enumerate}
   \item Select the IGNITION, MAG switch to OFF. There should be no RPM drop, as the electronic ignition is more advanced than the magneto at this condition, so the spark from the magneto contributes little. The engine should run smoothly on the electronic ignition.
   \item Select the IGNITION, MAG switch to ON.
   \item Select the IGNITION, ELEC switch to OFF. The RPM drop should be approximately 100 RPM, and the engine should run smoothly on the magneto. 
   \item Select the IGNITION, ELEC switch to ON.
-  \end{enumerate}}
-{\begin{enumerate}
-  \item Select the IGNITION, MAG switch to OFF. The RPM drop should be approximately 20 RPM, and the engine should run smoothly on the Lightspeed electronic ignition.
+  \end{enumerate}
+  }{
+  \begin{enumerate}
+  \item Select the IGNITION, MAG switch to OFF. There should be approximately 20 rpm drop. The engine should run smoothly on the Light Speed electronic ignition.
   \item Select the IGNITION, MAG switch to ON.
-  \item Select the IGNITION, ELEC switch to OFF. The RPM drop should be approximately 70 RPM, and the engine should run smoothly on the P-Mag electronic ignition. 
-  \item Pull the PMag CB to verify proper operation of the PMag internal alternator.
-  \item Reset the PMag CB to restore backup aircraft electrical power to the PMag.
+  \item Select the IGNITION, ELEC switch to OFF. The RPM drop should be approximately 70 RPM, and the engine should run smoothly on the PMag electronic ignition. 
+  \item Pull the PMag CB, to force the PMag to rely on its own internal alternator to provide ignition power, confirming proper operation on this power source.
+  \item Reset the PMag CB.
   \item Select the IGNITION, ELEC switch to ON.
-  \end{enumerate}}
+  \end{enumerate}
+  }
   
   \subsubsection{ELECTRICAL SYSTEM CHECK}
   The following should be conducted prior to night or IFR flight:

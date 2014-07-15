@@ -142,7 +142,7 @@ The following inspections are required following first flight:
 	\begin{enumerate*}
 		\item Check E-Mag website for Service Bulletin compliance.
 		\item Check PMag thermal sticker for exceedence. 
-		\item Check PMag ignition lead resistance is approximately 180\Omega per foot.  Confirm the resistance is approximately stable while bending, twisting and tugging each end.
+		\item Check PMag ignition lead resistance is approximately $180\Omega$ per foot.  Confirm the resistance is approximately stable while bending, twisting and tugging each end.
 		\item Check PMag plug gaps.
 		\item Remove PMag and check for smooth rotation and no excessive lateral or axial play in shaft. 
 		\item Torque wire lead connection screws to 5 in--lb.
@@ -173,13 +173,12 @@ The following inspections are required following first flight:
 	\item Remove rocker box covers and check for freedom of valve rockers when valves are closed. Look for evidence of abnormal wear or broken parts in the area of valve tips, valve keeper, springs and spring seats. 
 \end{enumerate*}
 
-\subsection{500 Hours} 
+\subsection{500 Hours} The following items should be performed every 500 hours or 36 months:
 \begin{enumerate*}
-	\item\textcolor{red}{Insert Slick's recommended items.} 
-	\item Electronic Ignition---the following items should be performed every 500 hours or 36 months: 
+\ifthenelse{\thePMAG = 0}{\item\textcolor{red}{Insert Slick's recommended items.}}{}
+	\item Light Speed Electronic Ignition: 
 	\begin{enumerate*}
 		\item Replace high tension leads (i.e. coil to spark plug wires), and 
-		\item Remove cover from Hall effect module, and inspect for bearing wear or oil contamination. 
 	\end{enumerate*}
 \end{enumerate*}
 
@@ -269,7 +268,7 @@ The following inspections are required following first flight:
 			\item Check magnetos to engine timing. See Lycoming Direct Drive Overhaul Manual for details of procedure. \dotfill $\bigbox$}
 			{\item Check E-Mag website for Service Bulletin compliance. \dotfill $\bigbox$
 			\item Check PMag thermal sticker for exceedence. \dotfill $\bigbox$
-			\item Check PMag ignition lead resistance IAW 'Ohm Check' from PMag Installation Manual  \dotfill $\bigbox$
+			\item Check PMag ignition lead resistance is approximately $180\Omega$ per foot.  Confirm the resistance is approximately stable while bending, twisting and tugging each end.  \dotfill $\bigbox$
 			\item Remove PMag and check for smooth rotation and no excessive lateral or axial play in shaft. \dotfill $\bigbox$
 			\item Torque PMag wire lead connection screws to 5 in--lb. \dotfill $\bigbox$
 			\item Set PMag timing. \dotfill $\bigbox$}
@@ -483,8 +482,8 @@ The following inspections are required following first flight:
 	\end{enumerate*}
 	\item{Engine Ground Run}
 	\begin{enumerate*}
-		\item Idle and maximum rpm --- check (for safety reasons, the check of maximum rpm will be done \\during a takeoff, rather than during a ground run). \dotfill $\bigbox$
-		\item Ignition RPM drop --- check. Record drops. \ifthenelse{\thePMAG = 0}{Mag}{PMag} OFF:\underline{\makebox[0.5in][l]{}}, EI OFF:\underline{\makebox[0.5in][l]{}}\dotfill $\bigbox$
+		\item Idle and maximum rpm --- check (for safety reasons, the check of maximum rpm will be done during a takeoff, rather than during a ground run). \dotfill $\bigbox$
+		\item Ignition drop --- check. Record drops. Mag OFF:\underline{\makebox[0.5in][l]{}}, EI OFF:\underline{\makebox[0.5in][l]{}}\dotfill $\bigbox$
 		\item Oil pressure --- check. Record oil pressure at idle: \underline{\makebox[0.5in][l]{}} \dotfill $\bigbox$
 		\item Cylinder and oil temperatures --- check. \dotfill $\bigbox$
 		\item Propeller governor operation -- check. \dotfill $\bigbox$

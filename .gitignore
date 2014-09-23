@@ -6,7 +6,7 @@ POH.ps
 *.maf
 *.toc
 graphs/*.eps
-graphs/*.tex
+#graphs/*.tex
 *.mlf*
 *.bak
 *orig*

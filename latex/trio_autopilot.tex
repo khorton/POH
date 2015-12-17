@@ -14,7 +14,7 @@ The autopilot control head is on the instrument panel below the turn and slip in
 \item \textbf{"H~NAV"} --- Engages or disengages the horizontal (i.e. roll) servo. A three second press and hold engages the autopilot in emergency left course reversal (180\textdegree \ left turn with altitude hold).
 \item \textbf{"V~NAV"} --- Engages or disengages the vertical (i.e. pitch) servo. A three second press and hold engages the autopilot in emergency right course reversal (180\textdegree \ right turn with altitude hold).
 \item \textbf{"H~MODE"} --- Cycles the horizontal mode between TRK (track), CRS (course) and INT (intercept) modes, if the display is currently showing horizontal mode info. If the autopilot display is currently showing vertical mode information, the first press of the "H~MODE" button replaces that with horizontal mode information.
-\item \textbf{"V~MODE"} --- Cycles the vertical mode between ALT HOLD (altitude hold), AS/VS (airspeed/vertical speed), ALT SEL (altitude select) and BARO SET (adjust altitude for altimeter setting changes). If the autopilot display is currently showing horizontal mode information, the first press of the "H~MODE" buttons replaces that with vertical mode informationl.
+\item \textbf{"V~MODE"} --- Cycles the vertical mode between ALT HOLD (altitude hold), AS/VS (airspeed/vertical speed), ALT SEL (altitude select) and BARO SET (adjust altitude for altimeter setting changes). If the autopilot display is currently showing horizontal mode information, the first press of the "H~MODE" buttons replaces that with vertical mode informational.
 \item \textbf{Rotary Knob} --- Allows pilot input of values by rotation and then pushing to enter. For changes to selected altitude, one click = 100 ft. If the knob is pressed, then turned, one click = 1000 ft. For changes to selected track, one click = 1\textdegree.
 \end{enumerate}
 \end{minipage} 
@@ -55,10 +55,10 @@ The following horizontal modes are available:
 
 \textbf{TRK} --- Track mode uses roll inputs to follow a GPS flight plan or Direct-To. GPS Steering (GPSS) data will be used if available, in which case the roll steering commands are coming from the GNS 430W. TRK is the default power-up mode, if a GPS flight plan or Direct-To is available.
 
-\textbf{CRS} --- Course mode uses roll inputs to fly a selected GPS course angle (i.e. a selected track with respect to magnetic north). The selected course is seen on the top left of the display, labeled "CRS". The selected course is adjusted by turning the rotary knob, if the H/V function arrow (middle of the top line) is pointing to the left. The actual track is shown just below, labeled "TRK". CRS is the default power-up mode if GPS data is available but no flight plan or Direct-To has been entered.
+\textbf{CRS} --- Course mode uses roll inputs to fly a selected GPS course angle (i.e. a selected track with respect to magnetic north). The selected course is seen on the top left of the display, labelled "CRS". The selected course is adjusted by turning the rotary knob, if the H/V function arrow (middle of the top line) is pointing to the left. The actual track is shown just below, labelled "TRK". CRS is the default power-up mode if GPS data is available but no flight plan or Direct-To has been entered.
 
 \begin{Note}
-ATC often requests a specfic heading to be flown. CRS mode allow a specific track to be flown. The CRS can be changed until the EFIS shows the desired heading. The heading will remain constant if the track remains constant, assuming no changes in wind or airspeed.
+ATC often requests a specific heading to be flown. CRS mode allow a specific track to be flown. The CRS can be changed until the EFIS shows the desired heading. The heading will remain constant if the track remains constant, assuming no changes in wind or airspeed.
 \end{Note}
 
 \textbf{INT} --- Intercept mode allows the current GPS leg to be intercepted at a selected interception angle. The default intercept angle is 25 degrees. The angle can be changed with the rotary knob, if the H/V function arrow is pointing to the left. TRK mode will engage automatically as the GPS leg is captured.
@@ -131,9 +131,9 @@ The following messages may be displayed on the control head LCD display:
 \item \textbf{TRIM UP REQD} --- The autopilot is holding a significant pitch control force. The autopilot vertical servo should be disconnected and the aircraft retrimmed. Anticipate that the aircraft will have a pitch down tendency when the vertical servo is disengaged.
 \item \textbf{TRIM DN REQD} --- The autopilot is holding a significant pitch control force. The autopilot vertical servo should be disconnected and the aircraft retrimmed. Anticipate that the aircraft will have a pitch up tendency when the vertical servo is disengaged.
 \item \textbf{CLUTCH SLIP} --- The autopilot vertical servo clutch is slipping due to excessive control force required. The autopilot is no longer capable of controlling the aircraft in pitch. The autopilot vertical servo should be disconnected and the aircraft retrimmed. Anticipate a significant out of trim condition when the vertical servo is disengaged.
-\item \textbf{BARO SET} --- The alitude indicated on the autopilot control head must be compared to the aircraft altimeter, and the rotary knob turned until the two values agree. Press the rotary knob to input this baro correction into the autopilot. This messages is displayed after power up, and before every climb or descent to a selected altitude.
+\item \textbf{BARO SET} --- The altitude indicated on the autopilot control head must be compared to the aircraft altimeter, and the rotary knob turned until the two values agree. Press the rotary knob to input this baro correction into the autopilot. This messages is displayed after power up, and before every climb or descent to a selected altitude.
 \item \textbf{ALT CAPTURE} --- Displayed for five seconds after the autopilot has captured the selected altitude.
 \item \textbf{VS ERR} --- There is a conflict between the sign of the selected vertical speed and the selected altitude --- e.g. the selected altitude is lower than the current altitude, but a climb has been selected.
 \item \textbf{G FORCE LIMIT} --- Both servos have disengaged due to a load factor greater than +2g or less than 0g.
-\item \textbf{I/O ERROR} --- Both servos have disengaged due to a communcation failure.
+\item \textbf{I/O ERROR} --- Both servos have disengaged due to a communication failure.
 \end{enumerate}

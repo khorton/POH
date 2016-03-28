@@ -198,6 +198,8 @@
 %\usepackage{tabls} %conflicts with array package
 \usepackage{tabularx}
   \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+% \usepackage{ltablex} % to allow tabularx tables to span page breaks
+  % \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \usepackage{textcomp} % for to get degree symbols from \textdegree
 \usepackage{titletoc}% allows formatting TOC without page numbers, and custom format to get chapter number at right
   \titlecontents{chapter}[0pc]{\vspace{5ex} \bfseries \sffamily \large}{}{\contentslabel[\chaptername]{0pc}}{\dotfill SECTION \thecontentslabel}

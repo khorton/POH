@@ -15,3 +15,4 @@ graphs/*.eps
 *.sublime-project
 latex/POH.sublime-workspace
 *.out.ps
+*.*~

@@ -43,6 +43,14 @@ In addition to the engine cowling, the aircraft has a number of inspection and a
   \item Wing tips are removable, but note that they must remain close to the wing tips due to the coax connections to an internal antenna in each wing tip, and the power wires for the strobe and navigation lights in each wing tip.
   \end{enumerate*}
 
+\begin{Note}[CAUTION]
+The ADS-B must not be powered up unless an ADS-B antenna is connected to it.  If the middle right wing inspection panel is removed, and it is desired to power up the aircraft, either:
+\begin{enumerate*}
+	\item Remove the fuse for the ADS-B transmitter, or
+	\item Uplug the wiring harness from Echo UAT ADS-B transmitter, on the bottom of the avionics shelf below the instrument panel, or
+	\item Connect the ADS-B antenna to its coax.
+\end{enumerate*}
+\end{Note}
 
 \needspace{10\baselineskip}
 \section{INITIAL INSPECTIONS}
@@ -630,13 +638,75 @@ One CW turn of high rpm adjustment screw should decrease max speed by 25 RPM.
 \caption{Tools for Aft Outboard LG Box Bolts (9/16" Socket)}
 \end{figure}
 
-\section{RECONFIGURE EIS 4000 ENGINE MONITOR}
+\section{REConfigURE EIS 4000 ENGINE MONITOR}
   \begin{enumerate*}
       \item Press and hold the Previous and Display keys.  
       \item The Set Lean Pt page will be momentarily shown, then the Configuration Set pages will appear.
 \end{enumerate*}
       
 \clearpage
+
+\section{GNS 430W CONFIGURATION}
+\begin{tabularx}{\textwidth} {| >{\setlength\hsize{1.6\hsize}}Y | >{\setlength\hsize{0.7\hsize}}Y | >{\setlength\hsize{0.7\hsize}}Y | c |} 
+	\hline Section & Item & Value & Remarks\\
+	\hline 
+	\hline Main ARINC 429 Config        & IN 1                & High OFF        &\\
+	\hline Main ARINC 429 Config        & IN 2                & High OFF        &\\
+	\hline Main ARINC 429 Config        & OUT                 & High ARINC 429  &\\
+	\hline Main ARINC 429 Config        & SDI                 & Common          &\\
+	\hline Main ARINC 429 Config        & VNAV                & Enable Labels   &\\
+	\hline Main RSS Config              & Chnl 1              & OFF OFF         &\\
+	\hline Main RSS Config              & Chnl 2              & OFF ADS-B OUT + &\\
+	\hline Main RSS Config              & Chnl 3              & OFF Aviation    &\\
+	\hline Main RSS Config              & Chnl 4              & OFF OFF         &\\
+	\hline Main System Config           & Configure           & Fuel            &\\
+	\hline Main System Config           & Fuel Type           & Av Gas          &\\
+	\hline COM Setup                    & Spacing             & 8.33 kHz        &\\
+	\hline COM Setup                    & S250                & 15              &\\
+	\hline COM Setup                    & S833                & 20              &\\
+	\hline COM Setup                    & Side                & 31              &\\
+	\hline COM Setup                    & Mic                 & 44              &\\
+	\hline VOR/LOC/GS ARINC 429 Config  & Speed               & Low Low         &\\
+	\hline VOR/LOC/GS ARINC 429 Config  & SDI                 & VOR/ILS 1       &\\
+	\hline VOR/LOC/GS ARINC 429 Config  & DME Mode            & Directed Freq 1 &\\
+	\hline GPS Vertical Offset          & GPS Antenna Height  & 4 ft            &\\
+	\hline 
+\end{tabularx}
+\clearpage
+
+
+\section{uAvionics EchoUAT ADS-B CONFIGURATION}
+\begin{tabularx}{\textwidth} {| >{\setlength\hsize{1.6\hsize}}Y | >{\setlength\hsize{0.7\hsize}}Y | >{\setlength\hsize{0.7\hsize}}Y | c |} 
+	\hline Section & Item & Value & Remarks\\
+	\hline 
+	\hline Transceiver Config           & Control                                        & UAT TX Enabled       &\\
+	\hline Transceiver Config           & ICAO Number                                    & C067BD               &\\
+	\hline Transceiver Config           & Call Sign                                      & CGNHK                &\\
+	\hline Transceiver Config           & Flight Plan ID                                 & left blank           &\\
+	\hline Transceiver Config           & CSID Logic                                     & Enabled              &\\
+	\hline Transceiver Config           & Anonymous Mode                                 & Disabled             &\\
+	\hline Transceiver Config           & Emitter Category                               & Light Airplane       &\\
+	\hline Transceiver Config           & VFR Code                                       & 1200                 &\\
+	\hline Transceiver Config           & ADS-B IN Capability                            & Both 1090/978 MHz    &\\
+	\hline Transceiver Config           & VSO                                            & 40                   &\\
+	\hline Transceiver Config           & Aircraft Length (m)                            & L$\leq$15            &\\
+	\hline Transceiver Config           & Aircraft Width (m)                             & W$\leq$23            &\\
+	\hline Transceiver Config           & GPS Antenna Offset Lateral (m)                 & 0                    &\\
+	\hline Transceiver Config           & GPS Antenna Offset Longitudinal from nose (m)  & 4                    &\\
+	\hline Installation                 & Setup Source                                   & App (WiFi) Stored    &\\
+	\hline Installation                 & Control Source                                 & Transponder Monitor  &\\
+	\hline Installation                 & GPS Source                                     & External GPS (COM 2) &\\
+	\hline Installation                 & Traffic Uplink Output                          & MFD (COM 2)          & Not Connected \\
+	\hline Installation                 & COM 1 Rate                                     & 38400                & Not Connected \\
+	\hline Installation                 & COM 1 Data                                     & 810                  & Not Connected \\
+	\hline Installation                 & COM 1 Phy                                      & RS-485 Terminated    & Not Connected \\
+	\hline Installation                 & COM 1 Protocol                                 & TMAP                 & Not Connected \\
+	\hline Installation                 & COM 2 Rate                                     & 9600                 &\\
+	\hline Installation                 & COM 2 Input Protocol                           & ADS-B+               &\\
+	\hline 
+\end{tabularx}
+\clearpage
+
 
 \section{TORQUE TABLE} 
 \begin{tabularx}

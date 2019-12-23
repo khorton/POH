@@ -650,26 +650,46 @@ One CW turn of high rpm adjustment screw should decrease max speed by 25 RPM.
 \begin{tabularx}{\textwidth} {| >{\setlength\hsize{1.4\hsize}}Y | >{\setlength\hsize{0.8\hsize}}Y | >{\setlength\hsize{0.8\hsize}}Y | c |} 
 	\hline Section & Item & Value & Remarks\\
 	\hline 
-	\hline Main ARINC 429 Config        & IN 1                & High OFF        &\\
-	\hline Main ARINC 429 Config        & IN 2                & High OFF        &\\
-	\hline Main ARINC 429 Config        & OUT                 & High ARINC 429  &\\
-	\hline Main ARINC 429 Config        & SDI                 & Common          &\\
-	\hline Main ARINC 429 Config        & VNAV                & Enable Labels   &\\
-	\hline Main RSS Config              & Chnl 1              & OFF OFF         &\\
-	\hline Main RSS Config              & Chnl 2              & OFF ADS-B OUT + &\\
-	\hline Main RSS Config              & Chnl 3              & OFF Aviation    &\\
-	\hline Main RSS Config              & Chnl 4              & OFF OFF         &\\
-	\hline Main System Config           & Configure           & Fuel            &\\
-	\hline Main System Config           & Fuel Type           & Av Gas          &\\
-	\hline COM Setup                    & Spacing             & 8.33 kHz        &\\
-	\hline COM Setup                    & S250                & 15              &\\
-	\hline COM Setup                    & S833                & 20              &\\
-	\hline COM Setup                    & Side                & 31              &\\
-	\hline COM Setup                    & Mic                 & 44              &\\
-	\hline VOR/LOC/GS ARINC 429 Config  & Speed               & Low Low         &\\
-	\hline VOR/LOC/GS ARINC 429 Config  & SDI                 & VOR/ILS 1       &\\
-	\hline VOR/LOC/GS ARINC 429 Config  & DME Mode            & Directed Freq 1 &\\
-	\hline GPS Vertical Offset          & GPS Antenna Height  & 4 ft            &\\
+	\hline Main ARINC 429 Config        & IN 1                       & Speed: High         &\\
+	                                    &                            & Data: OFF           &\\
+	                                    & IN 2                       & Speed: High         &\\
+	                                    &                            & Data: OFF           &\\
+	                                    & OUT                        & Speed: High         &\\
+	                                    &                            & Data: ARINC 429     &\\
+	                                    & SDI                        & Common              &\\
+	                                    & VNAV                       & Enable Labels       &\\
+	\hline Main RSS Config              & Chnl 1                     & Input: Icarus Alt   &from GTX327\\
+	                                    &                            & Output: OFF         &\\
+	                                    & Chnl 2                     & Input: OFF          &\\
+	                                    &                            & Output: ADS-B OUT + &to ADS-B\\
+	                                    & Chnl 3                     & Input: OFF          &\\
+	                                    &                            & Output: Aviation    &to AFCS and EFIS\\
+	                                    & Chnl 4                     & Input: OFF          &\\
+	                                    &                            & Output: OFF         &\\
+	\hline Main System Config           & Configure                  & Fuel                &\\
+	                                    & Fuel Type                  & Av Gas              &\\
+	\hline Main System Config           & Configure                  & Discretes           &\\
+	                                    & GPS Select                 & Auto                &\\
+	                                    & COM Presets                & Enabled             &\\
+	\hline COM Setup                    & Spacing                    & 25.0 kHz            &\\
+	\hline Main Lighting                & Display Source             & 14V DC              &\\
+	                                    & Key Source                 & Photo               &\\
+	                                    & Display Resp Time/Min      & 4 / 080             &\\
+	                                    & Key Resp Time/Min          & 4 / 40              &\\
+	                                    & Display Slope/Offset       & 50 / 50             &\\
+	                                    & Key Slope/Offset           & 50 / 50             &\\
+	                                    & Key Slope/Offset           & 50 / 50             &\\
+	                                    & Display Photo Trans \%     & 05                  &\\
+	                                    & Display Photo Slope/Offset & 50 / 50             &\\
+	\hline COM Setup                    & S250                       & 15                  &\\
+	                                    & S833                       & 20                  &\\
+	                                    & Side                       & 31                  &\\
+	                                    & Mic                        & 44                  &\\
+	\hline VOR/LOC/GS ARINC 429 Config  & Speed                      & RX: Low             &\\
+	                                    &                            & TX: Low             &\\
+	                                    & SDI                        & VOR/ILS 1           &\\
+	                                    & DME Mode                   & Directed Freq 1     &\\
+	\hline GPS Vertical Offset          & GPS Antenna Height         & 4 ft                &\\
 	\hline 
 \end{tabularx}
 \clearpage
@@ -680,33 +700,56 @@ One CW turn of high rpm adjustment screw should decrease max speed by 25 RPM.
 	\hline Section & Item & Value & Remarks\\
 	\hline 
 	\hline Transceiver Config           & Control                                        & UAT TX Enabled       &\\
-	\hline Transceiver Config           & ICAO Number                                    & C067BD               &\\
-	\hline Transceiver Config           & Call Sign                                      & CGNHK                &\\
-	\hline Transceiver Config           & Flight Plan ID                                 & left blank           &\\
-	\hline Transceiver Config           & CSID Logic                                     & Enabled              &\\
-	\hline Transceiver Config           & Anonymous Mode                                 & Disabled             &\\
-	\hline Transceiver Config           & Emitter Category                               & Light Airplane       &\\
-	\hline Transceiver Config           & VFR Code                                       & 1200                 &\\
-	\hline Transceiver Config           & ADS-B IN Capability                            & Both 1090/978 MHz    &\\
-	\hline Transceiver Config           & VSO                                            & 40                   &\\
-	\hline Transceiver Config           & Aircraft Length (m)                            & L$\leq$15            &\\
-	\hline Transceiver Config           & Aircraft Width (m)                             & W$\leq$23            &\\
-	\hline Transceiver Config           & GPS Antenna Offset Lateral (m)                 & 0                    &\\
-	\hline Transceiver Config           & GPS Antenna Offset Longitudinal from nose (m)  & 4                    &\\
+	                                    & ICAO Number                                    & C067BD               &\\
+	                                    & Call Sign                                      & CGNHK                &\\
+	                                    & Flight Plan ID                                 & left blank           &\\
+	                                    & CSID Logic                                     & Enabled              &\\
+	                                    & Anonymous Mode                                 & Disabled             &\\
+	                                    & Emitter Category                               & Light Airplane       &\\
+	                                    & VFR Code                                       & 1200                 &\\
+	                                    & ADS-B IN Capability                            & Both 1090/978 MHz    &\\
+	                                    & VSO                                            & 40                   &\\
+	                                    & Aircraft Length (m)                            & L$\leq$15            &\\
+	                                    & Aircraft Width (m)                             & W$\leq$23            &\\
+	                                    & GPS Antenna Offset Lateral (m)                 & 0                    &\\
+	                                    & GPS Ant Offset from nose (m)                   & 4                    &\\
 	\hline Installation                 & Setup Source                                   & App (WiFi) Stored    &\\
-	\hline Installation                 & Control Source                                 & Transponder Monitor  &\\
-	\hline Installation                 & GPS Source                                     & External GPS (COM 2) &\\
-	\hline Installation                 & Traffic Uplink Output                          & MFD (COM 2)          & Not Connected \\
-	\hline Installation                 & COM 1 Rate                                     & 38400                & Not Connected \\
-	\hline Installation                 & COM 1 Data                                     & 810                  & Not Connected \\
-	\hline Installation                 & COM 1 Phy                                      & RS-485 Terminated    & Not Connected \\
-	\hline Installation                 & COM 1 Protocol                                 & TMAP                 & Not Connected \\
-	\hline Installation                 & COM 2 Rate                                     & 9600                 &\\
-	\hline Installation                 & COM 2 Input Protocol                           & ADS-B+               &\\
+	                                    & Control Source                                 & Transponder Monitor  &\\
+	                                    & GPS Source                                     & External GPS (COM 2) &\\
+	                                    & Traffic Uplink Output                          & MFD (COM 2)          & Not Connected \\
+	                                    & COM 1 Rate                                     & 38400                & Not Connected \\
+	                                    & COM 1 Data                                     & 810                  & Not Connected \\
+	                                    & COM 1 Phy                                      & RS-485 Terminated    & Not Connected \\
+	                                    & COM 1 Protocol                                 & TMAP                 & Not Connected \\
+	                                    & COM 2 Rate                                     & 9600                 &\\
+	                                    & COM 2 Input Protocol                           & ADS-B+               &\\
 	\hline 
 \end{tabularx}
 \clearpage
 
+\section{Garmin GTX-327 CONFIGURATION}
+\begin{tabularx}{\textwidth} {| >{\setlength\hsize{1.1\hsize}}Y | >{\setlength\hsize{1.1\hsize}}Y | >{\setlength\hsize{0.8\hsize}}Y | c |} 
+	\hline Section & Item & Value & Remarks\\
+	\hline 
+	\hline Display Mode                 & Display Mode                                   & AUTO                 &\\
+	                                    & Level                                          & 85                   &\\
+	\hline Backlight                    & BKLT                                           & MAN                  &\\
+	                                    & LVL                                            & ----                 &Current Value\\
+	                                    & RSP TIME                                       & 1                    &\\
+	                                    & MIN                                            & 10                   &\\
+	                                    & BKLT SRCE                                      & PHOTO                &\\
+	                                    & SLOPE                                          & 50                   &\\
+	                                    & OFFSET                                         & 50                   &\\
+	\hline Key Lighting                 & KEY                                            & AUTO                 &\\
+	                                    & LVL                                            & ----                 &Current Value\\
+	                                    & RSP TIME                                       & 1                    &\\
+	                                    & MIN                                            & 10                   &\\
+	                                    & KEY SRCE                                       & PHOTO                &\\
+	                                    & SLOPE                                          & 50                   &\\
+	                                    & OFFSET                                         & 50                   &\\
+	\hline 
+\end{tabularx}
+\clearpage
 
 \section{TORQUE TABLE} 
 \begin{tabularx}

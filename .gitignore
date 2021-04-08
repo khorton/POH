@@ -16,3 +16,4 @@ graphs/*.eps
 latex/POH.sublime-workspace
 *.out.ps
 *.*~
+*.bbprojectsettings
